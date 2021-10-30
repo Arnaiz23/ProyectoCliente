@@ -25,3 +25,6 @@ Informacion de la pagina
 		Ej: buscar pantalon [resultado: salen todos los pantalones]
 	Filtro (por objeto) [Marca, tipo objeto]
 		Ej: guantes, pantalones, camisetas...
+
+
+MIRAR PQ NO SE ME CENTRA EL BOTON DE LAS OPCIONES DERECHA

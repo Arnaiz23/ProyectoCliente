@@ -1,0 +1,127 @@
+/* CONTENEDOR IZQUIERDA */
+.main_container_izquierda{
+    /* border: 1px solid #f00; */
+    width: 75%;
+    padding: 15px 20px;
+}
+    /* DEPORTES */
+    .main_container_izquierda_deportes{
+        border: 2px solid #d11;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .main_container_izquierda_deportes a{
+        font-size: 20px;
+        padding: 10px;
+        text-decoration: none;
+    }
+    /* FILTRO */
+    .main_container_izquierda_filtro{
+        width: max-content;
+        margin: 30px 0 20px auto;
+    }
+    #filtro{
+        padding: 5px;
+    }
+    /* TARJETAS */
+    .main_container_izquierda_tarjetas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 96%;
+        margin: 10px auto;
+    }
+    .card{
+        border: 2px solid #ff0;
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+    }
+/* CONTENEDOR DERECHA */
+.main_container_derecha{
+    /* border: 1px solid #0f0; */
+    width: 25%;
+}
+    /* CARRITO */
+    .main_container_derecha_carrito{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 2px solid #f0f; */
+        padding: 5px 20px;
+        width: 70%;
+        margin: auto;
+        background-color: var(--gris-claro);
+    }
+    /* BUSCAR */
+    .main_container_derecha_buscar{
+        width: 70%;
+        margin: 40px auto;
+        border-radius: 5px;
+        background-color: #fff;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 2px solid #089;
+    }
+    .main_container_derecha_buscar span{
+        padding: 5px;
+        margin: 0 5px;
+    }
+    .main_container_derecha_buscar input{
+        padding: 5px;
+        border: none;
+        font-size: 18px;
+    }
+    .main_container_derecha_buscar input:focus{
+        outline: none;
+        border: none;
+    }
+    /* OPCIONES FILTRO */
+    .main_container_derecha_opciones{
+        /* border: 2px solid #70f; */
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        background-color: var(--gris-claro);
+    }
+    .subtitulo_opciones_filtro{
+        text-align: center;
+        margin: 10px;
+    }
+    .opciones_filtro{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .opciones_filtro input{
+        transform: scale(1.2);
+        margin-right: 20px;
+    }
+    .opciones_filtro p{
+        font-size: 18px;
+        margin: 0px;
+        padding: .4rem;
+    }
+    .linea{
+        width: 90%;
+        margin: 10px auto;
+        border: 1px solid rgba(0,0,0,.4);
+    }
+    #buscar_filtro{
+        width: 80%;
+        margin: 20px auto 10px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: var(--rojo-oscuro);
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: background-color .3s;
+    }
+    #buscar_filtro:hover{
+        background-color: #ac0909;
+    }

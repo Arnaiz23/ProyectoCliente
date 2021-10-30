@@ -54,7 +54,64 @@
         </nav>
     </header>
     <main>
-        
+        <div class="main_container">
+            <!-- CONTAINER IZQUIERDO CON LAS OPCIONES DE DEPORTE, TARJETAS Y EL FILTRO -->
+            <div class="main_container_izquierda">
+                <div class="main_container_izquierda_deportes">
+                    <a href="javascript:funcion()">Futbol</a>
+                    <a href="javascript:funcion()">Baloncesto</a>
+                    <a href="javascript:funcion()">Voleibol</a>
+                    <a href="javascript:funcion()">Running</a>
+                </div>
+                <div class="main_container_izquierda_filtro">
+                    <select name="filtro" id="filtro">
+                        <option value="0">Filtro</option>
+                        <option value="1">Precio : más caro primero</option>
+                        <option value="2">Precio: más barato primero</option>
+                    </select>
+                </div>
+                <div class="main_container_izquierda_tarjetas">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </div>
+            <!-- CONTENEDOR DERECHO CON EL CARRITO, BUSCAR Y LAS OPCIONES DE FILTRO -->
+            <div class="main_container_derecha">
+                <div class="main_container_derecha_carrito">
+                    <p>Carrito</p>
+                    <p>€</p>
+                </div>
+                <div class="main_container_derecha_buscar">
+                    <span class="icon-search"></span>
+                    <input type="text" name="buscar" id="buscar" placeholder="Buscar">
+                </div>
+                <div class="main_container_derecha_opciones">
+                    <h3 class="subtitulo_opciones_filtro">Marca</h3>
+                    <div class="opciones_filtro">
+                        <input type="checkbox" name="marca[]" id="">
+                        <p>Nike</p>
+                    </div>
+                    <div class="opciones_filtro">
+                        <input type="checkbox" name="marca[]" id="">
+                        <p>Adidas</p>
+                    </div>
+                    <div class="linea"></div>
+                    <h3 class="subtitulo_opciones_filtro">Tipo</h3>
+                    <div class="opciones_filtro">
+                        <input type="checkbox" name="tipo[]" id="">
+                        <p>Camiseta</p>
+                    </div>
+                    <div class="opciones_filtro">
+                        <input type="checkbox" name="tipo[]" id="">
+                        <p>Pantalón</p>
+                    </div>
+                    <!-- MIRAR PQ NO SE ME CENTRA -->
+                    <button type="button" id="buscar_filtro">BUSCAR</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer_nombreBrand">
