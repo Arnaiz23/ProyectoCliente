@@ -1,0 +1,27 @@
+Iconos
+	Home -> Boton home
+	User -> Inicio de sesion en apartado nombre usuario
+	Search -> Buscar
+	Bin -> carrito eliminar
+	Menu -> Para boton menu
+	Airplane -> Boton inicio de sesion en aterrizaje
+	Plus -> Carrito añadir unidad
+	Minus -> Carrito reducir unidad
+	Cross -> Fallo al introducir dato
+	Checkmark -> Acierto al introducir dato
+	Instagram Facebook2 Twitter
+	Lock -> icono contraseña en inicio de sesion
+	Cart -> icono carrito Menu
+	Question -> Preguntas menu
+	Circle up / down -> Pagina preguntas
+	Circle-left -> Pagina login volver
+
+Informacion de la pagina
+	Opciones (deportes)
+		Ej: futbol, baloncesto, voleibol
+	Filtro (ordenar)
+		Ej: ordenar por precio (asc y desc)...
+	Buscar (buscar lo escrito donde sea)
+		Ej: buscar pantalon [resultado: salen todos los pantalones]
+	Filtro (por objeto) [Marca, tipo objeto]
+		Ej: guantes, pantalones, camisetas...
