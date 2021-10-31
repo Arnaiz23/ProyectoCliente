@@ -4,6 +4,11 @@
     --rojo-oscuro:  #870807;
     --gris:  #6c6c6c;
     --gris-claro:  #d5d5d6;
+    --fucsia: #e0d;
+}
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    overflow-x: hidden;
 }
 
 /* HEADER NAV */
@@ -24,7 +29,7 @@
         .header_nav_home a{
             color: #fff;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 500;
         }
         .header_nav_home a span{
             margin-right: 10px;
@@ -48,7 +53,7 @@
         .header_nav_opciones_inicio a{
             color: #fff;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 500;
         }
         /* BOTON MENU */
         .header_nav_opciones_menu{
@@ -75,11 +80,13 @@
     .header_nombreBrand h1{
         margin: 0;
         font-size: 70px;
-        font-weight: 400;
+        font-weight: 500;
+        user-select: none;
     }
     .header_nombreBrand img{
         width: 120px;
         margin-right: 15px;
+        user-select: none;
     }
 
 /* MENU */
@@ -95,13 +102,14 @@
         top: 10%;
         right: 2%;
         padding: 20px;
-        /* transform: translateX(120%); */
+        transform: translateX(120%);
+        transition: transform .6s;
     }
     nav a{
         margin: 10px;
         margin-left: 30px;
         font-size: 20px;
-        color: #ddd;
+        color: #ccc;
         text-decoration: none;
         transition: color .3s;
     }
@@ -113,11 +121,12 @@
     }
     .ver{
         transform: translateX(0);
+        /* transition: transform .6s; */
     }
 
 /* MAIN */
 main{
-    /* background-color:  var(--negro-main) ; */
+    background-color:  var(--negro-main) ;
 }
 .main_container{
     /* border: 1px solid #000; */
@@ -136,12 +145,16 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    user-select: none;
 }
     /* FOOTER NOMBRE BRAND */
     .footer_nombreBrand{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+    }
+    .footer_nombreBrand h1{
+        font-weight: 500;
     }
     .footer_nombreBrand img{
         width: 70px;
@@ -150,6 +163,7 @@ footer{
     /* FOOTER COPYRIGHT */
     .footer_copyright p{
         font-size: 20px;
+        font-weight: 200;
     }
     /* FOOTER REDES */
     .footer_redes{

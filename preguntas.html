@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Link css comun -->
     <link rel="stylesheet" href="css/estilosComunes.css">
+    <!-- Link css especial -->
+    <link rel="stylesheet" href="css/preguntas.css">
     <title>MetaSport</title>
 </head>
 <body>
@@ -26,7 +28,7 @@
         <div class="header_nav">
             <!-- BOTON HOME -->
             <div class="header_nav_home">
-                <a href="javascript:funcion()"><span class="icon-home"></span>HOME</a>
+                <a href="index.html"><span class="icon-home"></span>HOME</a>
             </div>
             <div class="header_nav_opciones">
                 <!-- BOTON INICIO SESION -->
@@ -48,11 +50,46 @@
         <nav>
             <a href="index.html"><span class="icon-home"></span>Home</a>
             <a href="carrito.html"><span class="icon-cart"></span>Carrito</a>
-            <a href="javascript:funcion()"><span class="icon-question"></span>Preguntas</a>
+            <a href="preguntas.html"><span class="icon-question"></span>Preguntas frecuentes</a>
         </nav>
     </header>
     <main>
-        
+        <div class="main_container">
+            <div class="main_container_izquierda">
+                <div class="main_container_izquierda_pregunta">
+                    <h3 class="pregunta_tipica">Pregunta 1</h3>
+                    <span class="icon-circle-down"></span>
+                </div>
+                <!-- RESPUESTA -->
+                <div class="main_container_izquierda_respuesta">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatibus, commodi, nihil cumque at nemo molestias nulla obcaecati ullam, odio soluta esse blanditiis modi qui!</p>
+                </div>
+                <!-- ------------------------------------ -->
+                <div class="main_container_izquierda_pregunta">
+                    <h3 class="pregunta_tipica">Pregunta 2</h3>
+                    <span class="icon-circle-down"></span>
+                </div>
+                <!-- RESPUESTA -->
+                <div class="main_container_izquierda_respuesta">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatibus, commodi, nihil cumque at nemo molestias nulla obcaecati ullam, odio soluta esse blanditiis modi qui!</p>
+                </div>
+                <!-- ------------------------------------ -->
+                <div class="main_container_izquierda_pregunta">
+                    <h3 class="pregunta_tipica">Pregunta 3</h3>
+                    <span class="icon-circle-down"></span>
+                </div>
+                <!-- RESPUESTA -->
+                <div class="main_container_izquierda_respuesta">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatibus, commodi, nihil cumque at nemo molestias nulla obcaecati ullam, odio soluta esse blanditiis modi qui!</p>
+                </div>
+                <!-- ------------------------------------ -->
+            </div>
+            <div class="main_container_derecha">
+                <h3 class="pregunta_titulo">Dejanos tu pregunta</h3>
+                <textarea name="pregunta" id="" cols="30" rows="10" placeholder="Pregunta..."></textarea>
+                <button type="button" id="pregunta_enviar">ENVIAR</button>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer_nombreBrand">

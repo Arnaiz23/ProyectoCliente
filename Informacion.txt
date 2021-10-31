@@ -16,7 +16,7 @@ Iconos
 	Circle up / down -> Pagina preguntas
 	Circle-left -> Pagina login volver
 
-Informacion de la pagina
+Informacion de la pagina 
 	Opciones (deportes)
 		Ej: futbol, baloncesto, voleibol
 	Filtro (ordenar)
@@ -28,3 +28,14 @@ Informacion de la pagina
 
 
 MIRAR PQ NO SE ME CENTRA EL BOTON DE LAS OPCIONES DERECHA
+
+--------------------------------------------------------------------------
+	Si hay muchas tarjetas meterle un sticky al contenedor del carrito,
+	tanto en el index como en el del carrito
+--------------------------------------------------------------------------
+
+CSS
+	Pagina Aterrizaje OK
+	Pagina Login NO
+	Pagina Preguntas OK
+	Pagina carrito OK

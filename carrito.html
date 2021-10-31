@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Link css comun -->
     <link rel="stylesheet" href="css/estilosComunes.css">
+    <!-- Link css especial -->
+    <link rel="stylesheet" href="css/carrito.css">
     <title>MetaSport</title>
 </head>
 <body>
@@ -26,7 +28,7 @@
         <div class="header_nav">
             <!-- BOTON HOME -->
             <div class="header_nav_home">
-                <a href="javascript:funcion()"><span class="icon-home"></span>HOME</a>
+                <a href="index.html"><span class="icon-home"></span>HOME</a>
             </div>
             <div class="header_nav_opciones">
                 <!-- BOTON INICIO SESION -->
@@ -48,11 +50,43 @@
         <nav>
             <a href="index.html"><span class="icon-home"></span>Home</a>
             <a href="javascript:funcion()"><span class="icon-cart"></span>Carrito</a>
-            <a href="preguntas.html"><span class="icon-question"></span>Preguntas</a>
+            <a href="preguntas.html"><span class="icon-question"></span>Preguntas frecuentes</a>
         </nav>
     </header>
     <main>
-        
+        <div class="main_container">
+            <!-- CONTENEDOR IZQUIERDO CON LOS OBJETOS QUE METIDO EN EL CARRITO -->
+            <div class="main_container_izquierda">
+                <div class="main_container_izquierda_articulo">
+                    <img src="img/voley.png" alt="">
+                    <h3 class="articulo_subtitulo">Nombre</h3>
+                    <p class="articulo_cantidad">Cantidad:1</p>
+                    <span class="icon-bin"></span>
+                </div>
+                <div class="linea"></div>
+                <div class="main_container_izquierda_articulo">
+                    <img src="img/voley.png" alt="">
+                    <h3 class="articulo_subtitulo">Nombre</h3>
+                    <p class="articulo_cantidad">Cantidad:1</p>
+                    <span class="icon-bin"></span>
+                </div>
+                <div class="linea"></div>
+                <div class="main_container_izquierda_articulo">
+                    <img src="img/voley.png" alt="">
+                    <h3 class="articulo_subtitulo">Nombre</h3>
+                    <p class="articulo_cantidad">Cantidad: 1</p>
+                    <span class="icon-bin"></span>
+                </div>
+            </div>
+            <!-- CONTENEDOR DERECHO CON EL CARRITO -->
+            <div class="main_container_derecha">
+                <h2 class="main_container_derecha_titulo"><span class="icon-cart"></span>Carrito</h2>
+                <div class="main_container_derecha_carrito">
+                    <p>Carrito</p>
+                    <p>€</p>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer_nombreBrand">

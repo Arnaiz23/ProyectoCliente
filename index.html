@@ -10,6 +10,10 @@
     <meta name="author" content="Adrián Arnaiz Fernández">
     <meta name="robots" content="index">
     <!-- ---------------------------------------- -->
+    <!-- Link a Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;300;400;500;700&display=swap" rel="stylesheet"> 
     <!-- Link a favicon -->
     <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
     <!-- Link a css de los iconos -->
@@ -50,7 +54,7 @@
         <nav>
             <a href="javascript:funcion()"><span class="icon-home"></span>Home</a>
             <a href="carrito.html"><span class="icon-cart"></span>Carrito</a>
-            <a href="preguntas.html"><span class="icon-question"></span>Preguntas</a>
+            <a href="preguntas.html"><span class="icon-question"></span>Preguntas frecuentes</a>
         </nav>
     </header>
     <main>
@@ -71,14 +75,55 @@
                     </select>
                 </div>
                 <div class="main_container_izquierda_tarjetas">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+                    <div class="card">
+                        <img src="img/voley.png" alt="" class="card_imagenes">
+                        <div class="card_informacion">
+                            <h3 class="card_informacion_titulo">Lorem</h3>
+                            <p class="card_informacion_texto">Lorem ipsum dolor sit amet.</p>
+                            <div class="card_informacion_precio">
+                                <h3>Precio</h3>
+                                <p>25€</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/voley.png" alt="" class="card_imagenes">
+                        <div class="card_informacion">
+                            <h3 class="card_informacion_titulo">Lorem</h3>
+                            <p class="card_informacion_texto">Lorem ipsum dolor sit amet.</p>
+                            <div class="card_informacion_precio">
+                                <h3>Precio</h3>
+                                <p>25€</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/voley.png" alt="" class="card_imagenes">
+                        <div class="card_informacion">
+                            <h3 class="card_informacion_titulo">Lorem</h3>
+                            <p class="card_informacion_texto">Lorem ipsum dolor sit amet.</p>
+                            <div class="card_informacion_precio">
+                                <h3>Precio</h3>
+                                <p>25€</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/voley.png" alt="" class="card_imagenes">
+                        <div class="card_informacion">
+                            <h3 class="card_informacion_titulo">Lorem</h3>
+                            <p class="card_informacion_texto">Lorem ipsum dolor sit amet.</p>
+                            <div class="card_informacion_precio">
+                                <h3>Precio</h3>
+                                <p>25€</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- CONTENEDOR DERECHO CON EL CARRITO, BUSCAR Y LAS OPCIONES DE FILTRO -->
             <div class="main_container_derecha">
+                <h2 class="main_container_derecha_titulo"><span class="icon-cart"></span>Carrito</h2>
                 <div class="main_container_derecha_carrito">
                     <p>Carrito</p>
                     <p>€</p>
@@ -90,22 +135,22 @@
                 <div class="main_container_derecha_opciones">
                     <h3 class="subtitulo_opciones_filtro">Marca</h3>
                     <div class="opciones_filtro">
-                        <input type="checkbox" name="marca[]" id="">
-                        <p>Nike</p>
+                        <input type="checkbox" name="marca[]" id="nike">
+                        <label for="nike">Nike</label>
                     </div>
                     <div class="opciones_filtro">
-                        <input type="checkbox" name="marca[]" id="">
-                        <p>Adidas</p>
+                        <input type="checkbox" name="marca[]" id="adidas">
+                        <label for="adidas">Adidas</label>
                     </div>
                     <div class="linea"></div>
                     <h3 class="subtitulo_opciones_filtro">Tipo</h3>
                     <div class="opciones_filtro">
-                        <input type="checkbox" name="tipo[]" id="">
-                        <p>Camiseta</p>
+                        <input type="checkbox" name="tipo[]" id="camiseta">
+                        <label for="camiseta">Camiseta</label>
                     </div>
                     <div class="opciones_filtro">
-                        <input type="checkbox" name="tipo[]" id="">
-                        <p>Pantalón</p>
+                        <input type="checkbox" name="tipo[]" id="pantalon">
+                        <label for="pantalon">Pantalón</label>
                     </div>
                     <!-- MIRAR PQ NO SE ME CENTRA -->
                     <button type="button" id="buscar_filtro">BUSCAR</button>
