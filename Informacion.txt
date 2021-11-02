@@ -36,6 +36,25 @@ MIRAR PQ NO SE ME CENTRA EL BOTON DE LAS OPCIONES DERECHA
 
 CSS
 	Pagina Aterrizaje OK
-	Pagina Login NO
+	Pagina Login OK
 	Pagina Preguntas OK
 	Pagina carrito OK
+
+------------------------------------------------------------------------------------------
+Se puede usar almacenamiento local o la base de datos local o una base de datos externa
+
+Pantalla instituto
+    width: 1366
+    height: 768
+
+
+SERVIDOR
+    API Rest () Aplicacion web que se encarga solo de hacer las operaciones base de datos. Lo devuelve en JSON. Es lo que se usa hoy en dia
+    Peticiones:
+        GET -> Select
+        POST -> Insert
+        PUT -> Update
+        DELETE -> Delete
+    
+
+
