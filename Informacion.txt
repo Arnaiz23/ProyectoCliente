@@ -39,7 +39,7 @@ CSS
 	Pagina Login OK
 	Pagina Preguntas OK
 	Pagina carrito OK
-    Pagina admin NO
+    Pagina admin OK
     Pagina articulo NO
 
 Editar el scroll de la pagina
@@ -70,14 +70,14 @@ SERVIDOR
 
 JS
     Menu OK
-    Login (registro e carga predeterminada OK login NO)
+    Login (registro e carga predeterminada OK login OK)
     Login (botones OK)
     Login (validacion NO)
         Registro:        
-            Recoger datos, comprobar que no existen, true -> guardarlos (comprobar que se han aceptado las condiciones)
+            Recoger datos, comprobar que no existen, true -> guardarlos 			(comprobar que se han aceptado las condiciones)
         Login:
             Recoger datos, comprobar que son correctos, y aceptar o no
-    Preguntas tipicas NO
+    Preguntas tipicas OK
     Preguntas del usuario NO
     Tarjetas NO
     Filtro datos NO
