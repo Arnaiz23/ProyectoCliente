@@ -185,3 +185,14 @@ footer{
         color: #a22;
         border-color: #a22;
     }
+
+
+@media screen and (max-width:1366px) {
+    nav{
+        width: 20%;
+        top: 25%;
+    }
+    nav a{
+        font-size: 18px;
+    }
+}
