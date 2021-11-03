@@ -170,6 +170,7 @@
         margin: 0px;
         padding: .4rem;
         cursor: pointer;
+        user-select: none;
     }
     .linea{
         width: 90%;

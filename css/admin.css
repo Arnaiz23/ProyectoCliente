@@ -1,0 +1,87 @@
+/* MAIN */
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2% 5%;
+}
+    /* CONTENEDOR IZQUIERDO */
+    .main_informacion_izquierda{
+        /* height: 20vh; */
+        width: 20%;
+        border: 1px solid #0f0;
+        background-color: var(--gris-claro);
+    }
+    .main_informacion_izquierda ul{
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        margin: 20px auto;
+    }
+    .main_informacion_izquierda ul li{
+        margin: 10px;
+        padding: 20px;
+        background-color: var(--rojo-oscuro);
+        width: auto;
+        text-align: center;
+        color: #ddd;
+        font-weight: 500;
+        font-size: 1.1rem;
+        cursor: pointer;
+        box-shadow: 5px 5px 5px #000;
+    }
+
+    /* CONTENEDOR DERECHO */
+    .main_informacion_derecha{
+        /* height: 20vh; */
+        width: 50%;
+        border: 1px solid #f00;
+        background-color: var(--gris-claro);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main_informacion_derecha h3{
+        display: inline-block;
+        font-size: 30px
+    }
+    .tabla{
+        margin: 30px auto;
+        border-collapse: collapse;
+        border: 2px solid #000;
+    }
+    .tabla tr:first-child td{
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    .tabla td{
+        border: 2px solid #000;
+        padding: 20px;
+    }
+
+    /* CONTENEDOR OPCIONES */
+    .main_informacion_opciones{
+        width: 10%;
+        background-color: var(--gris-claro);
+        padding: 20px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .main_informacion_opciones p{
+        padding: 10px 15px;
+        background-color: var(--rojo-oscuro);
+        color: #fff;
+        box-shadow: 5px 5px 5px #000;
+    }
+    .ver_opciones{
+        display: flex;
+    }

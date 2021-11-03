@@ -42,6 +42,15 @@ CSS
     Pagina admin NO
     Pagina articulo NO
 
+Editar el scroll de la pagina
+
+Pagina admin
+	-Preguntas
+	-Tarjetas
+	-Filtro
+
+	En el añadir,eliminar... cuando pueda, poner un boton confirmar cambios
+
 ------------------------------------------------------------------------------------------
 Se puede usar almacenamiento local o la base de datos local o una base de datos externa
 
@@ -74,3 +83,7 @@ JS
     Filtro datos NO
     Filtro NO
     Filtro2 NO
+
+Poner imagenes de momento
+    guardar en variable el input.file
+    escribir en la imagen.src = "URL.createObjectURL(variable[0])"
