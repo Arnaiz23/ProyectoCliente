@@ -52,7 +52,11 @@
             margin: 0 10px;
         }
         /* OPCIONES DATOS */
-        .container_derecha_informacion label{
+        .container_derecha_informacion_login{
+            display: flex;
+            flex-direction: column;
+        }
+        .container_derecha_informacion_login label{
             color: #fff;
             font-weight: 700;
             font-size: 18px;
@@ -97,7 +101,7 @@
             width: 50%;
             margin-top: 15px;
         }
-        #boton_sesion{
+        #boton_sesion_login,#boton_sesion_register{
             background-color: var(--rojo-oscuro);
             padding: 10px 20px;
             width: 50%;
@@ -108,7 +112,7 @@
             box-shadow: 2px 2px 2px #000;
             transition: background-color .3s;
         }
-        #boton_sesion:hover{
+        #boton_sesion_login:hover,#boton_sesion_register:hover{
             background-color: var(--rojo-oscuro-claro);
         }
         #boton_sesion_contrario{

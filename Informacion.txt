@@ -39,6 +39,8 @@ CSS
 	Pagina Login OK
 	Pagina Preguntas OK
 	Pagina carrito OK
+    Pagina admin NO
+    Pagina articulo NO
 
 ------------------------------------------------------------------------------------------
 Se puede usar almacenamiento local o la base de datos local o una base de datos externa
@@ -57,4 +59,18 @@ SERVIDOR
         DELETE -> Delete
     
 
-
+JS
+    Menu OK
+    Login (registro e carga predeterminada OK login NO)
+    Login (botones OK)
+    Login (validacion NO)
+        Registro:        
+            Recoger datos, comprobar que no existen, true -> guardarlos (comprobar que se han aceptado las condiciones)
+        Login:
+            Recoger datos, comprobar que son correctos, y aceptar o no
+    Preguntas tipicas NO
+    Preguntas del usuario NO
+    Tarjetas NO
+    Filtro datos NO
+    Filtro NO
+    Filtro2 NO
