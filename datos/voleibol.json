@@ -1,0 +1,14 @@
+[
+    {
+        "imagen" : "../img/voley.png",
+        "nombre" : "voleibol",
+        "tipo" : "balones",
+        "precio" : "20€"
+    },
+    {
+        "imagen" : "../img/voley.png",
+        "nombre" : "adidas",
+        "tipo" : "balones",
+        "precio" : "30€"
+    }
+]

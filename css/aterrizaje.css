@@ -40,7 +40,7 @@
     /* TARJETAS */
     .main_container_izquierda_tarjetas{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
         width: 96%;

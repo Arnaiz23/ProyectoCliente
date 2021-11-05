@@ -1,0 +1,23 @@
+[
+    {
+        "imagen" : "../img/voley.png",
+        "nombre" : "nike",
+        "marca" : "Nike",
+        "tipo" : "balones",
+        "precio" : "20€"
+    },
+    {
+        "imagen" : "../img/voley.png",
+        "nombre" : "adidas",
+        "marca" : "Adidas",
+        "tipo" : "balones",
+        "precio" : "30€"
+    },
+    {
+        "imagen" : "../img/voley.png",
+        "nombre" : "adidas",
+        "marca" : "Adidas",
+        "tipo" : "balones",
+        "precio" : "40€"
+    }
+]
