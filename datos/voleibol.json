@@ -1,14 +1,20 @@
 [
     {
         "imagen" : "../img/voley.png",
-        "nombre" : "voleibol",
+        "nombre" : "adidas",
+        "marca" : "Adidas",
         "tipo" : "balones",
-        "precio" : "20€"
+        "descripcionCorta" : "hola",
+        "descripcion" : "adios",
+        "precio" : "40€"
     },
     {
         "imagen" : "../img/voley.png",
         "nombre" : "adidas",
+        "marca" : "Adidas",
         "tipo" : "balones",
-        "precio" : "30€"
+        "descripcionCorta" : "hola",
+        "descripcion" : "adios",
+        "precio" : "40€"
     }
 ]

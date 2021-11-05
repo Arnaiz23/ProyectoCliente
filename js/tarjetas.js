@@ -30,7 +30,7 @@ function pintarTabla(lista){
         let precio = document.querySelectorAll(".card_informacion_precio p")[indice];
         imagen.src = texto.imagen;
         titulo_tarjeta.innerHTML = texto.nombre;
-        parrafo_tarjeta.innerHTML = texto.tipo;
+        parrafo_tarjeta.innerHTML = texto.descripcionCorta;
         precio.innerHTML = texto.precio;
     });
 }
@@ -40,24 +40,32 @@ futbol.addEventListener("click",()=>{
     pintarTabla(listaf);
     eliminarMarca();
     insertarMarca(listaf);
+    eliminarTipo();
+    insertarTipo(listaf);
 });
 baloncesto.addEventListener("click",()=>{
     borrarTarjetas();
     pintarTabla(listab);
     eliminarMarca();
     insertarMarca(listab);
+    eliminarTipo();
+    insertarTipo(listab);
 });
 voleibol.addEventListener("click",()=>{
     borrarTarjetas();
     pintarTabla(listav);
     eliminarMarca();
     insertarMarca(listav);
+    eliminarTipo();
+    insertarTipo(listav);
 });
 running.addEventListener("click",()=>{
     borrarTarjetas();
     pintarTabla(listar);
     eliminarMarca();
     insertarMarca(listar);
+    eliminarTipo();
+    insertarTipo(listar);
 });
 
 function borrarTarjetas(){

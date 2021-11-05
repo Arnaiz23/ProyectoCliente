@@ -87,3 +87,20 @@ JS
 Poner imagenes de momento
     guardar en variable el input.file
     escribir en la imagen.src = "URL.createObjectURL(variable[0])"
+
+
+
+----------------------------------------------------------------
+Datos de futbol y esos
+    ,
+    {
+        "imagen" : "../img/",
+        "nombre" : "",
+        "marca" : "",
+        "tipo" : "",
+        "descripcionCorta" : "",
+        "descripcion" : "",
+        "precio" : "€"
+    }
+----------------------------------------------------------------
+Futbol -> https://www.futbolmania.com/es/fy6239

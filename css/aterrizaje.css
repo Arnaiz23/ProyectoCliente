@@ -49,7 +49,7 @@
     .card{
         /* border: 2px solid #ff0; */
         width: 300px;
-        height: 400px;
+        height: 100%;
         margin: 30px;
         background-color: var(--gris);
         cursor: pointer;

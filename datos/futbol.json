@@ -1,23 +1,83 @@
 [
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "nike",
-        "marca" : "Nike",
-        "tipo" : "balones",
-        "precio" : "20€"
+        "imagen" : "../img/Balón_Joma_Top_5_RFEF.jpeg",
+        "nombre" : "Balón Joma Top 5 RFEF",
+        "marca" : "Joma",
+        "tipo" : "Balones",
+        "descripcionCorta" : "Balón de fútbol sala Joma",
+        "descripcion" : "adios",
+        "precio" : "26,50€"
     },
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "adidas",
+        "imagen" : "../img/Balón_adidas_España_Pro.jpg",
+        "nombre" : "Balón adidas España Pro",
         "marca" : "Adidas",
-        "tipo" : "balones",
+        "tipo" : "Balones",
+        "descripcionCorta" : "Balón profesional de fútbol playa",
+        "descripcion" : "adios",
+        "precio" : "140€"
+    },
+    {
+        "imagen" : "../img/Balón_Puma_LaLiga_1_Adrenalina_2021_2022_Hybrid.jpg",
+        "nombre" : "Balón Puma LaLiga 1 Adrenalina 2021 2022 Hybrid",
+        "marca" : "Puma",
+        "tipo" : "Balones",
+        "descripcionCorta" : "Balón de fútbol Puma de La Liga española LFP 2021 2022",
+        "descripcion" : "adios",
+        "precio" : "25€"
+    },
+    {
+        "imagen" : "../img/Balón_adidas_Tiro_League_TB.jpg",
+        "nombre" : "Balón adidas Tiro League TB",
+        "marca" : "Adidas",
+        "tipo" : "Balones",
+        "descripcionCorta" : "Balón de fútbol adidas Team",
+        "descripcion" : "adios",
         "precio" : "30€"
     },
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "adidas",
+        "imagen" : "../img/Nike_Mercurial_Superfly_8_Pro_KM_FG.jpg",
+        "nombre" : "Nike Mercurial Superfly 8 Pro KM FG",
+        "marca" : "Nike",
+        "tipo" : "Botas",
+        "descripcionCorta" : "Botas de fútbol de Kylian Mbappé Nike FG",
+        "descripcion" : "Botas de fútbol de Kylian Mbappé Nike FG para césped natural o artificial de última generación - lilas azuladas",
+        "precio" : "160€"
+    },
+    {
+        "imagen" : "../img/Nike_Phantom_GT2_Elite_SW_AG-PRO.jpg",
+        "nombre" : "Nike Phantom GT2 Elite SW AG-PRO",
+        "marca" : "Nike",
+        "tipo" : "Botas",
+        "descripcionCorta" : "Botas de fútbol Nike AG-PRO para césped artificial",
+        "descripcion" : "Botas de fútbol Nike AG-PRO para césped artificial - verdes, negra",
+        "precio" : "270€"
+    },
+    {
+        "imagen" : "../img/adidas_Predator_FREAK_FG.jpg",
+        "nombre" : "adidas Predator FREAK + FG",
         "marca" : "Adidas",
-        "tipo" : "balones",
-        "precio" : "40€"
+        "tipo" : "Botas",
+        "descripcionCorta" : "Botas de fútbol con tobillera sin cordones adidas FG",
+        "descripcion" : "Botas de fútbol con tobillera sin cordones adidas FG para césped natural o artificial de última generación - blancas",
+        "precio" : "280€"
+    },
+    {
+        "imagen" : "../img/adidas_X_SPEEDFLOW.1_Adizero_FG.jpg",
+        "nombre" : "adidas X SPEEDFLOW.1 Adizero FG",
+        "marca" : "Adidas",
+        "tipo" : "Botas",
+        "descripcionCorta" : "Botas de fútbol adidas FG para césped natural o artificial",
+        "descripcion" : "Botas de fútbol adidas FG para césped natural o artificial de última generación - blancas, verdes",
+        "precio" : "220€"
+    },
+    {
+        "imagen" : "../img/Puma_Future_Z_1.2_FG_AG.jpg",
+        "nombre" : "Puma Future Z 1.2 FG/AG",
+        "marca" : "Puma",
+        "tipo" : "Botas",
+        "descripcionCorta" : "Botas de fútbol Puma FG/AG para césped natural o artificial",
+        "descripcion" : "Botas de fútbol Puma FG/AG para césped natural o artificial - azules, verdes",
+        "precio" : "200€"
     }
 ]

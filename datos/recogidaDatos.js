@@ -19,6 +19,7 @@ const getInfo = async ()=>{
         });
         pintarTabla(listaf);
         insertarMarca(listaf);
+        insertarTipo(listaf);
         // document.querySelector(".main_container_izquierda").innerHTML = valor;
     });
     peticionb.then(res => res.json())
@@ -44,8 +45,5 @@ const getInfo = async ()=>{
     });
 }
 
-/* window.onload = ()=>{
-    
-} */
 
 
