@@ -26,6 +26,27 @@ Informacion de la pagina
 	Filtro (por objeto) [Marca, tipo objeto]
 		Ej: guantes, pantalones, camisetas...
 
+--------------------------------------------------------------------
+Pagina administracion usuario
+    Datos del usuario   
+    Cambio de contraseña
+    Mis pedidos
+    Cerrar sesion
+    Borrar usuario
+--------------------------------------------------------------------
+Pagina preguntas    
+    EL apartado pregunta_personal, que solo salga si esta logeado
+----------------------------------------------------------------------
+Pagina de aterrizaje
+    Una vez estes logeado, el boton de iniciar sesion, cambiara a administracion de usuario
+----------------------------------------------------------------------
+Tarjetas 
+    Añadir el boton de añadir al carrito
+        (Si hago lo del carito solo si esta logeado, ese boton solo aparece si estas logeado)
+---------------------------------------------------------------------
+Carrito
+    Pensar si solo aparece en caso de que estes logueado o si puedes añadir al carrito objetos pero a la hora de dar a comprar, te obligue a logearte
+---------------------------------------------------------------------
 
 MIRAR PQ NO SE ME CENTRA EL BOTON DE LAS OPCIONES DERECHA
 
@@ -41,6 +62,7 @@ CSS
 	Pagina carrito OK
     Pagina admin OK
     Pagina articulo NO
+    Pagina administracion usuario NO
 
 Editar el scroll de la pagina
 
@@ -104,3 +126,5 @@ Datos de futbol y esos
     }
 ----------------------------------------------------------------
 Futbol -> https://www.futbolmania.com/es/fy6239
+
+git -> https://github.com/Arnaiz23/ProyectoCliente.git
