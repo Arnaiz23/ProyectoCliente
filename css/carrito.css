@@ -26,6 +26,26 @@
         font-weight: 500;
     }
 
+    /* COMPRAR */
+    .main_container_izquierda_comprar{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 40px;
+    }
+    .main_container_izquierda_comprar p{
+        background-color: var(--rojo-oscuro);
+        color: #fff;
+        font-size: 1.1rem;
+        padding: 20px;
+        box-shadow: 5px 5px 5px #000;
+        cursor: pointer;
+        transition: background-color .4s;
+    }
+    .main_container_izquierda_comprar p:hover{
+        background-color: var(--rojo-oscuro-claro);
+    }
+
 /* CONTENEDOR IZQUIERDO */
 .main_container_izquierda{
     background-color: var(--gris-claro);

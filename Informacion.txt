@@ -41,11 +41,11 @@ Pagina de aterrizaje
     Una vez estes logeado, el boton de iniciar sesion, cambiara a administracion de usuario
 ----------------------------------------------------------------------
 Tarjetas 
-    Añadir el boton de añadir al carrito
-        (Si hago lo del carito solo si esta logeado, ese boton solo aparece si estas logeado)
+    Añadir el boton de añadir al carrito (Solo en caso de que este registrado)
+    Añadir tambien las unidades que quieras (meterle el de pccomponentes)
 ---------------------------------------------------------------------
 Carrito
-    Pensar si solo aparece en caso de que estes logueado o si puedes añadir al carrito objetos pero a la hora de dar a comprar, te obligue a logearte
+    Solo aparezca en caso de estar logeado.
 ---------------------------------------------------------------------
 
 MIRAR PQ NO SE ME CENTRA EL BOTON DE LAS OPCIONES DERECHA
@@ -102,9 +102,9 @@ JS
     Preguntas tipicas OK
     Preguntas del usuario NO
     Tarjetas NO
-    Filtro datos NO
-    Filtro NO
-    Filtro2 NO
+    Filtro precio OK
+    Filtro (buscar, marca, tipo) NO [en proceso]
+    Carrito NO (Error en el js comun)
 
 Poner imagenes de momento
     guardar en variable el input.file

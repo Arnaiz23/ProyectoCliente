@@ -42,6 +42,8 @@ futbol.addEventListener("click",()=>{
     insertarMarca(listaf);
     eliminarTipo();
     insertarTipo(listaf);
+    localStorage.setItem("lista",JSON.stringify(listaf));
+    regresarFiltro();
 });
 baloncesto.addEventListener("click",()=>{
     borrarTarjetas();
@@ -50,6 +52,8 @@ baloncesto.addEventListener("click",()=>{
     insertarMarca(listab);
     eliminarTipo();
     insertarTipo(listab);
+    localStorage.setItem("lista",JSON.stringify(listab));
+    regresarFiltro();
 });
 voleibol.addEventListener("click",()=>{
     borrarTarjetas();
@@ -58,6 +62,8 @@ voleibol.addEventListener("click",()=>{
     insertarMarca(listav);
     eliminarTipo();
     insertarTipo(listav);
+    localStorage.setItem("lista",JSON.stringify(listav));
+    regresarFiltro();
 });
 running.addEventListener("click",()=>{
     borrarTarjetas();
@@ -66,6 +72,8 @@ running.addEventListener("click",()=>{
     insertarMarca(listar);
     eliminarTipo();
     insertarTipo(listar);
+    localStorage.setItem("lista",JSON.stringify(listar));
+    regresarFiltro();
 });
 
 function borrarTarjetas(){

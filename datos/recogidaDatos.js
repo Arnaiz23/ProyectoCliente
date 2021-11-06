@@ -20,6 +20,7 @@ const getInfo = async ()=>{
         pintarTabla(listaf);
         insertarMarca(listaf);
         insertarTipo(listaf);
+        localStorage.setItem("lista",JSON.stringify(listaf));
         // document.querySelector(".main_container_izquierda").innerHTML = valor;
     });
     peticionb.then(res => res.json())
