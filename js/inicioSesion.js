@@ -78,6 +78,8 @@ function pintarLogin(){
         let validar_login = document.querySelector("#boton_sesion_login");
         validar_login.addEventListener("click",()=>{
             alert("Iniciando");
+            sessionStorage.setItem("usuario","Adrian");
+            location.href = "index.html";
         });
 
     // FUNCION INICIO
@@ -86,7 +88,5 @@ function pintarLogin(){
             pintarRegistro();
         });
 }
-
-
 
 

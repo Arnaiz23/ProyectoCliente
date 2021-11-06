@@ -62,7 +62,7 @@ CSS
 	Pagina carrito OK
     Pagina admin OK
     Pagina articulo NO
-    Pagina administracion usuario NO
+    Pagina administracion usuario NO (Falta los datos de la derecha)
 
 Editar el scroll de la pagina
 
@@ -99,6 +99,7 @@ JS
             Recoger datos, comprobar que no existen, true -> guardarlos 			(comprobar que se han aceptado las condiciones)
         Login:
             Recoger datos, comprobar que son correctos, y aceptar o no
+        Sesion iniciada OK (a medias, 2 opciones [por tiempo, poner una alerta por si no quieres que te cierre la sesion] [dandole tu al boton])
     Preguntas tipicas OK
     Preguntas del usuario NO
     Tarjetas NO

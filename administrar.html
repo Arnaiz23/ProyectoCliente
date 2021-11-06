@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- METADATOS -->
+    <meta name="keywords" content="MetaSport metasport compra articulos deportivos futbol voleibol boxeo baloncesto">
+    <meta name="description" content="Pagina web de venta de articulos deportivos para poder practicar nuestro deporte favorito">
+    <meta name="author" content="Adrián Arnaiz Fernández">
+    <meta name="robots" content="index">
+    <!-- ---------------------------------------- -->
+    <!-- Link a Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;300;400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Link a favicon -->
+    <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+    <!-- Link a css de los iconos -->
+    <link rel="stylesheet" href="fonts.css">
+    <!-- Link nomralize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Link css comun -->
+    <link rel="stylesheet" href="css/estilosComunes.css">
+    <!-- Link css especial -->
+    <link rel="stylesheet" href="css/administrar.css">
+    <title>MetaSport</title>
+</head>
+<body>
+    <header>
+        <!-- HEADER DE NAVEGACION -->
+        <div class="header_nav">
+            <!-- BOTON HOME -->
+            <div class="header_nav_home">
+                <a href="index.html"><span class="icon-home"></span>HOME</a>
+            </div>
+            <div class="header_nav_opciones">
+                <!-- BOTON INICIO SESION -->
+                <div class="header_nav_opciones_inicio">
+                    <a href="javascript:void(0)"><span class="icon-user"></span>CERRAR SESION</a>
+                </div>
+                <!-- BOTON MENU -->
+                <div class="header_nav_opciones_menu">
+                    <span class="icon-menu" id="botonMenu"></span>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER NOMBRE DE EMPRESA CON LOGO -->
+        <div class="header_nombreBrand">
+            <img src="img/voley.png" alt="Logo MetaSport ">
+            <h1>MetaSport</h1>
+        </div>
+        <!-- MENU -->
+        <nav>
+            <a href="javascript:void(0)"><span class="icon-home"></span>Home</a>
+            <a href="carrito.html"><span class="icon-cart"></span>Carrito</a>
+            <a href="preguntas.html"><span class="icon-question"></span>Preguntas frecuentes</a>
+        </nav>
+    </header>
+    <main>
+        <div class="main_container">
+            <div class="main_container_total">
+                <div class="main_container_izquierda">
+                    <p>Mis pedidos</p>
+                    <!-- <p>Lista de deseos</p> -->
+                    <p>Tarjetas vinculadas</p>
+                    <p>Administrar cuenta</p>
+                </div>
+                <div class="main_container_derecha">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_nombreBrand">
+            <img src="img/voley.png" alt="Logo MetaSport ">
+            <h1>MetaSport</h1>
+        </div>
+        <div class="footer_copyright">
+            <p>©Derechos reservados por la tienda MetaSport</p>
+        </div>
+        <div class="footer_redes">
+            <span class="icon-footer icon-facebook2"></span>
+            <span class="icon-footer icon-instagram"></span>
+            <span class="icon-footer icon-twitter"></span>
+        </div>
+    </footer>
+    <script src="js/menu.js"></script>
+    <!-- Script comun -->
+    <script src="datos/recogidaDatos.js"></script>
+    <script src="js/administrar.js"></script>
+</body>
+</html>

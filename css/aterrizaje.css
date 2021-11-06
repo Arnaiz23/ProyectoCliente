@@ -53,12 +53,12 @@
         margin: 30px;
         background-color: var(--gris);
         cursor: pointer;
-        transition: transform .5s,border-radius .4s;
+        /* transition: transform .5s,border-radius .4s; */
     }
-    .card:hover{
-        transform: scale(1.1);
+    /* .card:hover{
+        transform: scale(1.01);
         border-radius: 5px;
-    }
+    } */
     .card_imagenes{
         width: 100%;
         object-fit: cover;
@@ -90,6 +90,67 @@
     .card_informacion_precio p{
         color: #fff;
     }
+    /* TARJETA CARRITO */
+    .card_informacion_carrito{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* AÑADIR */
+    .card_informacion_add{
+        background-color: var(--rojo-oscuro);
+        width: max-content;
+        padding: 1px 20px;
+        font-size: 1.1rem;
+        color: #ddd;
+        transition: background-color .4s, color .4s;
+    }
+    .card_informacion_add:hover{
+        background-color: var(--rojo-oscuro-claro);
+        color: #fff;
+    }
+    /* CANTIDAD */
+    .card_informacion_carrito_cantidad{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+    #add,#remove{
+        width: 30px;
+        height: 30px;
+        background-color: var(--gris);
+        border: 1px solid rgba(0,0,0,.8);
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color .4s;
+        color: #fff;
+    }
+    #add{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    #remove{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    #add:hover,#remove:hover{
+        background-color: var(--rojo-oscuro-claro);
+    }
+    #cantidadTarjeta{
+        width: 35px;
+        height: 30px;
+        border: 1px solid rgba(0,0,0,.8);
+        text-align: center;
+        -moz-appearance: textfield;
+    }
+    #cantidadTarjeta::-webkit-inner-spin-button,#cantidadTarjeta::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+    }
+    #cantidadTarjeta:focus{
+        outline: none;
+    }
+
 /* CONTENEDOR DERECHA */
 .main_container_derecha{
     /* border: 1px solid #0f0; */

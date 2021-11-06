@@ -6,19 +6,45 @@ const running = document.getElementById("running");
 let contenedorIzquierdo = document.querySelector(".main_container_izquierda_tarjetas");
 
 function pintarTarjeta(){
-    contenedorIzquierdo.insertAdjacentHTML("beforeend",`
-        <div class="card">
-            <img src="" alt="" class="card_imagenes">
-            <div class="card_informacion">
-                <h3 class="card_informacion_titulo"></h3>
-                <p class="card_informacion_texto"></p>
-                <div class="card_informacion_precio">
-                    <h3>Precio</h3>
-                    <p></p>
+    if(sessionStorage.getItem("usuario") != null){
+        contenedorIzquierdo.insertAdjacentHTML("beforeend",`
+            <div class="card">
+                <img src="" alt="" class="card_imagenes">
+                <div class="card_informacion">
+                    <h3 class="card_informacion_titulo"></h3>
+                    <p class="card_informacion_texto"></p>
+                    <div class="card_informacion_precio">
+                        <h3>Precio</h3>
+                        <p></p>
+                    </div>
+                    <div class="card_informacion_carrito">
+                        <div class="card_informacion_carrito_cantidad">
+                            <button type="button" id="add">+</button>
+                            <input type="number" name="cantidad" id="cantidadTarjeta" maxlength="999" minlength="0" value="1">
+                            <button type="button" id="remove">-</button>
+                        </div>
+                        <div class="card_informacion_add">
+                            <p>Añadir</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    `);
+        `);
+    }else{
+        contenedorIzquierdo.insertAdjacentHTML("beforeend",`
+            <div class="card">
+                <img src="" alt="" class="card_imagenes">
+                <div class="card_informacion">
+                    <h3 class="card_informacion_titulo"></h3>
+                    <p class="card_informacion_texto"></p>
+                    <div class="card_informacion_precio">
+                        <h3>Precio</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        `);
+    }
 }
 
 function pintarTabla(lista){
