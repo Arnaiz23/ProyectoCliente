@@ -39,6 +39,7 @@ Pagina preguntas
 ----------------------------------------------------------------------
 Pagina de aterrizaje
     Una vez estes logeado, el boton de iniciar sesion, cambiara a administracion de usuario
+    Si estas logeado con el usuarios administrador, al lado de iniciar sesion o mi cuenta, que salga un boton que te lleve a la pagina (admin.html)
 ----------------------------------------------------------------------
 Tarjetas 
     Añadir el boton de añadir al carrito (Solo en caso de que este registrado)
@@ -102,6 +103,8 @@ JS
         Sesion iniciada OK (a medias, 2 opciones [por tiempo, poner una alerta por si no quieres que te cierre la sesion] [dandole tu al boton])
     Preguntas tipicas OK
     Preguntas del usuario NO
+        Si no tienes cuenta, que te salga ademas un campo para poner el correctos
+        Si tienes cuenta, que se quede como esta ahora
     Tarjetas NO
     Filtro precio OK
     Filtro (buscar, marca, tipo) NO [en proceso]
@@ -129,3 +132,31 @@ Datos de futbol y esos
 Futbol -> https://www.futbolmania.com/es/fy6239
 
 git -> https://github.com/Arnaiz23/ProyectoCliente.git
+
+
+---------------------QUE FALTA-----------------------------------
+7-11
+    Aterrizaje  
+        -Completar datos de los JSON
+        -Filtrar por marca y tipo
+        -Modificar el valor del carrito
+    Inicio de sesion
+        -Completar JSON usuarios (Añadir mas y añadir nombre,direccion y esas cosas)
+        -Validar inicio
+        -Guardar el valor del usuario en localStorage (intentar crear un campo con letras y numero aleatorios random)
+        -Validar y realizar el registro
+    Mi cuenta
+        -Completar datos
+        -Administrar cuenta (Cambiar nombre, contraseña, eliminar cuenta)
+    Carrito
+        -Si estas logoeado, darle funcionalidad
+        -Si no lo estas, sacar una alerta que te indique que debes logearte y al aceptar, te lleva a la pagina de registro/inicio
+    Preguntas
+        -Cambiar un poco las cosas
+        -Si no estas logeado, añadir el cuadro para el correo
+    Admin
+        -Darle funcionalidad
+            -Cuando se le de a añadir, que salga un div que tengas que rellenar
+        -Añadir un boton confirmar, para guardarlo del todo
+
+    Modificar los js para que no me den errores (hecho por el momento)

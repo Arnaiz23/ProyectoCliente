@@ -6,7 +6,7 @@ const running = document.getElementById("running");
 let contenedorIzquierdo = document.querySelector(".main_container_izquierda_tarjetas");
 
 function pintarTarjeta(){
-    if(sessionStorage.getItem("usuario") != null){
+    if(localStorage.getItem("usuario") != null){
         contenedorIzquierdo.insertAdjacentHTML("beforeend",`
             <div class="card">
                 <img src="" alt="" class="card_imagenes">

@@ -5,6 +5,7 @@
     --gris:  #6c6c6c;
     --gris-claro:  #d5d5d6;
     --fucsia: #e0d;
+    --verde: #3b3;
 }
 body{
     font-family: 'Libre Franklin', sans-serif;
@@ -42,15 +43,21 @@ body{
             margin-right: 10px;
         }
         /* BOTON INICIO SESION */
-        .header_nav_opciones_inicio{
+        /* .header_nav_opciones_inicio{
             background-color: var(--rojo-oscuro-claro);
             padding: 10px;
             border-radius: 5px;
-        }
+        } */
         .header_nav_opciones_inicio span{
             margin-right: 10px;
         }
+        #administrar_sesion{
+            background-color: var(--verde);
+        }
         .header_nav_opciones_inicio a{
+            background-color: var(--rojo-oscuro-claro);
+            padding: 10px;
+            border-radius: 5px;
             color: #fff;
             text-decoration: none;
             font-weight: 500;

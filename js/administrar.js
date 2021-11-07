@@ -1,13 +1,13 @@
 const btnCerrarSesion = document.querySelector(".header_nav_opciones_inicio");
 
 function cerrarSesion(){
-    sessionStorage.removeItem("usuario");
+    localStorage.removeItem("usuario");
     location.href = "index.html";
 }
 
 function cerrarSesion2(){
     setTimeout(()=>{
-        sessionStorage.removeItem("usuario");
+        localStorage.removeItem("usuario");
         location.reload();
     },60000);
     // 1 MINUTO

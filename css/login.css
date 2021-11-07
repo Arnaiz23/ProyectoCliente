@@ -69,6 +69,7 @@
             border-bottom: 2px solid var(--gris-claro);
             margin-bottom: 20px;
             width: 70%;
+            color: #fff;
         }
         .input_datos:focus{
             outline: none;

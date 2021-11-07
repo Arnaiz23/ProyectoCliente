@@ -9,9 +9,13 @@ const login = document.querySelector("#login");
 const register = document.querySelector("#register");
 // const fragmento = document.createDocumentFragment();
 
+// ----------------------------------------------------------------------
 window.onload = ()=>{
     pintarRegistro();
+    getUsuario();
 }
+// ----------------------------------------------------------------------
+
 // CONFIGURACION LOGIN
 login.addEventListener("click",()=>{
     pintarLogin();
@@ -76,11 +80,29 @@ function pintarLogin(){
 
     // FUNCION INICIAR SESION
         let validar_login = document.querySelector("#boton_sesion_login");
+        let usuario_login = document.getElementById("user_name");
+        let password_login = document.getElementById("password");
         validar_login.addEventListener("click",()=>{
-            alert("Iniciando");
-            sessionStorage.setItem("usuario","Adrian");
-            location.href = "index.html";
+            listaUsuario.forEach(texto => {
+                if(texto.usuario == usuario_login.value){
+                    if(texto.password == password_login.value){
+                        alert("Iniciando");
+                        localStorage.setItem("usuario",texto.usuario);
+                        location.href = "index.html";
+                    }else{
+                        console.log("contraseña incorrecta");
+                    }
+                }else{
+                    console.log("usuario no existe");
+                }
+            });
+            // alert("Iniciando");
+            // localStorage.setItem("usuario","Adrian");
+            // location.href = "index.html";
         });
+        
+
+        
 
     // FUNCION INICIO
         let registro = document.querySelector("#boton_sesion_contrario");
@@ -88,5 +110,4 @@ function pintarLogin(){
             pintarRegistro();
         });
 }
-
 
