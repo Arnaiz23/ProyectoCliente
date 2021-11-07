@@ -12,3 +12,20 @@ function pintarCarrito(){
     `);
 }
 
+if(localStorage.getItem("usuario") == null){
+    document.querySelector("main").insertAdjacentHTML("beforebegin",`
+        <div class="contenedor_informativo_logear">
+            <div class="contenedor_informativo_logear_texto">
+                <p>Lo sentimos, para poder acceder a esta pestaña debes iniciar sesión</p>
+                <div class="contenedor_informativo_logear_texto_boton">
+                    <button type="button">Iniciar sesion</button>
+                </div>
+            </div>
+        </div>
+    `);
+    // BOTON REGRESAR POR NO ESTAR LOGEADO
+    document.querySelector(".contenedor_informativo_logear_texto_boton button").addEventListener("click",()=>{
+        location.href = "login.html";
+    });
+    document.body.style.overflow = "hidden";
+}

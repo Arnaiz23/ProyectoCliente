@@ -62,43 +62,51 @@ function pintarTabla(lista){
 }
 
 futbol.addEventListener("click",()=>{
-    borrarTarjetas();
-    pintarTabla(listaf);
-    eliminarMarca();
-    insertarMarca(listaf);
-    eliminarTipo();
-    insertarTipo(listaf);
-    localStorage.setItem("lista",JSON.stringify(listaf));
+    getInfo().then(deporte =>{
+        borrarTarjetas();
+        pintarTabla(deporte[0]);
+        eliminarMarca();
+        insertarMarca(deporte[0]);
+        eliminarTipo();
+        insertarTipo(deporte[0]);
+        localStorage.setItem("indice","0");
+    });
     regresarFiltro();
 });
 baloncesto.addEventListener("click",()=>{
-    borrarTarjetas();
-    pintarTabla(listab);
-    eliminarMarca();
-    insertarMarca(listab);
-    eliminarTipo();
-    insertarTipo(listab);
-    localStorage.setItem("lista",JSON.stringify(listab));
+    getInfo().then(deporte =>{
+        borrarTarjetas();
+        pintarTabla(deporte[1]);
+        eliminarMarca();
+        insertarMarca(deporte[1]);
+        eliminarTipo();
+        insertarTipo(deporte[1]);
+        localStorage.setItem("indice","1");
+    });
     regresarFiltro();
 });
 voleibol.addEventListener("click",()=>{
-    borrarTarjetas();
-    pintarTabla(listav);
-    eliminarMarca();
-    insertarMarca(listav);
-    eliminarTipo();
-    insertarTipo(listav);
-    localStorage.setItem("lista",JSON.stringify(listav));
+    getInfo().then(deporte =>{
+        borrarTarjetas();
+        pintarTabla(deporte[2]);
+        eliminarMarca();
+        insertarMarca(deporte[2]);
+        eliminarTipo();
+        insertarTipo(deporte[2]);
+        localStorage.setItem("indice","2");
+    });
     regresarFiltro();
 });
 running.addEventListener("click",()=>{
-    borrarTarjetas();
-    pintarTabla(listar);
-    eliminarMarca();
-    insertarMarca(listar);
-    eliminarTipo();
-    insertarTipo(listar);
-    localStorage.setItem("lista",JSON.stringify(listar));
+    getInfo().then(deporte =>{
+        borrarTarjetas();
+        pintarTabla(deporte[3]);
+        eliminarMarca();
+        insertarMarca(deporte[3]);
+        eliminarTipo();
+        insertarTipo(deporte[3]);
+        localStorage.setItem("indice","3");
+    });
     regresarFiltro();
 });
 

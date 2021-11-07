@@ -74,3 +74,42 @@
         cursor: pointer;
         font-size: 1.2rem;
     }
+
+
+/* INFORMACION NO LOGEADO */
+.contenedor_informativo_logear{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.contenedor_informativo_logear_texto{
+    background-color: #fff;
+    display: inline-block;
+    padding: 40px;
+    font-size: 1.1rem;
+}
+.contenedor_informativo_logear_texto_boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.contenedor_informativo_logear_texto_boton button{
+    padding: 10px 20px;
+    background-color: var(--rojo-oscuro);
+    box-shadow: 2px 2px 2px #000;
+    border: none;
+    color: #ddd;
+    cursor: pointer;
+    transition: background-color .4s, color .4s;
+}
+.contenedor_informativo_logear_texto_boton button:hover{
+    background-color: var(--rojo-oscuro-claro);
+    color: #fff;
+}

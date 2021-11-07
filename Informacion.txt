@@ -148,9 +148,9 @@ git -> https://github.com/Arnaiz23/ProyectoCliente.git
     Mi cuenta
         -Completar datos
         -Administrar cuenta (Cambiar nombre, contraseña, eliminar cuenta)
+        -Eliminar hecho (falta eliminar el usuario de vd)
     Carrito
         -Si estas logoeado, darle funcionalidad
-        -Si no lo estas, sacar una alerta que te indique que debes logearte y al aceptar, te lleva a la pagina de registro/inicio
     Preguntas
         -Cambiar un poco las cosas
         -Si no estas logeado, añadir el cuadro para el correo
@@ -160,3 +160,4 @@ git -> https://github.com/Arnaiz23/ProyectoCliente.git
         -Añadir un boton confirmar, para guardarlo del todo
 
     Modificar los js para que no me den errores (hecho por el momento)
+    En caso de que al final quiera, poner un boton ir arriba

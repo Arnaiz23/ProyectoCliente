@@ -10,8 +10,8 @@
     },
     {
         "imagen" : "../img/voley.png",
-        "nombre" : "adidas",
-        "marca" : "Adidas",
+        "nombre" : "Nike",
+        "marca" : "Nike",
         "tipo" : "balones",
         "descripcionCorta" : "hola",
         "descripcion" : "adios",

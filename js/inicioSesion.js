@@ -12,7 +12,7 @@ const register = document.querySelector("#register");
 // ----------------------------------------------------------------------
 window.onload = ()=>{
     pintarRegistro();
-    getUsuario();
+    getUsuario().then(valor => listaUsuario = valor)
 }
 // ----------------------------------------------------------------------
 
@@ -90,10 +90,10 @@ function pintarLogin(){
                         localStorage.setItem("usuario",texto.usuario);
                         location.href = "index.html";
                     }else{
-                        console.log("contraseña incorrecta");
+                        alert("contraseña incorrecta");
                     }
                 }else{
-                    console.log("usuario no existe");
+                    alert("usuario no existe");
                 }
             });
             // alert("Iniciando");

@@ -156,6 +156,9 @@
     /* border: 1px solid #0f0; */
     width: 25%;
     padding: 15px 0;
+    height: max-content;
+    position: sticky;
+    top: 10px;
 }
     /* CARRITO */
     .main_container_derecha_titulo{

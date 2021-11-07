@@ -2,7 +2,10 @@
     {
         "usuario" : "Adrian",
         "password" : "1234",
-        "tipo" : "usuario"
+        "tipo" : "usuario",
+        "nombre": "Adrian",
+        "apellidos" : "Arnaiz Fernández",
+        "correo" : "adrian@gmail.com"
     },
     {
         "usuario" : "admin",

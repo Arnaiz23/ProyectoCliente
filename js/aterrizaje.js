@@ -108,7 +108,7 @@ function filtroBuscar(lista){
             }
         }
     });
-    console.log(filtrada)
+    // console.log(filtrada)
     // let filtrada = lista.filter(elemento => elemento.nombre.includes(buscar.value));
     borrarTarjetas();
     pintarTabla(filtrada);
@@ -117,7 +117,8 @@ function filtroBuscar(lista){
 const botonBuscar = document.getElementById("buscar_filtro");
 
 botonBuscar.addEventListener("click",()=>{
-    let lista = localStorage.getItem("lista");
-    let lista2 = JSON.parse(lista);
-    filtroBuscar(lista2);
+    let indice = localStorage.getItem("indice");
+    getInfo().then(deporte => {
+        filtroBuscar(deporte[indice]);
+    });
 })
