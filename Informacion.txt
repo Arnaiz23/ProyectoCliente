@@ -138,7 +138,6 @@ git -> https://github.com/Arnaiz23/ProyectoCliente.git
 7-11
     Aterrizaje  
         -Completar datos de los JSON
-        -Filtrar por marca y tipo (en proceso)
         -Modificar el valor del carrito
     Inicio de sesion
         -Completar JSON usuarios (Añadir mas y añadir nombre,direccion y esas cosas)
@@ -148,7 +147,7 @@ git -> https://github.com/Arnaiz23/ProyectoCliente.git
     Mi cuenta
         -Completar datos
         -Administrar cuenta (Cambiar nombre, contraseña, eliminar cuenta)
-        -Eliminar hecho (falta eliminar el usuario de vd)
+        -Eliminar OK (falta eliminar el usuario de vd)
         -Añadir un boton para actualizar la informacion (estilo el de eliminar pero cambias a actualizar informacion)
     Carrito
         -Si estas logeado, darle funcionalidad

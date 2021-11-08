@@ -109,7 +109,7 @@ function filtroBuscar(lista){
     
     lista.filter(elemento => {
         for(let clave in elemento){
-            if(elemento[clave].toLowerCase().includes(buscar.value)){
+            if(elemento[clave].toLowerCase().includes(buscar.value.toLowerCase())){
                 if(!filtrada.includes(elemento)){
                     filtrada.push(elemento);
                 }
@@ -122,32 +122,90 @@ function filtroBuscar(lista){
     pintarTabla(filtrada);
 }
 
+buscar.addEventListener("keypress",(e)=>{
+    if(e.keyCode == 13){
+        console.log("hola")
+        getInfo().then(deporte =>{
+            filtroBuscar(deporte[localStorage.getItem("indice")]);
+        });
+    }
+});
+buscar.addEventListener("focusout",()=>{
+    if(buscar.value == ""){
+        getInfo().then(deporte =>{
+            borrarTarjetas();
+            pintarTabla(deporte[localStorage.getItem("indice")]);
+        });
+    }
+})
+
 const botonBuscar = document.getElementById("buscar_filtro");
 
 botonBuscar.addEventListener("click",()=>{
-    let indice = localStorage.getItem("indice");
-    getInfo().then(deporte => {
+    // let indice = localStorage.getItem("indice");
+    /* getInfo().then(deporte => {
         filtroBuscar(deporte[indice]);
         filtrar();
-    });
+    }); */
+    filtrar();
 })
 
 // filtrar
 function filtrar(){
-    let lista = [];
+    let lista = new Array();
+    let lista2 = new Array();
+    let lista3 = new Array();
+    let marca = 0;
+    let cantidad = 0;
+    let opcion = 0;
     let filtroSeleccionada = document.querySelectorAll(".opciones_filtro input");
     filtroSeleccionada.forEach(texto => {
         if(texto.checked){
-            getInfo().then(elemento =>{
+            cantidad++;
+            getInfo().then(elemento =>{            
                 elemento[localStorage.getItem("indice")].filter(valor => {
                     if(valor.marca == texto.id){
                         lista.push(valor);
+                        marca++;
+                    }
+                    if(valor.tipo == texto.id){
+                        lista3.push(valor);
                     }
                 });
-                console.log(lista)
-                borrarTarjetas();
-                pintarTabla(lista);
+                lista.forEach(valor =>{
+                    if(valor.tipo == texto.id){
+                        lista2.push(valor);
+                        opcion = 1;
+                    }
+                });
+                if(marca == 0){
+                    opcion = 2;
+                }
+                switch(opcion){
+                    // SOLO MARCA
+                    case 0:
+                        borrarTarjetas();
+                        pintarTabla(lista);
+                        break;
+                    // MARCA Y TIPO
+                    case 1:
+                        borrarTarjetas();
+                        pintarTabla(lista2);
+                        break;
+                    // SOLO TIPO
+                    case 2:
+                        borrarTarjetas();
+                        pintarTabla(lista3);
+                        break;
+                }
             });
         }
-    })
+    });
+    if(cantidad == 0){
+        getInfo().then(elemento => {
+            borrarTarjetas();
+            pintarTabla(elemento[localStorage.getItem("indice")]);
+        })
+    }
+    
 }
