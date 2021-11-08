@@ -260,8 +260,13 @@
     }
 
 
-@media screen and (max-width:1366px) {
+@media screen and (max-width:1380px) {
     .main_container_derecha_buscar{
         width: 70%;
+        margin: 20px auto;
+    }
+    .main_container_derecha{
+        top: -10px;
+        padding-top: 0;
     }
 }

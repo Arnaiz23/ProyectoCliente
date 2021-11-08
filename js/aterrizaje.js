@@ -71,22 +71,30 @@ function ordenarMayor(lista){
 
 // FILTRO
 document.getElementById("filtroMenor").addEventListener("click",()=>{
-    let lista = localStorage.getItem("lista");
-    let lista2 = JSON.parse(lista);
-    ordenarMenor(lista2);
+    let lista2;
+    let indice = parseInt(localStorage.getItem("indice"));
+    getInfo().then(lista =>{
+        lista2 = lista[localStorage.getItem("indice")];
+        ordenarMenor(lista2);
+    });
+    console.log(lista2)
 });
 
 document.getElementById("filtroMayor").addEventListener("click",()=>{
-    let lista = localStorage.getItem("lista");
-    let lista2 = JSON.parse(lista);
-    ordenarMayor(lista2);
+    let lista2;
+    getInfo().then(lista =>{
+        lista2 = lista[localStorage.getItem("indice")];
+        ordenarMayor(lista2);
+    });
 });
 
 document.getElementById("filtroNormal").addEventListener("click",()=>{
-    let lista = localStorage.getItem("lista");
-    let lista2 = JSON.parse(lista);
-    borrarTarjetas();
-    pintarTabla(lista2);
+    let lista2;
+    getInfo().then(lista =>{
+        lista2 = lista[localStorage.getItem("indice")];
+        borrarTarjetas();
+        pintarTabla(lista2);
+    });
 });
 
 function regresarFiltro(){
@@ -108,6 +116,7 @@ function filtroBuscar(lista){
             }
         }
     });
+    filtrar();
     // console.log(filtrada)
     // let filtrada = lista.filter(elemento => elemento.nombre.includes(buscar.value));
     borrarTarjetas();
@@ -122,3 +131,13 @@ botonBuscar.addEventListener("click",()=>{
         filtroBuscar(deporte[indice]);
     });
 })
+
+// filtrar
+function filtrar(){
+    let filtroSeleccionada = document.querySelectorAll(".opciones_filtro input");
+    filtroSeleccionada.forEach(texto => {
+        if(texto.checked){
+            console.log(texto)
+        }
+    })
+}

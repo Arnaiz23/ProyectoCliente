@@ -1,7 +1,7 @@
 const contenedor_precio = document.querySelector(".main_container_derecha_carrito");
 
 window.onload = async ()=>{
-    if(location.href != "http://localhost:8080/preguntas.html" && location.href != "http://localhost:8080/carrito.html"){
+    if(!location.href.includes("preguntas.html") && !location.href.includes("carrito.html")){
         getInfo().then(deporte => {
             pintarTabla(deporte[0]);
             insertarMarca(deporte[0]);
@@ -62,7 +62,7 @@ window.onload = async ()=>{
             contenedor_precio.innerHTML = "<p>Inicia sesión para acceder</p>";
         } */
     }else{
-        if(location.href == "http://localhost:8080/carrito.html"){
+        if(location.href.includes("carrito.html")){
             contenedor_precio.insertAdjacentHTML("beforeend",`
                     <p>0 €</p>
             `);
@@ -84,7 +84,9 @@ window.onload = async ()=>{
                         `;
                     }
                 }else{
-                    contenedor_precio.innerHTML = "<p>Inicia sesión para acceder</p>";
+                    if(location.href.includes("carrito.html")){
+                        contenedor_precio.innerHTML = "<p>Inicia sesión para acceder</p>";
+                    }
                 }
             });
         });
