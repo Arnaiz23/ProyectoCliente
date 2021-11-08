@@ -38,7 +38,7 @@ function insertarTipo(lista){
         tipoAntiguo.insertAdjacentHTML("beforeend",`
         <div class="opciones_filtro">
             <input type="checkbox" name="tipo[]" id="${texto}">
-            <label for="camiseta">${texto}</label>
+            <label for="${texto}">${texto}</label>
         </div>
         `);
     });
@@ -109,14 +109,13 @@ function filtroBuscar(lista){
     
     lista.filter(elemento => {
         for(let clave in elemento){
-            if(elemento[clave].includes(buscar.value)){
+            if(elemento[clave].toLowerCase().includes(buscar.value)){
                 if(!filtrada.includes(elemento)){
                     filtrada.push(elemento);
                 }
             }
         }
     });
-    filtrar();
     // console.log(filtrada)
     // let filtrada = lista.filter(elemento => elemento.nombre.includes(buscar.value));
     borrarTarjetas();
@@ -129,15 +128,26 @@ botonBuscar.addEventListener("click",()=>{
     let indice = localStorage.getItem("indice");
     getInfo().then(deporte => {
         filtroBuscar(deporte[indice]);
+        filtrar();
     });
 })
 
 // filtrar
 function filtrar(){
+    let lista = [];
     let filtroSeleccionada = document.querySelectorAll(".opciones_filtro input");
     filtroSeleccionada.forEach(texto => {
         if(texto.checked){
-            console.log(texto)
+            getInfo().then(elemento =>{
+                elemento[localStorage.getItem("indice")].filter(valor => {
+                    if(valor.marca == texto.id){
+                        lista.push(valor);
+                    }
+                });
+                console.log(lista)
+                borrarTarjetas();
+                pintarTabla(lista);
+            });
         }
     })
 }
