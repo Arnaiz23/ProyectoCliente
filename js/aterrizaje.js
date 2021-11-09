@@ -124,7 +124,6 @@ function filtroBuscar(lista){
 
 buscar.addEventListener("keypress",(e)=>{
     if(e.keyCode == 13){
-        console.log("hola")
         getInfo().then(deporte =>{
             filtroBuscar(deporte[localStorage.getItem("indice")]);
         });
@@ -167,6 +166,7 @@ function filtrar(){
                     if(valor.marca == texto.id){
                         lista.push(valor);
                         marca++;
+                        opcion = 0;
                     }
                     if(valor.tipo == texto.id){
                         lista3.push(valor);

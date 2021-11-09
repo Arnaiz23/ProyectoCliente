@@ -5,7 +5,8 @@
         "tipo" : "usuario",
         "nombre": "Adrian",
         "apellidos" : "Arnaiz Fernández",
-        "correo" : "adrian@gmail.com"
+        "correo" : "adrian@gmail.com",
+        "direccion" : ""
     },
     {
         "usuario" : "admin",

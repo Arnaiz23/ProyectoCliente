@@ -83,19 +83,41 @@ function pintarLogin(){
         let usuario_login = document.getElementById("user_name");
         let password_login = document.getElementById("password");
         validar_login.addEventListener("click",()=>{
-            listaUsuario.forEach(texto => {
+            let busqueda = listaUsuario.find((cuenta) => {
+                return cuenta.usuario == usuario_login.value
+            });
+            if(busqueda){
+                // if(busqueda.usuario == usuario_login.value){
+                    if(busqueda.password == password_login.value){
+                        alert("Iniciando");
+                        localStorage.setItem("usuario",busqueda.usuario);
+                        location.href = "index.html";
+                        contador = 1;
+                    }else{
+                        alert("contraseña incorrecta");
+                    }
+                // }
+            }else{
+                alert("usuario no existe");
+            }
+
+        
+
+            
+            /* listaUsuario.forEach(texto => {
                 if(texto.usuario == usuario_login.value){
                     if(texto.password == password_login.value){
                         alert("Iniciando");
                         localStorage.setItem("usuario",texto.usuario);
                         location.href = "index.html";
+                        contador = 1;
                     }else{
                         alert("contraseña incorrecta");
                     }
                 }else{
                     alert("usuario no existe");
                 }
-            });
+            }); */
             // alert("Iniciando");
             // localStorage.setItem("usuario","Adrian");
             // location.href = "index.html";

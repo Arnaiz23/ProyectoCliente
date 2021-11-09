@@ -158,6 +158,7 @@ git -> https://github.com/Arnaiz23/ProyectoCliente.git
         -Darle funcionalidad
             -Cuando se le de a añadir, que salga un div que tengas que rellenar
         -Añadir un boton confirmar, para guardarlo del todo
-
+    Clases
+        -Modificarlas
     Modificar los js para que no me den errores (hecho por el momento)
     En caso de que al final quiera, poner un boton ir arriba
