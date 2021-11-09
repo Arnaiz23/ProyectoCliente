@@ -27,9 +27,15 @@ window.onload = async ()=>{
                 }
             });
             if(localStorage.getItem("usuario") != null){
+                if(localStorage.getItem("carrito") == null){
+                    var valor = 0;
+                }else{
+                    valor = 0;
+                    carrito.forEach(producto => valor += parseInt(producto.precio));
+                }
                 // Sustituir el 0 por una variable del precio
                 contenedor_precio.insertAdjacentHTML("beforeend",`
-                    <p>0 €</p>
+                    <p>${valor.toFixed(2)} €</p>
                 `);
             }else{
                 contenedor_precio.innerHTML = "<p>Inicia sesión para acceder</p>";
@@ -63,9 +69,17 @@ window.onload = async ()=>{
         } */
     }else{
         if(location.href.includes("carrito.html")){
+            if(localStorage.getItem("carrito") == null){
+                var valor = 0;
+            }else{
+                valor = 0;
+                carrito.forEach(producto => valor += parseInt(producto.precio));
+            }
+            // Sustituir el 0 por una variable del precio
             contenedor_precio.insertAdjacentHTML("beforeend",`
-                    <p>0 €</p>
+                <p>${valor.toFixed(2)} €</p>
             `);
+            pintarCarrito();
         }
         getUsuario().then(valor=>{
             valor.forEach(dato =>{

@@ -6,7 +6,7 @@
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol sala Joma",
         "descripcion" : "adios",
-        "precio" : "26,50€"
+        "precio" : "26.50"
     },
     {
         "imagen" : "../img/Balón_adidas_España_Pro.jpg",
@@ -15,7 +15,7 @@
         "tipo" : "Balones",
         "descripcionCorta" : "Balón profesional de fútbol playa",
         "descripcion" : "adios",
-        "precio" : "140€"
+        "precio" : "140"
     },
     {
         "imagen" : "../img/Balón_Puma_LaLiga_1_Adrenalina_2021_2022_Hybrid.jpg",
@@ -24,7 +24,7 @@
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol Puma de La Liga española LFP 2021 2022",
         "descripcion" : "adios",
-        "precio" : "25€"
+        "precio" : "25"
     },
     {
         "imagen" : "../img/Balón_adidas_Tiro_League_TB.jpg",
@@ -33,7 +33,7 @@
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol adidas Team",
         "descripcion" : "adios",
-        "precio" : "30€"
+        "precio" : "30"
     },
     {
         "imagen" : "../img/Nike_Mercurial_Superfly_8_Pro_KM_FG.jpg",
@@ -42,7 +42,7 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol de Kylian Mbappé Nike FG",
         "descripcion" : "Botas de fútbol de Kylian Mbappé Nike FG para césped natural o artificial de última generación - lilas azuladas",
-        "precio" : "160€"
+        "precio" : "160"
     },
     {
         "imagen" : "../img/Nike_Phantom_GT2_Elite_SW_AG-PRO.jpg",
@@ -51,7 +51,7 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol Nike AG-PRO para césped artificial",
         "descripcion" : "Botas de fútbol Nike AG-PRO para césped artificial - verdes, negra",
-        "precio" : "270€"
+        "precio" : "270"
     },
     {
         "imagen" : "../img/adidas_Predator_FREAK_FG.jpg",
@@ -60,7 +60,7 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol con tobillera sin cordones adidas FG",
         "descripcion" : "Botas de fútbol con tobillera sin cordones adidas FG para césped natural o artificial de última generación - blancas",
-        "precio" : "280€"
+        "precio" : "280"
     },
     {
         "imagen" : "../img/adidas_X_SPEEDFLOW.1_Adizero_FG.jpg",
@@ -69,7 +69,7 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol adidas FG para césped natural o artificial",
         "descripcion" : "Botas de fútbol adidas FG para césped natural o artificial de última generación - blancas, verdes",
-        "precio" : "220€"
+        "precio" : "220"
     },
     {
         "imagen" : "../img/Puma_Future_Z_1.2_FG_AG.jpg",
@@ -78,6 +78,6 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol Puma FG/AG para césped natural o artificial",
         "descripcion" : "Botas de fútbol Puma FG/AG para césped natural o artificial - azules, verdes",
-        "precio" : "200€"
+        "precio" : "200"
     }
 ]

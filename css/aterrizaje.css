@@ -116,7 +116,7 @@
         align-items: center;
         width: 40%;
     }
-    #add,#remove{
+    .add,.remove{
         width: 30px;
         height: 30px;
         background-color: var(--gris);
@@ -126,28 +126,28 @@
         transition: background-color .4s;
         color: #fff;
     }
-    #add{
+    .add{
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
     }
-    #remove{
+    .remove{
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
     }
-    #add:hover,#remove:hover{
+    .add:hover,.remove:hover{
         background-color: var(--rojo-oscuro-claro);
     }
-    #cantidadTarjeta{
+    .cantidadTarjeta{
         width: 35px;
         height: 30px;
         border: 1px solid rgba(0,0,0,.8);
         text-align: center;
         -moz-appearance: textfield;
     }
-    #cantidadTarjeta::-webkit-inner-spin-button,#cantidadTarjeta::-webkit-outer-spin-button{
+    .cantidadTarjeta::-webkit-inner-spin-button,.cantidadTarjeta::-webkit-outer-spin-button{
         -webkit-appearance: none;
     }
-    #cantidadTarjeta:focus{
+    .cantidadTarjeta:focus{
         outline: none;
     }
 

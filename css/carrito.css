@@ -52,6 +52,7 @@
     width: 75%;
     margin: 30px 20px;
     padding: 40px 20px;
+    min-height: 309px;
 }
 .linea{
     border: 1px solid #000;
@@ -74,7 +75,11 @@
         cursor: pointer;
         font-size: 1.2rem;
     }
-
+#carrito_vacio{
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 7%;
+}
 
 /* INFORMACION NO LOGEADO */
 .contenedor_informativo_logear{

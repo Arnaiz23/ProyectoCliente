@@ -19,11 +19,11 @@ function pintarTarjeta(){
                     </div>
                     <div class="card_informacion_carrito">
                         <div class="card_informacion_carrito_cantidad">
-                            <button type="button" id="add">+</button>
-                            <input type="number" name="cantidad" id="cantidadTarjeta" maxlength="999" minlength="0" value="1">
-                            <button type="button" id="remove">-</button>
+                            <button type="button" class="add" onclick="masCantidad()">+</button>
+                            <input type="number" name="cantidad" class="cantidadTarjeta" maxlength="999" minlength="0" value="1">
+                            <button type="button" class="remove" onclick="menosCantidad()">-</button>
                         </div>
-                        <div class="card_informacion_add">
+                        <div class="card_informacion_add" onclick="addCarrito()">
                             <p>Añadir</p>
                         </div>
                     </div>
@@ -54,10 +54,16 @@ function pintarTabla(lista){
         let titulo_tarjeta = document.querySelectorAll(".card_informacion_titulo")[indice];
         let parrafo_tarjeta = document.querySelectorAll(".card_informacion_texto")[indice];
         let precio = document.querySelectorAll(".card_informacion_precio p")[indice];
+        let boton = document.querySelectorAll(".card_informacion_add p")[indice];
+        let cantidad = document.querySelectorAll(".cantidadTarjeta")[indice];
+        boton.parentElement.dato = texto;
+        boton.dato = texto;
+        boton.dato2 = cantidad;
+        boton.parentElement.dato2 = cantidad;
         imagen.src = texto.imagen;
         titulo_tarjeta.innerHTML = texto.nombre;
         parrafo_tarjeta.innerHTML = texto.descripcionCorta;
-        precio.innerHTML = texto.precio;
+        precio.innerHTML = texto.precio+"€";
     });
 }
 
