@@ -6,7 +6,11 @@
         "nombre": "Adrian",
         "apellidos" : "Arnaiz Fernández",
         "correo" : "adrian@gmail.com",
-        "direccion" : ""
+        "direcciones" : 
+            {
+                "direccion1" : "Av. de la Onu",
+                "direccion2" : "Calle España"
+            }
     },
     {
         "usuario" : "admin",

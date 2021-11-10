@@ -6,6 +6,7 @@
     --gris-claro:  #d5d5d6;
     --fucsia: #e0d;
     --verde: #3b3;
+    --verde-oscuro: rgb(37, 145, 37);
 }
 body{
     font-family: 'Libre Franklin', sans-serif;

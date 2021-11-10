@@ -8,9 +8,6 @@ class Usuario{
         this.correo = correo;
         this.direccion = direccion;
     }
-    addUser(){
-
-    }
     eliminarUsuario(){
 
     }

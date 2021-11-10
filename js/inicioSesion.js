@@ -12,7 +12,14 @@ const register = document.querySelector("#register");
 // ----------------------------------------------------------------------
 window.onload = ()=>{
     pintarRegistro();
-    getUsuario().then(valor => listaUsuario = valor)
+    if(localStorage.getItem("listaUsuario") != null){
+        listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
+    }else{
+        getUsuario().then(valor => {
+            listaUsuario = valor;
+            localStorage.setItem("listaUsuario",JSON.stringify(listaUsuario))
+        })
+    }
 }
 // ----------------------------------------------------------------------
 
@@ -55,7 +62,43 @@ function pintarRegistro(){
     // FUNCION REGISTRAR
         let validar_register = document.querySelector("#boton_sesion_register");
         validar_register.addEventListener("click",()=>{
-            alert("Registrado");
+            // alert("Registrado");
+            let usuario = document.getElementById("user_name");
+            let password = document.getElementById("password");
+            let mail = document.getElementById("email");
+            let listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
+            let terminos = document.getElementById("terminos");
+            // getUsuario().then(valor => {
+                // listaUsuario = valor;
+                let coincidencian = listaUsuario.find(nombre => {
+                    return nombre.usuario == usuario.value;
+                });
+                let coincidenciae = listaUsuario.find(nombre => {
+                    return nombre.correo == mail.value;
+                });
+                if(usuario.value != "" && mail.value != "" && password.value != ""){
+                    if(coincidencian == undefined){
+                        if(coincidenciae == undefined){
+                            if(terminos.checked){
+                                listaUsuario.push(new Usuario(usuario.value,password.value,"usuario","","",mail.value,""));
+                                localStorage.setItem("listaUsuario",JSON.stringify(listaUsuario));
+                                alert("Registrado");
+                                location.href = "index.html";
+                                localStorage.setItem("usuario",usuario.value);
+                            }else{
+                                alert("Hay que aceptar los términos para poder continuar");
+                            }
+                        }else{
+                            alert("Ya hay una cuenta con ese correo");
+                        }
+                    }else{
+                        alert("Este nombre de usuario ya esta en uso");
+                    }
+                }else{
+                    alert("Rellena todos los datos");
+                }
+                
+            // });
         });
     
     // FUNCION INICIO
@@ -132,4 +175,3 @@ function pintarLogin(){
             pintarRegistro();
         });
 }
-
