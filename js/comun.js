@@ -31,7 +31,7 @@ window.onload = async ()=>{
                     var valor = 0;
                 }else{
                     valor = 0;
-                    carrito.forEach(producto => valor += parseInt(producto.precio));
+                    carrito.forEach(producto => valor += parseFloat(producto.precio));
                 }
                 // Sustituir el 0 por una variable del precio
                 contenedor_precio.insertAdjacentHTML("beforeend",`
@@ -73,7 +73,7 @@ window.onload = async ()=>{
                 var valor = 0;
             }else{
                 valor = 0;
-                carrito.forEach(producto => valor += parseInt(producto.precio));
+                carrito.forEach(producto => valor += parseFloat(producto.precio));
             }
             // Sustituir el 0 por una variable del precio
             contenedor_precio.insertAdjacentHTML("beforeend",`

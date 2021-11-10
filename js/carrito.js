@@ -5,7 +5,7 @@ if(localStorage.getItem("carrito") == null){
 }else{
     precio = 0;
     var carrito = JSON.parse(localStorage.getItem("carrito"));
-    carrito.forEach(producto => precio += parseInt(producto.precio));
+    carrito.forEach(producto => precio += parseFloat(producto.precio));
 }
 
 function pintarCarrito(){
@@ -25,25 +25,27 @@ function pintarCarrito(){
         contenedor.insertAdjacentHTML("afterbegin",`
             <h2 id="carrito_vacio">El carrito esta vacío actualmente</h2>
         `);
+        document.querySelector(".main_container_izquierda_comprar p").style.cursor = "not-allowed";
     }
 }
-
-if(localStorage.getItem("usuario") == null){
-    document.querySelector("main").insertAdjacentHTML("beforebegin",`
-        <div class="contenedor_informativo_logear">
-            <div class="contenedor_informativo_logear_texto">
-                <p>Lo sentimos, para poder acceder a esta pestaña debes iniciar sesión</p>
-                <div class="contenedor_informativo_logear_texto_boton">
-                    <button type="button">Iniciar sesion</button>
+if(location.href.includes("carrito.html")){
+    if(localStorage.getItem("usuario") == null){
+        document.querySelector("main").insertAdjacentHTML("beforebegin",`
+            <div class="contenedor_informativo_logear">
+                <div class="contenedor_informativo_logear_texto">
+                    <p>Lo sentimos, para poder acceder a esta pestaña debes iniciar sesión</p>
+                    <div class="contenedor_informativo_logear_texto_boton">
+                        <button type="button">Iniciar sesion</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    `);
-    // BOTON REGRESAR POR NO ESTAR LOGEADO
-    document.querySelector(".contenedor_informativo_logear_texto_boton button").addEventListener("click",()=>{
-        location.href = "login.html";
-    });
-    document.body.style.overflow = "hidden";
+        `);
+        // BOTON REGRESAR POR NO ESTAR LOGEADO
+        document.querySelector(".contenedor_informativo_logear_texto_boton button").addEventListener("click",()=>{
+            location.href = "login.html";
+        });
+        document.body.style.overflow = "hidden";
+    }
 }
 
 function addCarrito(){

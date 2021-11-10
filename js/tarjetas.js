@@ -54,12 +54,14 @@ function pintarTabla(lista){
         let titulo_tarjeta = document.querySelectorAll(".card_informacion_titulo")[indice];
         let parrafo_tarjeta = document.querySelectorAll(".card_informacion_texto")[indice];
         let precio = document.querySelectorAll(".card_informacion_precio p")[indice];
-        let boton = document.querySelectorAll(".card_informacion_add p")[indice];
-        let cantidad = document.querySelectorAll(".cantidadTarjeta")[indice];
-        boton.parentElement.dato = texto;
-        boton.dato = texto;
-        boton.dato2 = cantidad;
-        boton.parentElement.dato2 = cantidad;
+        if(localStorage.getItem("usuario") != null){
+            let boton = document.querySelectorAll(".card_informacion_add p")[indice];
+            let cantidad = document.querySelectorAll(".cantidadTarjeta")[indice];
+            boton.parentElement.dato = texto;
+            boton.dato = texto;
+            boton.dato2 = cantidad;
+            boton.parentElement.dato2 = cantidad;
+        }
         imagen.src = texto.imagen;
         titulo_tarjeta.innerHTML = texto.nombre;
         parrafo_tarjeta.innerHTML = texto.descripcionCorta;
