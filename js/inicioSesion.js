@@ -66,7 +66,67 @@ function pintarRegistro(){
             let usuario = document.getElementById("user_name");
             let password = document.getElementById("password");
             let mail = document.getElementById("email");
-            let listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
+            // ---------------------------------------------------------
+            getUsuario().then(usuarios =>{
+                let coincidencian = usuarios.find(nombre => {
+                    return nombre.usuario == usuario.value;
+                });
+                let coincidenciae = usuarios.find(nombre => {
+                    return nombre.correo == mail.value;
+                });
+                if(usuario.value != "" && mail.value != "" && password.value != ""){
+                    if(coincidencian == undefined){
+                        if(coincidenciae == undefined){
+                            if(terminos.checked){
+                                // ------------------------------------------------
+                                let datos = `
+                                    "usuario" : "${usuario.value}",
+                                    "password" : "${password.value}",
+                                    "tipo" : "usuario",
+                                    "nombre": "",
+                                    "apellidos" : "",
+                                    "correo" : "${mail.value}",
+                                    "direcciones" : 
+                                        {
+                                            "direccion1" : ""
+                                        }
+                                `;
+                                fetch("../php/datos.php",{
+                                    method : "POST",
+                                    body : JSON.stringify(datos),
+                                    headers : {"Content-type" : "application/json"}
+                                }).then(function(response){
+                                    if(response.ok){
+                                        return response.text()
+                                    }else{
+                                        throw "Error en la llamada Ajax";
+                                    }
+                                }).then(function(texto) {
+                                    console.log(texto);
+                                    })
+                                    .catch(function(err) {
+                                        console.log(err);
+                                    });
+                                // -----------------------------------------------------
+                                alert("Registrado");
+                                location.href = "index.html";
+                                localStorage.setItem("usuario",usuario.value);
+                            }else{
+                                alert("Hay que aceptar los términos para poder continuar");
+                            }
+                        }else{
+                            alert("Ya hay una cuenta con ese correo");
+                        }
+                    }else{
+                        alert("Este nombre de usuario ya esta en uso");
+                    }
+                }else{
+                    alert("Rellena todos los datos");
+                }
+            });
+            // -----------------------------------------------------------
+            // USUARIOS CON LOCALSTORAGE
+            /* let listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
             let terminos = document.getElementById("terminos");
             // getUsuario().then(valor => {
                 // listaUsuario = valor;
@@ -96,7 +156,7 @@ function pintarRegistro(){
                     }
                 }else{
                     alert("Rellena todos los datos");
-                }
+                } */
                 
             // });
         });
@@ -126,23 +186,26 @@ function pintarLogin(){
         let usuario_login = document.getElementById("user_name");
         let password_login = document.getElementById("password");
         validar_login.addEventListener("click",()=>{
-            let busqueda = listaUsuario.find((cuenta) => {
-                return cuenta.usuario == usuario_login.value
+            getUsuario().then(usuarios =>{
+                let busqueda = usuarios.find((cuenta) => {
+                    return cuenta.usuario == usuario_login.value
+                });
+                if(busqueda){
+                    // if(busqueda.usuario == usuario_login.value){
+                        if(busqueda.password == password_login.value){
+                            alert("Iniciando");
+                            localStorage.setItem("usuario",busqueda.usuario);
+                            location.href = "index.html";
+                            contador = 1;
+                        }else{
+                            alert("contraseña incorrecta");
+                        }
+                    // }
+                }else{
+                    alert("usuario no existe");
+                }
             });
-            if(busqueda){
-                // if(busqueda.usuario == usuario_login.value){
-                    if(busqueda.password == password_login.value){
-                        alert("Iniciando");
-                        localStorage.setItem("usuario",busqueda.usuario);
-                        location.href = "index.html";
-                        contador = 1;
-                    }else{
-                        alert("contraseña incorrecta");
-                    }
-                // }
-            }else{
-                alert("usuario no existe");
-            }
+            
 
         
 
