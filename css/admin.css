@@ -88,3 +88,7 @@ main{
     .ver_opciones{
         display: flex;
     }
+    .adminProductoImagen{
+        width: 60%;
+        margin-left: 20px;
+    }

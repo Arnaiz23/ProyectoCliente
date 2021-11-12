@@ -23,7 +23,7 @@ document.getElementById("adminProductos").addEventListener("click",async ()=>{
             productos.forEach(producto => {
                 tabla.insertAdjacentHTML("afterend",`
                     <tr>
-                        <td><img src="${producto.imagen}" style="width:20%"></td>
+                        <td><img src="${producto.imagen}" class="adminProductoImagen"></td>
                         <td>${producto.nombre}</td>
                         <td>${producto.descripcionCorta}</td>
                         <td>${producto.descripcion}</td>
