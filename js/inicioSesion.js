@@ -12,14 +12,14 @@ const register = document.querySelector("#register");
 // ----------------------------------------------------------------------
 window.onload = ()=>{
     pintarRegistro();
-    if(localStorage.getItem("listaUsuario") != null){
+    /* if(localStorage.getItem("listaUsuario") != null){
         listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
     }else{
         getUsuario().then(valor => {
             listaUsuario = valor;
             localStorage.setItem("listaUsuario",JSON.stringify(listaUsuario))
         })
-    }
+    } */
 }
 // ----------------------------------------------------------------------
 

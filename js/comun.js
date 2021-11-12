@@ -9,23 +9,25 @@ window.onload = async ()=>{
             localStorage.setItem("indice","0");
         });
         getUsuario().then(valor=>{
-            valor.forEach(dato =>{
-                // USUARIO
-                if(localStorage.getItem("usuario") != null){
-                    let boton_administracion = document.querySelector(".header_nav_opciones_inicio");
-                    if(dato.tipo == "admin" && dato.usuario == localStorage.getItem("usuario")){
-                        // if(localStorage.getItem("usuario") == texto.usuario){
-                            boton_administracion.innerHTML = `
-                            <a href="admin.html" id="administrar_sesion"><span class="icon-cog"></span>ADMIN</a>
-                            `;
-                        // }
-                    }else{
-                        boton_administracion.innerHTML = `
-                            <a href="administrar.html"><span class="icon-user"></span>MI CUENTA</a>
-                        `;
-                    }
-                }
+            let coincidencia = valor.find(elemento =>{
+                return elemento.usuario == localStorage.getItem("usuario");
             });
+            // USUARIO
+            if(localStorage.getItem("usuario") != null){
+                let boton_administracion = document.querySelector(".header_nav_opciones_inicio");
+                
+                if(coincidencia.tipo == "admin"){
+                    // if(localStorage.getItem("usuario") == texto.usuario){
+                        boton_administracion.innerHTML = `
+                        <a href="admin.html" id="administrar_sesion"><span class="icon-cog"></span>ADMIN</a>
+                        `;
+                    // }
+                }else{
+                    boton_administracion.innerHTML = `
+                        <a href="administrar.html"><span class="icon-user"></span>MI CUENTA</a>
+                    `;
+                }
+            }
             if(localStorage.getItem("usuario") != null){
                 if(localStorage.getItem("carrito") == null){
                     var valor = 0;

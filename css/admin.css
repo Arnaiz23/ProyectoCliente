@@ -3,7 +3,7 @@ main{
     display: flex;
     /* align-items: center; */
     justify-content: space-evenly;
-    padding: 1% 5%;
+    padding: 2% 1%;
 }
     /* CONTENEDOR IZQUIERDO */
     .main_informacion_izquierda{
@@ -48,6 +48,7 @@ main{
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        min-height: 420px;
     }
     .main_informacion_derecha h3{
         display: inline-block;
@@ -56,16 +57,17 @@ main{
     .tabla{
         margin: 30px auto;
         border-collapse: collapse;
-        border: 2px solid #000;
-        width: 90%;
+        /* border: 2px solid #000; */
+        width: 95%;
     }
     .tabla tr:first-child td{
         font-weight: bold;
         font-size: 1.1rem;
     }
     .tabla td{
-        border: 2px solid #000;
+        /* border: 2px solid #000; */
         padding: 20px;
+        max-width: 250px;
     }
 
     /* CONTENEDOR OPCIONES */
@@ -91,4 +93,24 @@ main{
     .adminProductoImagen{
         width: 60%;
         margin-left: 20px;
+        cursor: pointer;
+    }
+
+    /* PREGUNTAS */
+    .preguntas{
+        width: 70%;
+        margin: auto;
+    }
+    .preguntas h5{
+        font-size: 1.1rem;
+    }
+    .preguntaIndividual{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .modificarPregunta{
+        width: 10%;
+        cursor: pointer;
     }

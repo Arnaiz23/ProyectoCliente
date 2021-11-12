@@ -144,7 +144,7 @@ git -> https://github.com/Arnaiz23/ProyectoCliente.git
         -Guardar el valor del usuario en localStorage (intentar crear un campo con letras y numero aleatorios random)
         -Validar y realizar el registro (falta solo pintar y los avisos)
     Mi cuenta
-        -Completar datos
+        -Completar datos (modificarlo por lo del servidor)
         -Administrar cuenta (Cambiar nombre, contraseña, eliminar cuenta)
         -Eliminar OK (falta eliminar el usuario de vd)
         -Añadir un boton para actualizar la informacion (estilo el de eliminar pero cambias a actualizar informacion)
@@ -153,7 +153,11 @@ git -> https://github.com/Arnaiz23/ProyectoCliente.git
         -Si no estas logeado, añadir el cuadro para el correo
     Admin
         -Darle funcionalidad
-            -Cuando se le de a añadir, que salga un div que tengas que rellenar
+            -Mostrar ambos OK
+            -Darlse la funcionalidad
+                -En producto, pinchar en la imagen o el td y que salga un div como el de añadir un producto y en los placeholder los datos actuales
+                    -En ese div añadir el boton de eliminar
+                -Añadir boton para poder añadir
         -Añadir un boton confirmar, para guardarlo del todo
     Clases
         -Modificarlas
