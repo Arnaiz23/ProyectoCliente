@@ -1,16 +1,18 @@
 /* MAIN */
 main{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-evenly;
-    padding: 2% 5%;
+    padding: 1% 5%;
 }
     /* CONTENEDOR IZQUIERDO */
     .main_informacion_izquierda{
-        /* height: 20vh; */
+        height: 100%;
         width: 20%;
         border: 1px solid #0f0;
         background-color: var(--gris-claro);
+        position: sticky;
+        top: 20px;
     }
     .main_informacion_izquierda ul{
         padding: 0;
@@ -38,7 +40,7 @@ main{
     /* CONTENEDOR DERECHO */
     .main_informacion_derecha{
         /* height: 20vh; */
-        width: 50%;
+        width: 70%;
         border: 1px solid #f00;
         background-color: var(--gris-claro);
         padding: 10px 20px;
@@ -55,7 +57,7 @@ main{
         margin: 30px auto;
         border-collapse: collapse;
         border: 2px solid #000;
-        width: 80%;
+        width: 90%;
     }
     .tabla tr:first-child td{
         font-weight: bold;
