@@ -125,3 +125,15 @@
         #boton_sesion_contrario:hover{
             color: #fff;
         }
+
+        /* VALIDACION LOGIN */
+        .datosCorrectos{
+            border: 2px solid var(--verde);
+        }
+        .datosIncorrectos{
+            border: 2px solid var(--rojo-oscuro-claro);
+        }
+        .datosIncorrectosTexto{
+            color:red;
+            margin-top:0;
+        }

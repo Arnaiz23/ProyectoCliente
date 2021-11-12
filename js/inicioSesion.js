@@ -198,11 +198,28 @@ function pintarLogin(){
                             location.href = "index.html";
                             contador = 1;
                         }else{
-                            alert("contraseña incorrecta");
+                            // alert("contraseña incorrecta");
+                            if(password_login.nextElementSibling.classList.contains("datosIncorrectosTexto")){
+                                password_login.nextElementSibling.remove();
+                            }
+                            password_login.classList.add("datosIncorrectos");
+                            password_login.insertAdjacentHTML("afterend",`
+                                <p class="datosIncorrectosTexto">La contraseña no coincide</p>
+                            `);
+                            password_login.style.marginBottom = "20px";
+                            if(usuario_login.classList.contains("datosIncorrectos")){
+                                usuario_login.classList.remove("datosIncorrectos");
+                                document.querySelector(".datosIncorrectosTexto").remove();
+                            }
+                            usuario_login.classList.add("datosCorrectos");
                         }
                     // }
                 }else{
-                    alert("usuario no existe");
+                    // alert("usuario no existe");
+                    usuario_login.classList.add("datosIncorrectos");
+                    usuario_login.insertAdjacentHTML("afterend",`
+                        <p class="datosIncorrectosTexto">El usuario no existe</p>
+                    `);
                 }
             });
             

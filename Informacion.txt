@@ -141,7 +141,6 @@ git -> https://github.com/Arnaiz23/ProyectoCliente.git
         -Completar datos de los JSON
     Inicio de sesion
         -Completar JSON usuarios (Añadir mas y añadir nombre,direccion y esas cosas)
-        -Validar inicio (falta solo el pintar y los avisos)
         -Guardar el valor del usuario en localStorage (intentar crear un campo con letras y numero aleatorios random)
         -Validar y realizar el registro (falta solo pintar y los avisos)
     Mi cuenta
