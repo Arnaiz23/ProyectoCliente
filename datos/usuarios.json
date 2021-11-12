@@ -16,5 +16,18 @@
         "usuario" : "admin",
         "password": "admin",
         "tipo" : "admin"
-    }
+    },
+{
+
+                                    "usuario" : "asa",
+                                    "password" : "asas",
+                                    "tipo" : "usuario",
+                                    "nombre": "",
+                                    "apellidos" : "",
+                                    "correo" : "asasas",
+                                    "direcciones" : 
+                                        {
+                                            "direccion1" : ""
+                                        }
+                                }
 ]
