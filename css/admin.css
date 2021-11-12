@@ -55,6 +55,7 @@ main{
         margin: 30px auto;
         border-collapse: collapse;
         border: 2px solid #000;
+        width: 80%;
     }
     .tabla tr:first-child td{
         font-weight: bold;
