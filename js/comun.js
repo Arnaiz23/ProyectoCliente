@@ -8,8 +8,21 @@ window.onload = async ()=>{
             insertarTipo(deporte[0]);
             localStorage.setItem("indice","0");
         });
-        getUsuario().then(valor=>{
-            let coincidencia = valor.find(elemento =>{
+        fetch("../php/datos.php",{
+            method : "POST",
+            headers : {
+                "Content-type" : "application/json",
+                "tipo" : "usuarios"
+            }
+        }).then(function(response){
+            if(response.ok){
+                return response.json();
+            }else{
+                throw "ERROR EN LA LLAMADA AJAX";
+            }
+        }).then(function(texto){
+            // console.log(texto);
+            let coincidencia = texto.find(elemento =>{
                 return elemento.usuario == localStorage.getItem("usuario");
             });
             // USUARIO
@@ -42,6 +55,8 @@ window.onload = async ()=>{
             }else{
                 contenedor_precio.innerHTML = "<p>Inicia sesión para acceder</p>";
             }
+        }).catch(function(err){
+            console.log(err);
         });
 
         // USUARIO
@@ -83,28 +98,45 @@ window.onload = async ()=>{
             `);
             pintarCarrito();
         }
-        getUsuario().then(valor=>{
-            valor.forEach(dato =>{
-                // USUARIO
-                if(localStorage.getItem("usuario") != null){
-                    let boton_administracion = document.querySelector(".header_nav_opciones_inicio");
-                    if(dato.tipo == "admin" && dato.usuario == localStorage.getItem("usuario")){
-                        // if(localStorage.getItem("usuario") == texto.usuario){
-                            boton_administracion.innerHTML = `
-                            <a href="admin.html" id="administrar_sesion"><span class="icon-cog"></span>ADMIN</a>
-                            `;
-                        // }
-                    }else{
-                        boton_administracion.innerHTML = `
-                            <a href="administrar.html"><span class="icon-user"></span>MI CUENTA</a>
-                        `;
-                    }
-                }else{
-                    if(location.href.includes("carrito.html")){
-                        contenedor_precio.innerHTML = "<p>Inicia sesión para acceder</p>";
-                    }
-                }
+        fetch("../php/datos.php",{
+            method : "POST",
+            headers : {
+                "Content-type" : "application/json",
+                "tipo" : "usuarios"
+            }
+        }).then(function(response){
+            if(response.ok){
+                return response.json();
+            }else{
+                throw "ERROR EN LA LLAMADA AJAX";
+            }
+        }).then(function(texto){
+            // console.log(texto);
+            let coincidencia = texto.find(elemento =>{
+                return elemento.usuario == localStorage.getItem("usuario");
             });
+            // USUARIO
+            if(localStorage.getItem("usuario") != null){
+                let boton_administracion = document.querySelector(".header_nav_opciones_inicio");
+                
+                if(coincidencia.tipo == "admin"){
+                    // if(localStorage.getItem("usuario") == texto.usuario){
+                        boton_administracion.innerHTML = `
+                        <a href="admin.html" id="administrar_sesion"><span class="icon-cog"></span>ADMIN</a>
+                        `;
+                    // }
+                }else{
+                    boton_administracion.innerHTML = `
+                        <a href="administrar.html"><span class="icon-user"></span>MI CUENTA</a>
+                    `;
+                }
+            }else{
+                if(location.href.includes("carrito.html")){
+                    contenedor_precio.innerHTML = "<p>Inicia sesión para acceder</p>";
+                }
+            }
+        }).catch(function(err){
+            console.log(err);
         });
     }
 }

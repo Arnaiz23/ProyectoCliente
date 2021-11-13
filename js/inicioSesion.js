@@ -66,12 +66,26 @@ function pintarRegistro(){
             let usuario = document.getElementById("user_name");
             let password = document.getElementById("password");
             let mail = document.getElementById("email");
+            let coincidencian,coincidenciae;
             // ---------------------------------------------------------
-            getUsuario().then(usuarios =>{
-                let coincidencian = usuarios.find(nombre => {
+            fetch("../php/datos.php",{
+                method : "POST",
+                headers : {
+                    "Content-type" : "application/json",
+                    "tipo" : "usuarios"
+                }
+            }).then(function(response){
+                if(response.ok){
+                    return response.json();
+                }else{
+                    throw "ERROR EN LA LLAMADA AJAX";
+                }
+            }).then(function(texto){
+                // console.log(texto);
+                coincidencian = texto.find(nombre => {
                     return nombre.usuario == usuario.value;
                 });
-                let coincidenciae = usuarios.find(nombre => {
+                coincidenciae = texto.find(nombre => {
                     return nombre.correo == mail.value;
                 });
                 if(usuario.value != "" && mail.value != "" && password.value != ""){
@@ -94,7 +108,10 @@ function pintarRegistro(){
                                 fetch("../php/datos.php",{
                                     method : "POST",
                                     body : JSON.stringify(datos),
-                                    headers : {"Content-type" : "application/json"}
+                                    headers : {
+                                        "Content-type" : "application/json",
+                                        "tipo" :"usuarioNuevo"
+                                    }
                                 }).then(function(response){
                                     if(response.ok){
                                         return response.text()
@@ -123,6 +140,8 @@ function pintarRegistro(){
                 }else{
                     alert("Rellena todos los datos");
                 }
+            }).catch(function(err){
+                console.log(err);
             });
             // -----------------------------------------------------------
             // USUARIOS CON LOCALSTORAGE
@@ -186,8 +205,21 @@ function pintarLogin(){
         let usuario_login = document.getElementById("user_name");
         let password_login = document.getElementById("password");
         validar_login.addEventListener("click",()=>{
-            getUsuario().then(usuarios =>{
-                let busqueda = usuarios.find((cuenta) => {
+            fetch("../php/datos.php",{
+                method : "POST",
+                headers : {
+                    "Content-type" : "application/json",
+                    "tipo" : "usuarios"
+                }
+            }).then(function(response){
+                if(response.ok){
+                    return response.json();
+                }else{
+                    throw "ERROR EN LA LLAMADA AJAX"
+                }
+            }).then(function(texto){
+                // console.log(texto):
+                let busqueda = texto.find((cuenta) => {
                     return cuenta.usuario == usuario_login.value
                 });
                 if(busqueda){
@@ -221,37 +253,14 @@ function pintarLogin(){
                         <p class="datosIncorrectosTexto">El usuario no existe</p>
                     `);
                 }
+            }).catch(function(err){
+                console.log(err)
             });
-            
-
-        
-
-            
-            /* listaUsuario.forEach(texto => {
-                if(texto.usuario == usuario_login.value){
-                    if(texto.password == password_login.value){
-                        alert("Iniciando");
-                        localStorage.setItem("usuario",texto.usuario);
-                        location.href = "index.html";
-                        contador = 1;
-                    }else{
-                        alert("contraseña incorrecta");
-                    }
-                }else{
-                    alert("usuario no existe");
-                }
-            }); */
-            // alert("Iniciando");
-            // localStorage.setItem("usuario","Adrian");
-            // location.href = "index.html";
         });
         
-
-        
-
     // FUNCION INICIO
         let registro = document.querySelector("#boton_sesion_contrario");
         registro.addEventListener("click",()=>{
             pintarRegistro();
         });
-}
+} 

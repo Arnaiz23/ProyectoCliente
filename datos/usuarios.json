@@ -29,5 +29,44 @@
                                         {
                                             "direccion1" : ""
                                         }
+                                },
+{
+
+                                    "usuario" : "arnaiz23",
+                                    "password" : "a",
+                                    "tipo" : "usuario",
+                                    "nombre": "",
+                                    "apellidos" : "",
+                                    "correo" : "hola@gmail.com",
+                                    "direcciones" : 
+                                        {
+                                            "direccion1" : ""
+                                        }
+                                },
+{
+
+                                    "usuario" : "arnaiz231",
+                                    "password" : "a",
+                                    "tipo" : "usuario",
+                                    "nombre": "",
+                                    "apellidos" : "",
+                                    "correo" : "hola1@gmail.com",
+                                    "direcciones" : 
+                                        {
+                                            "direccion1" : ""
+                                        }
+                                },
+{
+
+                                    "usuario" : "prueba",
+                                    "password" : "prueba",
+                                    "tipo" : "usuario",
+                                    "nombre": "",
+                                    "apellidos" : "",
+                                    "correo" : "prueba",
+                                    "direcciones" : 
+                                        {
+                                            "direccion1" : ""
+                                        }
                                 }
 ]

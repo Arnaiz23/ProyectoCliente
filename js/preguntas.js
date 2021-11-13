@@ -1,7 +1,20 @@
 window.onload = async()=>{
     // USUARIO ACTIVO
-    getUsuario().then(valor=>{
-        let coincidencia = valor.find(elemento =>{
+    fetch("../php/datos.php",{
+        method : "POST",
+        headers : {
+            "Content-type" : "application/json",
+            "tipo" : "usuarios"
+        }
+    }).then(function(response){
+        if(response.ok){
+            return response.json();
+        }else{
+            throw "ERROR EN LA LLAMADA AJAX";
+        }
+    }).then(function(texto){
+        // console.log(texto);
+        let coincidencia = texto.find(elemento =>{
             return elemento.usuario == localStorage.getItem("usuario");
         });
         // USUARIO
@@ -20,6 +33,8 @@ window.onload = async()=>{
                 `;
             }
         }
+    }).catch(function(err){
+        console.log(err);
     });
     // PREGUNTAS PINTAR
     let container = document.querySelector(".main_container_izquierda");

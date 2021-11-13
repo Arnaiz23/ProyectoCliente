@@ -22,12 +22,11 @@ btnCerrarSesion.addEventListener("click",()=>{
 
 let informacion = document.querySelector(".main_container_derecha");
 
+let usuario;
 // BOTON PEDIDOS
-administrarCuenta.addEventListener("click",()=>{
-    let listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"))
-    let usuario = listaUsuario.find(texto =>{
-        return texto.usuario == localStorage.getItem("usuario");
-    });
+administrarCuenta.addEventListener("click",async ()=>{
+    await Usuario();
+    
     // informacion.insertAdjacentHTML("afterbegin",`
     informacion.innerHTML = `
         <h3>Datos</h3>
@@ -77,19 +76,9 @@ administrarCuenta.addEventListener("click",()=>{
 });
 
 // BOTON DIRECCION
-document.getElementById("misDirecciones").addEventListener("click",()=>{
-    let listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"))
-    let usuario = listaUsuario.find(texto =>{
-        return texto.usuario == localStorage.getItem("usuario");
-    });
+document.getElementById("misDirecciones").addEventListener("click", async()=>{
+    await Usuario();
     let valor = 0;
-    /* informacion.innerHTML = `
-        <h2>Direccion1</h2>
-        <p>${usuario.direcciones.direccion1}</p>
-        <div class="linea"></div>
-        <h2>Direccion2</h2>
-        <p>${usuario.direcciones.direccion2}</p>
-    `; */
     informacion.innerHTML = "";
     for(direccion in usuario.direcciones){
         valor++;
@@ -123,3 +112,26 @@ document.getElementById("misDirecciones").addEventListener("click",()=>{
         document.body.style.overflowY = "hidden";
     });
 })
+
+async function Usuario(){
+    await fetch("../php/datos.php",{
+        method : "POST",
+        headers : {
+            "Content-type" : "application/json",
+            "tipo" : "usuarios"
+        }
+    }).then(function(response){
+        if(response.ok){
+            return response.json();
+        }else{
+            throw "ERROR EN LA LLAMADA AJAX";
+        }
+    }).then(function(texto){
+        // console.log(texto)
+        usuario = texto.find(texto =>{
+            return texto.usuario == localStorage.getItem("usuario");
+        });
+    }).catch(function(err){
+        console.log(err);
+    })
+}
