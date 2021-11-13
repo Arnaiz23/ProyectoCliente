@@ -133,6 +133,7 @@ A la hora de crear, al momento de añadir la imagen, poner: "imagen" : "img/"+im
 Futbol -> https://www.futbolmania.com/es/fy6239
 
 git -> https://github.com/Arnaiz23/ProyectoCliente.git
+Token -> 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
 
 
 ---------------------QUE FALTA-----------------------------------
