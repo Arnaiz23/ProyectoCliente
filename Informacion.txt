@@ -155,12 +155,14 @@ Token -> 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
             -Si todo esta correcto, poner un mensaje temporal de que la cuenta se ha actualizado
     Preguntas
         -Cambiar un poco las cosas
-        -Si no estas logeado, añadir el cuadro para el correo
+        -Validar (no funcionan)
     Admin
         -Darle funcionalidad
             -Mostrar ambos OK
-            -Darlse la funcionalidad
+            -Darle la funcionalidad
                 -En producto, pinchar en la imagen o el td y que salga un div como el de añadir un producto y en los placeholder los datos actuales
+                    -Datos OK
+                    -pintar la tabla esa NO
                     -En ese div añadir el boton de eliminar
                 -Añadir boton para poder añadir
         -Añadir un boton confirmar, para guardarlo del todo

@@ -20,18 +20,21 @@ document.getElementById("adminProductos").addEventListener("click",async ()=>{
                     <td>Precio</td>
                 </tr>
         `);
-        tabla = document.querySelector(".tabla tr");
+        tabla = document.querySelector(".tabla");
+        let indice = 0;
         listas.forEach(productos => {
             productos.forEach(producto => {
-                tabla.insertAdjacentHTML("afterend",`
+                tabla.insertAdjacentHTML("beforeend",`
                     <tr>
-                        <td><img src="${producto.imagen}" class="adminProductoImagen"></td>
+                        <td><img src="${producto.imagen}" class="adminProductoImagen" onclick="mostrarDatos()"></td>
                         <td>${producto.nombre}</td>
                         <td>${producto.descripcionCorta}</td>
                         <td>${producto.descripcion}</td>
                         <td>${producto.precio} €</td>
                     </tr>
-                `); 
+                `);
+                document.querySelectorAll(".adminProductoImagen")[indice].dato = producto;
+                indice++;
             });
         });
     });
@@ -96,4 +99,13 @@ function eliminarPintado(){
     if(tablaDelete != null){
         tablaDelete.remove();
     }
+}
+
+function mostrarDatos(){
+    document.body.style.overflowY = "hidden";
+    document.querySelector(".main_informacion_derecha").insertAdjacentHTML("afterend",`
+        <div class="fondo">
+            <div class="containerDentro"></div>
+        </div>
+    `);
 }

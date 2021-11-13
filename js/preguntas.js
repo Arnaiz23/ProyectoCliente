@@ -32,6 +32,11 @@ window.onload = async()=>{
                     <a href="administrar.html"><span class="icon-user"></span>MI CUENTA</a>
                 `;
             }
+        }else{
+            let cuadro = document.querySelector(".main_container_derecha h3");
+            cuadro.insertAdjacentHTML("afterend",`
+                <input type="email" name="correoPregunta" id="correoPregunta" placeholder="Correo">
+            `);
         }
     }).catch(function(err){
         console.log(err);
@@ -79,3 +84,13 @@ window.onload = async()=>{
         });
     }
 }
+
+document.getElementById("pregunta_enviar").addEventListener("click",()=>{
+    let correo = document.querySelector("#correoPregunta");
+    if(validarCorreo(correo)){
+        correo.style.border = "2px solid red";
+    }else{
+        alert("correcto");
+        
+    }
+});
