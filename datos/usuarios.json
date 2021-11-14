@@ -68,5 +68,18 @@
                                         {
                                             "direccion1" : ""
                                         }
-                                }
+                                },
+{
+
+                                    "usuario" : "arnaiz2311",
+                                    "password" : "123456",
+                                    "tipo" : "usuario",
+                                    "nombre": "",
+                                    "apellidos" : "",
+                                    "correo" : "adrian1@gmail.com",
+                                    "direcciones" : 
+                                        {
+                                            "direccion1" : ""
+                                        }
+                                    }
 ]

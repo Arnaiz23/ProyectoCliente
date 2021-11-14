@@ -44,11 +44,11 @@ function pintarRegistro(){
     borrar();
     pintar.insertAdjacentHTML("beforeend",`
     <label for="user_name">Nombre de usuario</label>
-    <input type="text" name="usuario" id="user_name" placeholder="Escribe tu nombre" class="input_datos">
+    <input type="text" name="usuario" id="user_name" placeholder="Escribe tu nombre" class="input_datos" title="El nombre de usuario debe tener mínimo 4 caracteres">
     <label for="password">Contraseña</label>
-    <input type="password" name="password" id="password" placeholder="Escribe la contraseña" class="input_datos">
+    <input type="password" name="password" id="password" placeholder="Escribe la contraseña" class="input_datos" title="La contraseña debe estar entre 6 y 16 caracteres">
     <label for="email">Email</label>
-    <input type="email" name="email" id="email" placeholder="Escribe el email" class="input_datos">
+    <input type="email" name="email" id="email" placeholder="Escribe el email" class="input_datos" title="El correo debe tener el formato habitual: 'hola@gmail.com'">
     <div class="container_derecha_informacion_terminos">
         <input type="checkbox" name="terminos" id="terminos">
         <label for="terminos">Acepto los términos y condiciones</label>
@@ -89,11 +89,31 @@ function pintarRegistro(){
                     return nombre.correo == mail.value;
                 });
                 if(usuario.value != "" && mail.value != "" && password.value != ""){
+                    let enviar = true;
+                    if(!validarCorreo(mail.value)){
+                        mail.style.border = "2px solid var(--rojo-oscuro-claro)";
+                        enviar = false;
+                    }else{
+                        mail.style.border = "2px solid var(--verde)";
+                    }
+                    if(!validarPassword(password.value)){
+                        password.style.border = "2px solid var(--rojo-oscuro-claro)";
+                        enviar = false;
+                    }else{
+                        password.style.border = "2px solid var(--verde)";
+                    }
+                    if(!validarUsuario(usuario.value)){
+                        usuario.style.border = "2px solid var(--rojo-oscuro-claro)";
+                        enviar = false;
+                    }else{
+                        usuario.style.border = "2px solid var(--verde)";
+                    }
                     if(coincidencian == undefined){
                         if(coincidenciae == undefined){
                             if(terminos.checked){
                                 // ------------------------------------------------
-                                let datos = `
+                                if(enviar){
+                                    let datos = `
                                     "usuario" : "${usuario.value}",
                                     "password" : "${password.value}",
                                     "tipo" : "usuario",
@@ -104,30 +124,31 @@ function pintarRegistro(){
                                         {
                                             "direccion1" : ""
                                         }
-                                `;
-                                fetch("../php/datos.php",{
-                                    method : "POST",
-                                    body : JSON.stringify(datos),
-                                    headers : {
-                                        "Content-type" : "application/json",
-                                        "tipo" :"usuarioNuevo"
-                                    }
-                                }).then(function(response){
-                                    if(response.ok){
-                                        return response.text()
-                                    }else{
-                                        throw "Error en la llamada Ajax";
-                                    }
-                                }).then(function(texto) {
-                                    console.log(texto);
-                                    })
-                                    .catch(function(err) {
-                                        console.log(err);
-                                    });
-                                // -----------------------------------------------------
-                                alert("Registrado");
-                                location.href = "index.html";
-                                localStorage.setItem("usuario",usuario.value);
+                                    `;
+                                    fetch("../php/datos.php",{
+                                        method : "POST",
+                                        body : JSON.stringify(datos),
+                                        headers : {
+                                            "Content-type" : "application/json",
+                                            "tipo" :"usuarioNuevo"
+                                        }
+                                    }).then(function(response){
+                                        if(response.ok){
+                                            return response.text()
+                                        }else{
+                                            throw "Error en la llamada Ajax";
+                                        }
+                                    }).then(function(texto) {
+                                        console.log(texto);
+                                        })
+                                        .catch(function(err) {
+                                            console.log(err);
+                                        });
+                                    // -----------------------------------------------------
+                                    alert("Registrado");
+                                    location.href = "index.html";
+                                    localStorage.setItem("usuario",usuario.value);
+                                }
                             }else{
                                 alert("Hay que aceptar los términos para poder continuar");
                             }
