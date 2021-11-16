@@ -86,3 +86,13 @@ function eliminarProducto(){
     contenedor_precio[1].innerHTML = `${precio.toFixed(2)}€`;
     pintarCarrito();
 }
+
+let realizarPedido = document.querySelector(".main_container_izquierda_comprar p");
+
+realizarPedido.addEventListener("click",()=>{
+    let carrito = localStorage.getItem("carrito");
+    localStorage.setItem("mispedidos",carrito);
+    contenedor.insertAdjacentHTML("afterend",`
+        
+    `);
+});
