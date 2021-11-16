@@ -114,6 +114,7 @@ function pintarRegistro(){
                                 // ------------------------------------------------
                                 if(enviar){
                                     let datos = `
+                                    "id" : "${Math.random()}",
                                     "usuario" : "${usuario.value}",
                                     "password" : "${password.value}",
                                     "tipo" : "usuario",

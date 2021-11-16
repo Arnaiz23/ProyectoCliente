@@ -144,18 +144,10 @@ Token -> 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
         -Guardar el valor del usuario en localStorage (intentar crear un campo con letras y numero aleatorios random)
     Mi cuenta
         -Completar datos (modificarlo por lo del servidor)
-        -Administrar cuenta (Cambiar nombre, contraseña, eliminar cuenta)
-        -Eliminar OK (falta eliminar el usuario de vd)
         -Mis direcciones 
             -Añadir y volver
         -Mis tarjetas
         -Mis pedidos
-        -Eliminar la cuenta JS
-        -Actualizar cuenta
-        -Añadir un boton para actualizar la informacion (estilo el de eliminar pero cambias a actualizar informacion)
-            -Si ninguno de los campos tiene datos, poner el puntero prohibido al actualizar
-            -Si le das y es para cambair la contraseña, que coincidan ambas para continuar
-            -Si todo esta correcto, poner un mensaje temporal de que la cuenta se ha actualizado
     Preguntas
         -Cambiar un poco las cosas
     Admin

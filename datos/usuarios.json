@@ -1,85 +1,20 @@
 [
     {
-        "usuario" : "Adrian",
-        "password" : "1234",
-        "tipo" : "usuario",
+        "id": "01",
+        "usuario": "Adrian",
+        "password": "1234567",
+        "tipo": "usuario",
         "nombre": "Adrian",
-        "apellidos" : "Arnaiz Fernández",
-        "correo" : "adrian@gmail.com",
-        "direcciones" : 
-            {
-                "direccion1" : "Av. de la Onu",
-                "direccion2" : "Calle España"
-            }
+        "apellidos": "Arnaiz Fernandez",
+        "correo": "adrian@gmail.com",
+        "direcciones": {
+            "direccion1": "Av. de la Onu",
+            "direccion2": "Calle Espa\u00f1a"
+        }
     },
     {
-        "usuario" : "admin",
+        "usuario": "admin",
         "password": "admin",
-        "tipo" : "admin"
-    },
-{
-
-                                    "usuario" : "asa",
-                                    "password" : "asas",
-                                    "tipo" : "usuario",
-                                    "nombre": "",
-                                    "apellidos" : "",
-                                    "correo" : "asasas",
-                                    "direcciones" : 
-                                        {
-                                            "direccion1" : ""
-                                        }
-                                },
-{
-
-                                    "usuario" : "arnaiz23",
-                                    "password" : "a",
-                                    "tipo" : "usuario",
-                                    "nombre": "",
-                                    "apellidos" : "",
-                                    "correo" : "hola@gmail.com",
-                                    "direcciones" : 
-                                        {
-                                            "direccion1" : ""
-                                        }
-                                },
-{
-
-                                    "usuario" : "arnaiz231",
-                                    "password" : "a",
-                                    "tipo" : "usuario",
-                                    "nombre": "",
-                                    "apellidos" : "",
-                                    "correo" : "hola1@gmail.com",
-                                    "direcciones" : 
-                                        {
-                                            "direccion1" : ""
-                                        }
-                                },
-{
-
-                                    "usuario" : "prueba",
-                                    "password" : "prueba",
-                                    "tipo" : "usuario",
-                                    "nombre": "",
-                                    "apellidos" : "",
-                                    "correo" : "prueba",
-                                    "direcciones" : 
-                                        {
-                                            "direccion1" : ""
-                                        }
-                                },
-{
-
-                                    "usuario" : "arnaiz2311",
-                                    "password" : "123456",
-                                    "tipo" : "usuario",
-                                    "nombre": "",
-                                    "apellidos" : "",
-                                    "correo" : "adrian1@gmail.com",
-                                    "direcciones" : 
-                                        {
-                                            "direccion1" : ""
-                                        }
-                                    }
+        "tipo": "admin"
+    }
 ]

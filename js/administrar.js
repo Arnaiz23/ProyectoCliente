@@ -42,7 +42,7 @@ administrarCuenta.addEventListener("click",async ()=>{
         <input type="password" name="passwordAdministracion" id="passwordAdministracion">
         <p>Confirmación</p>
         <input type="password" name="passwordAdministracion2" id="passwordAdministracion2">
-        <button type="button" id="actualizarCuenta">Actualizar</button>
+        <button type="button" id="actualizarCuenta" onclick="actualizarCuenta()">Actualizar</button>
         <div class="linea"></div>
         <h3>Eliminar cuenta</h3>
         <button type="button" id="eliminarCuenta">Eliminar</button>
@@ -67,10 +67,59 @@ administrarCuenta.addEventListener("click",async ()=>{
             document.body.style.overflowY = "initial";
         });
         // ELIMINAR PERMANENTE
-        document.getElementById("eliminarCuentaConfirmado").addEventListener("click",()=>{
-            alert("Eliminando la cuenta...");
-            location.href = "index.html";
-            localStorage.removeItem("usuario");
+        document.getElementById("eliminarCuentaConfirmado").addEventListener("click",async ()=>{
+            await fetch("../php/datos.php",{
+                method : "POST",
+                headers : {
+                    "Content-type" : "application/json",
+                    "tipo" : "usuarios"
+                }
+            }).then(function(response){
+                if(response.ok){
+                    return response.json();
+                }else{
+                    throw "ERROR EN LA LLAMADA AJAX";
+                }
+            }).then(async function(texto){
+                // console.log(texto)
+                texto.forEach((valor,indice)=>{
+                    if(valor.id === usuario.id){
+                        texto.splice(indice,1);
+                    }
+                });
+                console.log(JSON.stringify(texto))
+                // texto.splice(usuario,1);
+                // console.log(texto);
+                await fetch("../php/datos.php",{
+                    method : "POST",
+                    headers : {
+                        "Content-type" : "application/json",
+                        "tipo" : "deleteusuario"
+                    },
+                    body : JSON.stringify(texto)
+                }).then(function(response){
+                    if(response.ok){
+                        return response.text();
+                    }else{
+                        throw "ERROR EN LA LLAMADA AJAX";
+                    }
+                }).then(function(respuesta){
+                    // console.log(respuesta)
+                    if(respuesta == "Eliminado"){
+                        alert("Cuenta eliminada");
+                        location.href = "index.html";
+                        localStorage.removeItem("usuario");
+                    }
+                }).catch(function(err){
+                    console.log(err);
+                })
+            }).catch(function(err){
+                console.log(err);
+            })
+            // console.log(usuario);
+            // alert("Eliminando la cuenta...");
+            /* location.href = "index.html";
+            localStorage.removeItem("usuario"); */
         });
     });
 });
@@ -134,4 +183,95 @@ async function Usuario(){
     }).catch(function(err){
         console.log(err);
     })
+}
+
+
+// ACTUALIZAR
+async function actualizarCuenta(){
+    let nombre = document.getElementById("nombreAdministracion");
+    let apellidos = document.getElementById("apellidosAdministracion");
+    let correo = document.getElementById("correoAdministracion");
+    let password1 = document.getElementById("passwordAdministracion");
+    let password2 = document.getElementById("passwordAdministracion2");
+
+
+    await fetch("../php/datos.php",{
+            method : "POST",
+            headers : {
+                "Content-type" : "application/json",
+                "tipo" : "usuarios"
+            }
+        }).then(function(response){
+            if(response.ok){
+                return response.json();
+            }else{
+                throw "ERROR EN LA LLAMADA AJAX";
+            }
+        }).then(async function(texto){
+            // console.log(texto)
+            let actualizar = true;
+            texto.forEach(valor =>{
+                if(JSON.stringify(valor) === JSON.stringify(usuario)){
+                    // console.log(valor)
+                    if(nombre.value != ""){
+                        valor.nombre = nombre.value;
+                    }
+                    if(apellidos.value != ""){
+                        valor.apellidos = apellidos.value;
+                    }
+                    if(correo.value != ""){
+                        valor.correo = correo.value;
+                    }
+                    if(password1.value != "" && password2.value != ""){
+                        if(password2.value === password1.value){
+                            if(validarPassword(password1.value)){
+                                valor.password = password1.value;
+                            }else{
+                                password1.style.border = "2px solid var(--rojo-oscuro-claro)";
+                                password2.style.border = "2px solid var(--rojo-oscuro-claro)";
+                                actualizar = false;
+                                alert("Las contraseñas no cumplen con los requisitos");
+                            }
+                        }else{
+                            alert("Las contraseñas no coinciden");
+                            password1.style.border = "2px solid red";
+                            password2.style.border = "2px solid red";
+                            actualizar = false;
+                        }
+                    }
+                    if(nombre.value == "" && apellidos.value == "" && correo.value == "" && (password1.value == "" || password2.value == "")){
+                        actualizar = false;
+                    }
+                }
+            });
+            console.log(texto)
+            if(actualizar){
+                await fetch("../php/datos.php",{
+                    method : "POST",
+                    headers : {
+                        "Content-type" : "application/json",
+                        "tipo" : "usuarioModificar"
+                    },
+                    body : JSON.stringify(texto)
+                }).then(function(response){
+                    if(response.ok){
+                        return response.text();
+                    }else{
+                        throw "ERROR EN LA LLAMADA AJAX";
+                    }
+                }).then(function(texto){
+                    // console.log(texto)
+                    if(texto == "Modificado"){
+                        alert("La cuenta se ha actualizado");
+                        location.reload();
+                    }
+                }).catch(function(err){
+                    console.log(err);
+                })
+            }
+        }).catch(function(err){
+            console.log(err);
+        })
+    // console.log(usuario)
+    
 }

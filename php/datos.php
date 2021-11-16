@@ -20,6 +20,26 @@
                 print $usuarios;
             }
             // print json_encode($fichero);
+        }else if($cabecera["tipo"] == "deleteusuario"){
+            $fichero = fopen("../datos/usuarios.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Eliminado";
+            /* fwrite($fichero,"[\n");
+            foreach($datos as $valor){
+                fwrite($fichero,json_encode($valor).",");
+            }
+            fwrite($fichero,"\n]"); */
+            fclose($fichero);
+        }else if($cabecera["tipo"] == "usuarioModificar"){
+            $fichero = fopen("../datos/usuarios.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Modificado";
+            /* fwrite($fichero,"[\n");
+            foreach($datos as $valor){
+                fwrite($fichero,json_encode($valor).",");
+            }
+            fwrite($fichero,"\n]"); */
+            fclose($fichero);
         }else if($cabecera["tipo"] == "futbol"){
             $futbol = file("../datos/futbol.json");
             foreach($futbol as $producto){
