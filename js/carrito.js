@@ -87,12 +87,55 @@ function eliminarProducto(){
     pintarCarrito();
 }
 
-let realizarPedido = document.querySelector(".main_container_izquierda_comprar p");
-
-realizarPedido.addEventListener("click",()=>{
-    let carrito = localStorage.getItem("carrito");
-    localStorage.setItem("mispedidos",carrito);
-    contenedor.insertAdjacentHTML("afterend",`
+if(location.href.includes("carrito.html")){
+    let realizarPedido = document.querySelector(".main_container_izquierda_comprar p");
+    realizarPedido.addEventListener("click",()=>{
         
-    `);
-});
+        if(realizarPedido.style.cursor != "not-allowed"){
+            contenedor.insertAdjacentHTML("afterend",`
+                <div class="fondo_pedido">
+                    <div class="pedido_direccion">
+                        <label for="direccionPedido">Elige una dirección</label>
+                        <select name="direccion" id="direccionPedido">
+                            
+                        </select>
+                        <label for="direccionPedido2">O escribe una nueva</label>
+                        <input type="text" name="direccionPedido2" id="direccionPedido2">
+                        <div class="botonPagar">Siguiente</div>
+                    </div>
+                </div>
+            `);
+            let siguiente = document.querySelector(".botonPagar");
+            siguiente.addEventListener("click",()=>{
+                document.querySelector(".fondo_pedido").remove();
+                contenedor.insertAdjacentHTML("afterend",`
+                    <div class="fondo_pedido">
+                        <div class="pedido">
+                            <!-- Nombre titular -->
+                            <label for="nombreTitular">Nombre del titular</label>
+                            <input type="text" name="nombreTitular" id="nombreTitular">
+                            <!-- Numero tarjeta -->
+                            <label for="numeroTarjeta">Numero de tarjeta</label>
+                            <input type="number" name="numeroTarjeta" id="numeroTarjeta">
+                            <!-- Fecha -->
+                            <label for="fechaTarjeta">Fecha de expiración</label>
+                            <input type="date" name="fechaTarjeta" id="fechaTarjeta">
+                            <!-- CVC -->
+                            <label for="cvcTarjeta">CVC</label>
+                            <input type="text" name="cvcTarjeta" id="cvcTarjeta">
+                            <p class="botonPagar">Pagar y finalizar</p>
+                        </div>
+                    </div>
+                `);
+                let pagar = document.querySelector(".botonPagar");
+                pagar.addEventListener("click",()=>{
+                    let carrito = localStorage.getItem("carrito");
+                    localStorage.setItem("mispedidos",carrito);
+                    alert("Pedido realizado");
+                    localStorage.removeItem("carrito");
+                    location.reload();
+                });
+            });
+        }
+    });
+}

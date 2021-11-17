@@ -41,6 +41,7 @@
         box-shadow: 5px 5px 5px #000;
         cursor: pointer;
         transition: background-color .4s;
+        user-select: none;
     }
     .main_container_izquierda_comprar p:hover{
         background-color: var(--rojo-oscuro-claro);
@@ -136,7 +137,30 @@
     height: 90%;
     background-color: #fff;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
+.pedido label{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.pedido input{
+    width: 50%;
+}
+.pedido input:focus{
+    outline: none;
+}
+.pedido input[type="date"]{
+    text-align: center;
+}
+.pedido input[type="number"]{
+    -moz-appearance: textfield;
+}
+/* .pedido input[type="number"]{
+    -webkit-appearance: none;
+} */
 .botonPagar{
     width: max-content;
     padding: 10px 15px;
@@ -149,4 +173,21 @@
 .botonPagar:hover{
     background-color: var(--rojo-oscuro-claro);
     color: #fff;
+}
+.pedido_direccion{
+    background-color: #fff;
+    width: 40%;
+    /* height: 10%; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+.pedido_direccion *{
+    margin: 10px;
+}
+.pedido_direccion input:focus{
+    outline: none;
 }

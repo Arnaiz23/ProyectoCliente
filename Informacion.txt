@@ -140,8 +140,6 @@ Token -> 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
 7-11
     Aterrizaje  
         -Completar datos de los JSON
-    Inicio de sesion
-        -Guardar el valor del usuario en localStorage (intentar crear un campo con letras y numero aleatorios random)
     Mi cuenta
         -Completar datos (modificarlo por lo del servidor)
         -Mis direcciones 
@@ -159,6 +157,7 @@ Token -> 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
         -Añadir un boton confirmar, para guardarlo del todo
     Carrito 
         -Realizar pedido js
+            -Validar los campos de tarjeta y direccion
     Clases
         -Modificarlas
     Una vez acabada la pagina, mirar si quiero crear mis propios alerts
