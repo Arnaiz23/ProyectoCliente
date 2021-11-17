@@ -143,9 +143,7 @@ Token -> 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
     Mi cuenta
         -Completar datos (modificarlo por lo del servidor)
         -Mis direcciones 
-            -Añadir y volver
-        -Mis tarjetas
-        -Mis pedidos
+            -Añadir y modificar
     Preguntas
         -Cambiar un poco las cosas
     Admin
@@ -155,11 +153,10 @@ Token -> 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
                     -En ese div añadir el boton de eliminar
                     -Eliminar y modificar JS
         -Añadir un boton confirmar, para guardarlo del todo
-    Carrito 
-        -Realizar pedido js
-            -Validar los campos de tarjeta y direccion
     Clases
         -Modificarlas
+    Servidor y cliente
+        -Solicitar al servidor los productos
     Una vez acabada la pagina, mirar si quiero crear mis propios alerts
     Modificar los js para que no me den errores (hecho por el momento)
     En caso de que al final quiera, poner un boton ir arriba

@@ -61,6 +61,18 @@
             foreach($running as $producto){
                 print $producto;
             }
+        }else if($cabecera["tipo"] == "todos"){
+            $futbol = file("../datos/futbol.json");
+            $baloncesto = file("../datos/baloncesto.json");
+            $voleibol = file("../datos/voleibol.json");
+            $running = file("../datos/running.json");
+            foreach($futbol as $producto){
+                print $producto;
+            }
+            foreach($baloncesto as $producto){
+                print $producto;
+            }
+            // print json_encode($futbol);
         }else if($cabecera["tipo"] == "futboladd"){
             // print $datos;
             $futbol = fopen("../datos/futbol.json","r+");

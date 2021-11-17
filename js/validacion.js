@@ -29,3 +29,33 @@ function validarPassword(password){
         return false;
     }
 }
+
+// VALIDAR NOMBRE
+function validarNombre(nombre){
+    let nombrevalido = /^[a-zA-Z ]$/;
+    if(nombre.value != "" || nombrevalido.test(nombre)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// VALIDAR CVC
+function validarCVC(cvc){
+    let cvcvalido= /^[0-9]{3}$/;
+    if(cvc.value != "" || cvcvalido.test(cvc)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// VALIDAR TARJETA
+function validarNumero(numero){
+    let numerovalido= /^[0-9]$/;
+    if(numero.value != "" || numerovalido.test(numero)){
+        return true;
+    }else{
+        return false;
+    }
+}

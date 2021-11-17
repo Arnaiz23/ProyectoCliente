@@ -61,5 +61,56 @@ const getInfo = async ()=>{
     });
 } */
 
+async function Deporte(deporte){
+    await fetch(`../php/datos.php`,{
+        method : "POST",
+        headers : {
+            "Content-type" : "application/json",
+            "tipo" : `${deporte}`
+        }
+    }).then(function(response){
+        if(response.ok){
+            return response.json();
+        }else{
+            throw "ERROR EN LA LLAMADA AJAX"
+        }
+    }).then(function(texto){
+        // console.log(texto);
+        borrarTarjetas();
+        pintarTabla(texto);
+        eliminarMarca();
+        insertarMarca(texto);
+        eliminarTipo();
+        insertarTipo(texto);
+        // localStorage.setItem("indice","0");
+    }).catch(function(err){
+        console.log(err);
+    });
+}
 
-
+async function TodosDeportes(){
+    await fetch(`../php/datos.php`,{
+        method : "POST",
+        headers : {
+            "Content-type" : "application/json",
+            "tipo" : "todos"
+        }
+    }).then(function(response){
+        if(response.ok){
+            return response.text();
+        }else{
+            throw "ERROR EN LA LLAMADA AJAX"
+        }
+    }).then(function(texto){
+        console.log(texto);
+        /* borrarTarjetas();
+        pintarTabla(texto);
+        eliminarMarca();
+        insertarMarca(texto);
+        eliminarTipo();
+        insertarTipo(texto); */
+        // localStorage.setItem("indice","0");
+    }).catch(function(err){
+        console.log(err);
+    });
+}

@@ -37,6 +37,9 @@ document.getElementById("adminProductos").addEventListener("click",async ()=>{
                 indice++;
             });
         });
+        /* tabla.insertAdjacentHTML("afterend",`
+            <h1>Actualizar</h1>
+        `); */
     });
     if(document.getElementById("adminAdd") != null){
         document.getElementById("adminAdd").remove();
@@ -94,6 +97,9 @@ document.getElementById("adminPreguntas").addEventListener("click",async ()=>{
             document.querySelectorAll(".texto h5")[indice].dato = valor;
             indice++;
         });
+        /* tabla.insertAdjacentHTML("afterend",`
+            <h1>Hola</h1>
+        `); */
     }).catch(function(err){
         console.log(err);
     });

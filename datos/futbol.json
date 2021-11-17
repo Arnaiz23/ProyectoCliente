@@ -79,5 +79,15 @@
         "descripcionCorta" : "Botas de fútbol Puma FG/AG para césped natural o artificial",
         "descripcion" : "Botas de fútbol Puma FG/AG para césped natural o artificial - azules, verdes",
         "precio" : "200"
-    }
+    },
+{
+
+                    "imagen" : "../img/Balón_adidas_España_Pro.jpg",
+                    "nombre" : "Hola",
+                    "marca" : "MiMarca",
+                    "tipo" : "MiTipo",
+                    "descripcionCorta" : "hola",
+                    "descripcion" : "hola",
+                    "precio" : "21"
+                }
 ]

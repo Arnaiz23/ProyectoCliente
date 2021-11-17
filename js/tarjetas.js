@@ -69,8 +69,8 @@ function pintarTabla(lista){
     });
 }
 
-futbol.addEventListener("click",()=>{
-    getInfo().then(deporte =>{
+futbol.addEventListener("click",async ()=>{
+    /* getInfo().then(deporte =>{
         borrarTarjetas();
         pintarTabla(deporte[0]);
         eliminarMarca();
@@ -78,11 +78,13 @@ futbol.addEventListener("click",()=>{
         eliminarTipo();
         insertarTipo(deporte[0]);
         localStorage.setItem("indice","0");
-    });
+    }); */
+    await Deporte("futbol");
+    localStorage.setItem("indice","0");
     regresarFiltro();
 });
-baloncesto.addEventListener("click",()=>{
-    getInfo().then(deporte =>{
+baloncesto.addEventListener("click",async ()=>{
+    /* getInfo().then(deporte =>{
         borrarTarjetas();
         pintarTabla(deporte[1]);
         eliminarMarca();
@@ -90,11 +92,13 @@ baloncesto.addEventListener("click",()=>{
         eliminarTipo();
         insertarTipo(deporte[1]);
         localStorage.setItem("indice","1");
-    });
+    }); */
+    await Deporte("baloncesto");
+    localStorage.setItem("indice","1");
     regresarFiltro();
 });
-voleibol.addEventListener("click",()=>{
-    getInfo().then(deporte =>{
+voleibol.addEventListener("click",async ()=>{
+    /* getInfo().then(deporte =>{
         borrarTarjetas();
         pintarTabla(deporte[2]);
         eliminarMarca();
@@ -102,11 +106,13 @@ voleibol.addEventListener("click",()=>{
         eliminarTipo();
         insertarTipo(deporte[2]);
         localStorage.setItem("indice","2");
-    });
+    }); */
+    await Deporte("voleibol");
+    localStorage.setItem("indice","2");
     regresarFiltro();
 });
-running.addEventListener("click",()=>{
-    getInfo().then(deporte =>{
+running.addEventListener("click",async ()=>{
+    /* getInfo().then(deporte =>{
         borrarTarjetas();
         pintarTabla(deporte[3]);
         eliminarMarca();
@@ -114,7 +120,9 @@ running.addEventListener("click",()=>{
         eliminarTipo();
         insertarTipo(deporte[3]);
         localStorage.setItem("indice","3");
-    });
+    }); */
+    await Deporte("running");
+    localStorage.setItem("indice","3");
     regresarFiltro();
 });
 

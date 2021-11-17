@@ -89,15 +89,42 @@ function eliminarProducto(){
 
 if(location.href.includes("carrito.html")){
     let realizarPedido = document.querySelector(".main_container_izquierda_comprar p");
-    realizarPedido.addEventListener("click",()=>{
-        
+    realizarPedido.addEventListener("click",async ()=>{
+        let usuario;
+        await fetch("../php/datos.php",{
+            method : "POST",
+            headers : {
+                "Content-type" : "application/json",
+                "tipo" : "usuarios"
+            }
+        }).then(function(response){
+            if(response.ok){
+                return response.json();
+            }else{
+                throw "ERROR EN LA LLAMADA AJAX";
+            }
+        }).then(function(texto){
+            // console.log(texto)
+            usuario = texto.find(texto =>{
+                return texto.usuario == localStorage.getItem("usuario");
+            });
+        }).catch(function(err){
+            console.log(err);
+        });
+        usuario = usuario.direcciones;
+        let direcciones = "";
+        for(direccion in usuario){
+            let cont = 1;
+            direcciones += `<option value="${cont}">${usuario[direccion]}</option>`;
+        }
         if(realizarPedido.style.cursor != "not-allowed"){
             contenedor.insertAdjacentHTML("afterend",`
                 <div class="fondo_pedido">
                     <div class="pedido_direccion">
                         <label for="direccionPedido">Elige una dirección</label>
                         <select name="direccion" id="direccionPedido">
-                            
+                            <option value="0">...</option>
+                            ${direcciones}
                         </select>
                         <label for="direccionPedido2">O escribe una nueva</label>
                         <input type="text" name="direccionPedido2" id="direccionPedido2">
@@ -105,37 +132,95 @@ if(location.href.includes("carrito.html")){
                     </div>
                 </div>
             `);
+            // VALIDACION
+            let valorDireccion = document.getElementById("direccionPedido");
+            let nuevaDireccion = document.getElementById("direccionPedido2");
+            
             let siguiente = document.querySelector(".botonPagar");
+            let error = false;
+            
             siguiente.addEventListener("click",()=>{
-                document.querySelector(".fondo_pedido").remove();
-                contenedor.insertAdjacentHTML("afterend",`
-                    <div class="fondo_pedido">
-                        <div class="pedido">
-                            <!-- Nombre titular -->
-                            <label for="nombreTitular">Nombre del titular</label>
-                            <input type="text" name="nombreTitular" id="nombreTitular">
-                            <!-- Numero tarjeta -->
-                            <label for="numeroTarjeta">Numero de tarjeta</label>
-                            <input type="number" name="numeroTarjeta" id="numeroTarjeta">
-                            <!-- Fecha -->
-                            <label for="fechaTarjeta">Fecha de expiración</label>
-                            <input type="date" name="fechaTarjeta" id="fechaTarjeta">
-                            <!-- CVC -->
-                            <label for="cvcTarjeta">CVC</label>
-                            <input type="text" name="cvcTarjeta" id="cvcTarjeta">
-                            <p class="botonPagar">Pagar y finalizar</p>
+                if(valorDireccion.value == 0 && nuevaDireccion.value == ""){
+                    error = true;
+                    nuevaDireccion.style.border = "2px solid red";
+                    if(nuevaDireccion.nextElementSibling == siguiente){
+                        nuevaDireccion.insertAdjacentHTML("afterend",`
+                            <p style=color:red;>Selecciona una direccion</p>
+                        `);
+                    }
+                }else{
+                    error = false;
+                }
+                if(!error){
+                    document.querySelector(".fondo_pedido").remove();
+                    contenedor.insertAdjacentHTML("afterend",`
+                        <div class="fondo_pedido">
+                            <div class="pedido">
+                                <!-- Nombre titular -->
+                                <label for="nombreTitular">Nombre del titular</label>
+                                <input type="text" name="nombreTitular" id="nombreTitular">
+                                <!-- Numero tarjeta -->
+                                <label for="numeroTarjeta">Numero de tarjeta</label>
+                                <input type="number" name="numeroTarjeta" id="numeroTarjeta">
+                                <!-- Fecha -->
+                                <label for="fechaTarjeta">Fecha de expiración</label>
+                                <input type="date" name="fechaTarjeta" id="fechaTarjeta">
+                                <!-- CVC -->
+                                <label for="cvcTarjeta">CVC</label>
+                                <input type="text" name="cvcTarjeta" id="cvcTarjeta">
+                                <p class="botonPagar">Pagar y finalizar</p>
+                            </div>
                         </div>
-                    </div>
-                `);
-                let pagar = document.querySelector(".botonPagar");
-                pagar.addEventListener("click",()=>{
-                    let carrito = localStorage.getItem("carrito");
-                    localStorage.setItem("mispedidos",carrito);
-                    alert("Pedido realizado");
-                    localStorage.removeItem("carrito");
-                    location.reload();
-                });
+                    `);
+                    let pagar = document.querySelector(".botonPagar");
+                    let validacion = true;
+                    pagar.addEventListener("click",()=>{
+                        let fecha = document.getElementById("fechaTarjeta");
+                        if(fecha.value == ""){
+                            fecha.style.border = "2px solid red";
+                            validacion = false;
+                        }else{
+                            validacion = true;
+                        }
+                        let nombre = document.getElementById("nombreTitular");
+                        if(!validarNombre(nombre)){
+                            nombre.style.border = "2px solid red";
+                            validacion = false;
+                        }else{
+                            validacion = true;
+                        }
+                        let cvc = document.getElementById("cvcTarjeta");
+                        if(!validarCVC(cvc)){
+                            cvc.style.border = "2px solid red";
+                            validacion = false;
+                        }else{
+                            validacion = true;
+                        }
+                        let numeroTarjeta = document.getElementById("numeroTarjeta");
+                        if(!validarNumero(numeroTarjeta)){
+                            numeroTarjeta.style.border = "2px solid red";
+                            validacion = false;
+                        }else{
+                            validacion = true;
+                        }
+                        if(validacion){
+                            let tarjeta = {
+                                "nombreTitular" : nombre.value,
+                                "numero" : numeroTarjeta.value,
+                                "fechaExpiracion" : fecha.value,
+                                "cvc" : cvc.value
+                            };
+                            localStorage.setItem("tarjeta",JSON.stringify(tarjeta));
+                            let carrito = localStorage.getItem("carrito");
+                            localStorage.setItem("mispedidos",carrito);
+                            alert("Pedido realizado");
+                            localStorage.removeItem("carrito");
+                            location.reload();
+                        }
+                    });
+                }
             });
+            
         }
     });
 }

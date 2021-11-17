@@ -4,6 +4,8 @@ const administrarCuenta = document.getElementById("administrarCuenta");
 
 function cerrarSesion(){
     localStorage.removeItem("usuario");
+    localStorage.removeItem("tarjeta");
+    localStorage.removeItem("mispedidos");
     location.href = "index.html";
 }
 
@@ -275,3 +277,49 @@ async function actualizarCuenta(){
     // console.log(usuario)
     
 }
+
+
+
+// BOTON MIS TARJETAS
+let btnTarjeta = document.getElementById("misTarjetas");
+
+btnTarjeta.addEventListener("click",()=>{
+    let tarjeta;
+    if(localStorage.getItem("tarjeta") != null){
+        tarjeta = JSON.parse(localStorage.getItem("tarjeta"));
+        document.querySelector(".main_container_derecha").innerHTML = "";
+        document.querySelector(".main_container_derecha").insertAdjacentHTML("beforeend",`
+            <div class="tarjeta">
+                <p class="tipoTarjeta">Visa</p>
+                <p class="nombreTarjeta">${tarjeta.nombreTitular}</p>
+                <p class="fechaTarjeta">${tarjeta.fechaExpiracion}</p>
+                <p class="numeroTarjeta">${tarjeta.numero}</p>
+            </div>
+        `);
+    }else{
+        document.querySelector(".main_container_derecha h2").innerHTML = "No tienes ninguna tarjeta guardada";
+    }
+});
+
+// MIS PEDIDOS
+let btnPedidos = document.getElementById("misPedidos");
+
+btnPedidos.addEventListener("click",()=>{
+    let pedidos;
+    if(localStorage.getItem("tarjeta") != null){
+        pedidos = JSON.parse(localStorage.getItem("mispedidos"));
+        document.querySelector(".main_container_derecha").innerHTML = "";
+        pedidos.forEach(pedido =>{
+            document.querySelector(".main_container_derecha").insertAdjacentHTML("beforeend",`
+                <div class="pedidos">
+                    <img src="${pedido.imagen}" class="imagenPedido">
+                    <p class="nombrePedido">${pedido.nombre}</p>
+                    <p class="fechaPedido">${pedido.cantidad}</p>
+                    <p class="numeroPedido">${pedido.precio} €</p>
+                </div>
+            `);
+        });
+    }else{
+        document.querySelector(".main_container_derecha h2").innerHTML = "No has realizado ningun pedido";
+    }
+});

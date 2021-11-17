@@ -1,4 +1,4 @@
-async function Usuario(){
+async function Usuario(usuario){
     await fetch("../php/datos.php",{
         method : "POST",
         headers : {
