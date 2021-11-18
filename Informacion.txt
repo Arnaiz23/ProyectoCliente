@@ -150,9 +150,10 @@ Token -> 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
         -Darle funcionalidad
             -Mostrar ambos OK
             -Darle la funcionalidad
-                    -En ese div añadir el boton de eliminar
+                    -En ese div añadir el boton de eliminar OK
                     -Eliminar y modificar JS
-        -Añadir un boton confirmar, para guardarlo del todo
+        -Arreglar el contenedor de modificar y añadir un producto
+            -Mas o menos bien pero falta la parte de abajo de ese contenedor
     Clases
         -Modificarlas
     Servidor y cliente

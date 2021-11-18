@@ -297,7 +297,7 @@ btnTarjeta.addEventListener("click",()=>{
             </div>
         `);
     }else{
-        document.querySelector(".main_container_derecha h2").innerHTML = "No tienes ninguna tarjeta guardada";
+        document.querySelector(".main_container_derecha").innerHTML = `<h2>No tienes ninguna tarjeta guardada</h2>`;
     }
 });
 
@@ -320,6 +320,6 @@ btnPedidos.addEventListener("click",()=>{
             `);
         });
     }else{
-        document.querySelector(".main_container_derecha h2").innerHTML = "No has realizado ningun pedido";
+        document.querySelector(".main_container_derecha").innerHTML = `<h2>No has realizado ningun pedido</h2>`;
     }
 });

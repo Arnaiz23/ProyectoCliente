@@ -69,6 +69,9 @@ main{
         padding: 20px;
         max-width: 250px;
     }
+    .tabla td:last-child{
+        min-width: max-content;
+    }
 
     /* CONTENEDOR OPCIONES */
     .main_informacion_opciones{
@@ -194,3 +197,17 @@ main{
         box-shadow: 5px 5px 5px #000;
         border: none;
     }
+
+@media screen and (max-width:1400px) {
+    .containerDentro textarea{
+        max-height: 100px;
+    }
+    .fondo{
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .containerDentro{
+        position: absolute;
+        top: 20px;
+    }
+}
