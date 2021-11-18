@@ -145,19 +145,17 @@ Token -> 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
         -Mis direcciones 
             -Añadir y modificar
     Preguntas
-        -Cambiar un poco las cosas
+        -JSON
     Admin
         -Darle funcionalidad
             -Mostrar ambos OK
             -Darle la funcionalidad
                     -En ese div añadir el boton de eliminar OK
                     -Eliminar y modificar JS
-        -Arreglar el contenedor de modificar y añadir un producto
-            -Mas o menos bien pero falta la parte de abajo de ese contenedor
     Clases
         -Modificarlas
     Servidor y cliente
         -Solicitar al servidor los productos
     Una vez acabada la pagina, mirar si quiero crear mis propios alerts
-    Modificar los js para que no me den errores (hecho por el momento)
+    Modificar los js para que no me den errores
     En caso de que al final quiera, poner un boton ir arriba

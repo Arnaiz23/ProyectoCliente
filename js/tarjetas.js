@@ -9,7 +9,7 @@ function pintarTarjeta(){
     if(localStorage.getItem("usuario") != null){
         contenedorIzquierdo.insertAdjacentHTML("beforeend",`
             <div class="card">
-                <img src="" alt="" class="card_imagenes">
+                <img src="" alt="" class="card_imagenes" onclick="mostrarProducto()">
                 <div class="card_informacion">
                     <h3 class="card_informacion_titulo"></h3>
                     <p class="card_informacion_texto"></p>
@@ -33,7 +33,7 @@ function pintarTarjeta(){
     }else{
         contenedorIzquierdo.insertAdjacentHTML("beforeend",`
             <div class="card">
-                <img src="" alt="" class="card_imagenes">
+                <img src="" alt="" class="card_imagenes" onclick="mostrarProducto()">
                 <div class="card_informacion">
                     <h3 class="card_informacion_titulo"></h3>
                     <p class="card_informacion_texto"></p>
@@ -63,6 +63,7 @@ function pintarTabla(lista){
             boton.parentElement.dato2 = cantidad;
         }
         imagen.src = texto.imagen;
+        imagen.objeto = texto;
         titulo_tarjeta.innerHTML = texto.nombre;
         parrafo_tarjeta.innerHTML = texto.descripcionCorta;
         precio.innerHTML = texto.precio+"€";
@@ -131,4 +132,10 @@ function borrarTarjetas(){
     tarjeta.forEach((texto,indice)=>{
         contenedorIzquierdo.removeChild(tarjeta[indice]);
     })
+}
+
+
+function mostrarProducto(){
+    localStorage.setItem("producto",JSON.stringify(event.target.objeto));
+    location.href = "producto.html";
 }

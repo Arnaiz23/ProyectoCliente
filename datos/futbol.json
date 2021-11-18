@@ -5,7 +5,7 @@
         "marca" : "Joma",
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol sala Joma",
-        "descripcion" : "adios",
+        "descripcion" : "Joma, como Sponsor Técnico Oficial de Fútbol Sala de la Real Federación Española de Fútbol, y la RFEF han dado a conocer el balón oficial con que el se disputará la próxima edición de la máxima competición nacional de fútbol sala, Primera División la Primera RFEF Futsal.",
         "precio" : "26.50"
     },
     {
@@ -14,7 +14,7 @@
         "marca" : "Adidas",
         "tipo" : "Balones",
         "descripcionCorta" : "Balón profesional de fútbol playa",
-        "descripcion" : "adios",
+        "descripcion" : "El estilo clásico y elegante del balón adidas Tiro cumple todas las expectativas de tu equipo. El Balón adidas España Pro cuenta con el sello de calidad FIFA Quality Pro para rodar en los mejores estadios del mundo. La superficie sin costuras térmicamente sellada garantiza una trayectoria del balón más predecible.",
         "precio" : "140"
     },
     {
@@ -23,7 +23,7 @@
         "marca" : "Puma",
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol Puma de La Liga española LFP 2021 2022",
-        "descripcion" : "adios",
+        "descripcion" : "Diseño en color amarillo flúor que se combina con unos gráficos en color turquesa que ofrecen un buen contraste y le permiten ser visto con facilidad en el terreno de juego.",
         "precio" : "25"
     },
     {
@@ -32,7 +32,7 @@
         "marca" : "Adidas",
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol adidas Team",
-        "descripcion" : "adios",
+        "descripcion" : "Para mejorar tu juego. Para hacer grande a tu equipo. adidas ha diseñado la colección Tiro para ofrecerte la esencia del fútbol en un balón. Inspirado en los balones oficiales, el balón Tiro League TB presenta una superficie sin costuras térmicamente sellada que garantiza una trayectoria más predecible. El distintivo IMS certifica su calidad en cualquier tipo de competición.",
         "precio" : "30"
     },
     {
@@ -79,15 +79,5 @@
         "descripcionCorta" : "Botas de fútbol Puma FG/AG para césped natural o artificial",
         "descripcion" : "Botas de fútbol Puma FG/AG para césped natural o artificial - azules, verdes",
         "precio" : "200"
-    },
-{
-
-                    "imagen" : "../img/Balón_adidas_España_Pro.jpg",
-                    "nombre" : "Hola",
-                    "marca" : "MiMarca",
-                    "tipo" : "MiTipo",
-                    "descripcionCorta" : "hola",
-                    "descripcion" : "hola",
-                    "precio" : "21"
-                }
+    }
 ]
