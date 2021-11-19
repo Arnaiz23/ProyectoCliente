@@ -106,7 +106,6 @@ let buscar = document.getElementById("buscar");
 
 function filtroBuscar(lista){
     let filtrada = [];
-    
     lista.filter(elemento => {
         for(let clave in elemento){
             if(elemento[clave].toLowerCase().includes(buscar.value.toLowerCase())){
