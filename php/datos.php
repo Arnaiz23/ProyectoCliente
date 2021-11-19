@@ -62,14 +62,11 @@
                 print $producto;
             }
         }else if($cabecera["tipo"] == "todos"){
-            $futbol = file("../datos/futbol.json");
-            $baloncesto = file("../datos/baloncesto.json");
-            $voleibol = file("../datos/voleibol.json");
-            $running = file("../datos/running.json");
-            foreach($futbol as $producto){
-                print $producto;
-            }
-            foreach($baloncesto as $producto){
+            $array[] = file("../datos/futbol.json");
+            $array[] = file("../datos/baloncesto.json");
+            $array[] = file("../datos/voleibol.json");
+            $array[] = file("../datos/running.json");
+            foreach($array as $producto){
                 print $producto;
             }
             // print json_encode($futbol);

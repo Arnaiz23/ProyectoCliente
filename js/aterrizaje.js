@@ -70,7 +70,7 @@ function ordenarMayor(lista){
 
 
 // FILTRO
-document.getElementById("filtroMenor").addEventListener("click",()=>{
+document.getElementById("filtroMenor").addEventListener("click",async ()=>{
     let lista2;
     let indice = parseInt(localStorage.getItem("indice"));
     getInfo().then(lista =>{
@@ -80,7 +80,7 @@ document.getElementById("filtroMenor").addEventListener("click",()=>{
     console.log(lista2)
 });
 
-document.getElementById("filtroMayor").addEventListener("click",()=>{
+document.getElementById("filtroMayor").addEventListener("click",async ()=>{
     let lista2;
     getInfo().then(lista =>{
         lista2 = lista[localStorage.getItem("indice")];
@@ -88,7 +88,7 @@ document.getElementById("filtroMayor").addEventListener("click",()=>{
     });
 });
 
-document.getElementById("filtroNormal").addEventListener("click",()=>{
+document.getElementById("filtroNormal").addEventListener("click",async ()=>{
     let lista2;
     getInfo().then(lista =>{
         lista2 = lista[localStorage.getItem("indice")];

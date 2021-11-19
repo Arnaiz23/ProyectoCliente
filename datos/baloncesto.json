@@ -1,20 +1,128 @@
 [
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "adidas",
-        "marca" : "Adidas",
-        "tipo" : "balones",
-        "descripcionCorta" : "hola",
-        "descripcion" : "adios",
-        "precio" : "40€"
+        "imagen" : "../img/bolsaBaloncesto.jpg",
+        "nombre" : "BOLSA DEPORTIVA TENTH NEGRA 30L",
+        "marca" : "Tenth",
+        "tipo" : "Bolsa deportes",
+        "descripcionCorta" : "Bolsa deportiva Tenth 30 Litros.",
+        "descripcion" : "Cierres con cremallera para un almacenamiento seguro. Cintas ajustables y acolchadas para un mayor confort. Compartimientos separados de fácil acceso. Asa de transporte.",
+        "precio" : "9,99"
     },
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "Nike",
+        "imagen" : "../img/bulls.jpg",
+        "nombre" : "CAMISETA TRAINING TENTH CHICAGO NIÑO",
+        "marca" : "Tenth",
+        "tipo" : "Camiseta",
+        "descripcionCorta" : "Camiseta sin mangas Tenth basket para niños. ",
+        "descripcion" : "Esta camiseta sin mangas de la colección de baloncesto y se adapta a los entrenamientos, partidos e incluso de forma ocasional, con su diseño innovador, esta prenda será la mejor elección para completar looks deportivos. Disfruta del confort de su tejido suave.",
+        "precio" : "12,99"
+    },
+    {
+        "imagen" : "../img/camisetaBaloncesto.jpg",
+        "nombre" : "CAMISETA BALONCESTO TENTH HOMBRE",
+        "marca" : "Tenth",
+        "tipo" : "Camiseta",
+        "descripcionCorta" : "Camiseta de manga curta, perfecta para cualquier plan diario.",
+        "descripcion" : "Camiseta de manga curta, perfecta para cualquier plan diario. Su suave tejido proporcionará una comodidad incomparable.",
+        "precio" : "5,99"
+    },
+    {
+        "imagen" : "../img/zapasBaloncesto.jpg",
+        "nombre" : "KD14",
         "marca" : "Nike",
-        "tipo" : "balones",
-        "descripcionCorta" : "hola",
-        "descripcion" : "adios",
-        "precio" : "50€"
+        "tipo" : "Zapatillas",
+        "descripcionCorta" : "Zapatillas de baloncesto",
+        "descripcion" : "Kevin Durant acecha en el ala, esperando al momento perfecto para atacar y abrirse camino entre la defensa.Las KD14 se han diseñado para que los jugadores más versátiles disfruten de una mayor frescura durante todo el partido gracias a la malla multicapa y la amortiguación reactiva.Además, la correa del pie es un guiño sutil a las KD4 y se inspira en la forma de la guadaña de la Parca.",
+        "precio" : "149,99"
+    },
+    {
+        "imagen" : "../img/zapas2Baloncesto.jpg",
+        "nombre" : "Kyrie 7",
+        "marca" : "Nike",
+        "tipo" : "Zapatillas",
+        "descripcionCorta" : "Zapatillas de baloncesto",
+        "descripcion" : "Kyrie Irving es una fuerza creativa dentro y fuera de la cancha. Necesita que sus zapatillas sigan el ritmo de sus jugadas y sean acordes con su estilo y su espíritu de superación. Las Kyrie 7 se han perfeccionado para la próxima generación de retorno de energía, control y velocidad. Se han optimizado el ajuste de las zapatillas, el tacto de la cancha y las capacidades de inclinación para que jugadores de todos los niveles tomen ventaja en su primer paso rápido.",
+        "precio" : "129,99"
+    },
+    {
+        "imagen" : "../img/zapas3Baloncesto.jpg",
+        "nombre" : "KD14",
+        "marca" : "Nike",
+        "tipo" : "Zapatillas",
+        "descripcionCorta" : "Zapatillas de baloncesto",
+        "descripcion" : "Kevin Durant acecha en el ala, esperando al momento perfecto para atacar y abrirse camino entre la defensa. Las KD14 están diseñadas para ayudar a los jugadores versátiles e implacables como KD a mantener la frescura durante todo el partido. El tejido de malla multicapa y la correa del mediopié ayudan a reducir el movimiento del pie dentro de la zapatilla. La amortiguación Zoom Air completa y la espuma Cushlon ofrecen un gran retorno de la energía para disfrutar de un rendimiento duradero.",
+        "precio" : "149,99"
+    },
+    {
+        "imagen" : "../img/lakers.jpg",
+        "nombre" : "Los Angeles Lakers Statement Edition 2020",
+        "marca" : "Jordan",
+        "tipo" : "Camiseta",
+        "descripcionCorta" : "Camiseta Swingman Jordan de la NBA",
+        "descripcion" : "La edición Statement Edition se caracteriza por sus atrevidos colores alternativos y por el diseño Jumpman.Es una camiseta que simboliza la fuerza colectiva, el espíritu y la actitud competitiva de los jugadores.La camiseta Jordan NBA Statement Edition Swingman de Los Angeles Lakers se inspira en el look que llevan los profesionales.Está confeccionada con un tejido de doble punto premium y cuenta con un ajuste holgado y sencillo, ideal para los aficionados.Este producto está fabricado al 100 % con un tejido de poliéster reciclado.",
+        "precio" : "89,99"
+    },
+    {
+        "imagen" : "../img/bullsPantalones.jpg",
+        "nombre" : "Chicago Bulls Association Edition",
+        "marca" : "Nike",
+        "tipo" : "Pantalones",
+        "descripcionCorta" : "Pantalón corto Swingman Nike de la NBA - Hombre",
+        "descripcion" : "El pantalón corto Swingman Association Edition de los Chicago Bulls se inspira en el auténtico pantalón corto de la NBA. Cuenta con fibras con capilarización del sudor, bolsillos laterales para acceder a tus cosas con facilidad y detalles de diseño que combinan con el look que lleva tu equipo sobre la cancha. Este producto está fabricado al 100 % con fibras de poliéster reciclado.",
+        "precio" : "64,99"
+    },
+    {
+        "imagen" : "../img/golden.jpg",
+        "nombre" : "Golden State Warriors City Edition",
+        "marca" : "Nike",
+        "tipo" : "Camiseta",
+        "descripcionCorta" : "Camiseta Nike Dri-FIT NBA Swingman",
+        "descripcion" : "Cada franquicia de la NBA cuenta con una Playlist de sus grandes éxitos, una recopilación de los icónicos momentos del pasado que cuentan la historia definitiva del equipo. La camiseta Golden State Warriors City Edition Swingman de 2021-22 muestra un diseño innovador que combina elementos de una gran variedad de uniformes vinculados a la historia del equipo. La playlist de los Dubs va desde su increíble campeonato de 2015 hasta su dominio en la temporada 2017-18, y hace un guiño simbólico a algunos de sus jugadores más emblemáticos y al doble campeonato del 47. El fondo negro muestra el logotipo del icónico puente del equipo, con líneas radiantes que convergen hacia un mismo centro. Este producto está fabricado con fibras de poliéster 100 % reciclado.",
+        "precio" : "109,99"
+    },
+    {
+        "imagen" : "../img/chaquetaGolden.jpg",
+        "nombre" : "Golden State Warriors Showtime City Edition",
+        "marca" : "Nike",
+        "tipo" : "Chaqueta",
+        "descripcionCorta" : "Chaqueta de la NBA de manga larga Nike Dri-FIT - Hombre",
+        "descripcion" : "Old School es el nuevo look de esta ropa de calentamiento original de la NBA. La chaqueta Golden State Warriors Showtime City Edition presenta una mezcla de detalles y colores del equipo inspirados en los grandes logros de su historia. Los ribetes elásticos a rayas, las mangas raglán y las letras son totalmente vintage. El tejido de doble punto y alto rendimiento mantienen la comodidad. Y como es la temporada del 75 aniversario de la NBA, incorpora un logotipo especial para esta conmemoración de diamante.",
+        "precio" : "129,99"
+    },
+    {
+        "imagen" : "../img/calcetines1.jpg",
+        "nombre" : "Nike Everyday",
+        "marca" : "Nike",
+        "tipo" : "Calcetines",
+        "descripcionCorta" : "Calcetines largos acolchados (3 pares)",
+        "descripcion" : "Los calcetines Nike Everyday son increíblemente suaves y están diseñados para llevarlos durante todo el día. Cuentan con la tecnología Dri-FIT para ofrecer comodidad a tus pies tanto en un paseo corto como en una gran aventura o cualquier otra cosa que pueda surgir.",
+        "precio" : "9,99"
+    },
+    {
+        "imagen" : "../img/calcetines2.jpg",
+        "nombre" : "Jordan Everyday Max",
+        "marca" : "Nike",
+        "tipo" : "Calcetines",
+        "descripcionCorta" : "Calcetines largos (3 pares) - Unisex",
+        "descripcion" : "Los calcetines largos Jordan Everyday Max proporcionan comodidad dentro y fuera de la cancha. Esta prenda cuenta con detalles de capilarización del sudor y sujeción en el puente del pie para ofrecer un ajuste seguro.",
+        "precio" : "17,99"
+    },
+    {
+        "imagen" : "../img/sudadera.jpg",
+        "nombre" : "Team 31 Essential",
+        "marca" : "Nike",
+        "tipo" : "Sudadera",
+        "descripcionCorta" : "Sudadera con capucha Nike de la NBA - Hombre",
+        "descripcion" : "Anima a tu equipo en las gradas o en la calle con la sudadera con capucha Nike de la NBA Team 31 Essential. Confeccionada con suave tejido Fleece cepillado, esta prenda es cálida y holgada. Además, puede llevarse debajo de una chaqueta.",
+        "precio" : "59,99"
+    },
+    {
+        "imagen" : "../img/pelotaBaloncesto.jpg",
+        "nombre" : "Jordan Legacy 8P",
+        "marca" : "Nike",
+        "tipo" : "Pelota",
+        "descripcionCorta" : "Pelota de baloncesto (Tamaño 7)",
+        "descripcion" : "Diseñada para su uso en interiores y exteriores, la pelota de baloncesto Jordan Legacy 8P está confeccionada con un compuesto de goma y piel sintética para jugar en cualquier superficie.",
+        "precio" : "34,99"
     }
 ]

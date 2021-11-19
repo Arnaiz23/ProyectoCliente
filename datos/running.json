@@ -1,20 +1,65 @@
 [
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "adidas",
-        "marca" : "Adidas",
-        "tipo" : "balones",
-        "descripcionCorta" : "hola",
-        "descripcion" : "adios",
-        "precio" : "40€"
+        "imagen" : "../img/calcetines3.jpg",
+        "nombre" : "Nike Spark",
+        "marca" : "Nike",
+        "tipo" : "Calcetines",
+        "descripcionCorta" : "Calcetines tobilleros de running con amortiguación",
+        "descripcion" : "Cuando estás en plena carrera, necesitas amortiguación durante kilómetros. Los calcetines Nike Spark ofrecen un ajuste seguro y transpirable diseñado para el entrenamiento.",
+        "precio" : "13,99"
     },
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "adidas",
+        "imagen" : "../img/zapas.jpg",
+        "nombre" : "Nike Pegasus Trail 3",
+        "marca" : "Nike",
+        "tipo" : "Zapatillas",
+        "descripcionCorta" : "Zapatillas de trail running - Mujer",
+        "descripcion" : "Siente la libertad de correr fuera de pista. Las Nike Pegasus Trail 3 ofrecen la comodidad amortiguada que más te gusta con un diseño que rinde homenaje al look clásico de las Pegasus. Proporcionan una tracción resistente para seguir en movimiento en terrenos rocosos. Mayor sujeción en el mediopié para ofrecer seguridad en cada aventura",
+        "precio" : "129,99"
+    },
+    {
+        "imagen" : "../img/zapas2.jpg",
+        "nombre" : "Zapatilla Adizero Boston 10",
         "marca" : "Adidas",
-        "tipo" : "balones",
-        "descripcionCorta" : "hola",
-        "descripcion" : "adios",
-        "precio" : "40€"
+        "tipo" : "Zapatillas",
+        "descripcionCorta" : "Zapatillas para hacer ejercicio",
+        "descripcion" : "La adizero Boston 10 es una zapatilla de running versátil diseñada para ayudarte a maximizar el rendimiento de tus carreras de larga distancia diarias. Inspirada en el legado adizero y en la evolución de su diseño, la adizero Boston 10 incluye las características con las que sueñan todos los corredores: la tecnología LIGHTSTRIKE PRO, una mediasuela de espuma EVA y LIGHTSTRIKE, varillas ENERGYRODS y una SUELA CON COMPUESTO DE CAUCHO CONTINENTAL™ que se combinan para ofrecerte más estabilidad y una pisada ligera y cómoda.",
+        "precio" : "150"
+    },
+    {
+        "imagen" : "../img/zapas3.jpg",
+        "nombre" : "Zapatilla Adizero Adios 6",
+        "marca" : "Adidas",
+        "tipo" : "Zapatillas",
+        "descripcionCorta" : "Zapatillas para salir a correr",
+        "descripcion" : "Tu esfuerzo y tus entrenamientos han empezado a dar sus frutos. Ya estás en la línea de salida. Cálzate esta zapatilla de running adidas de horma ancha y empieza a sumar kilómetros. La parte superior de malla es tan ligera que sentirás que vuelas. Incorpora la tecnología de amortiguación Lightstrike que te proporciona mayor respuesta e impulso.Este producto se ha fabricado con Primegreen, una combinación de materiales reciclados de alto rendimiento. La mitad de la parte superior se ha confeccionado con materiales reciclados. No contiene poliéster virgen.",
+        "precio" : "130"
+    },
+    {
+        "imagen" : "../img/camisetaRunning.jpg",
+        "nombre" : "Camiseta Own the Run",
+        "marca" : "Adidas",
+        "tipo" : "Camiseta",
+        "descripcionCorta" : "Camsieta para hacer ejercicio",
+        "descripcion" : "Tienes el cajón lleno de camisetas que no te sirven. Demasiado gruesas o finas. Muy ajustadas o excesivamente holgadas. Olvídate de esas incomodidades y viste la camiseta adidas Own the Run. Se ha confeccionado con materiales reciclados como parte de nuestro compromiso con la sostenibilidad y para ofrecerte la máxima comodidad de principio a fin de la carrera. No te conformes con menos.",
+        "precio" : "21"
+    },
+    {
+        "imagen" : "../img/pantalonesRunning.jpg",
+        "nombre" : "Pantalón corto Own the Run",
+        "marca" : "Adidas",
+        "tipo" : "Pantalones",
+        "descripcionCorta" : "Pantalones de running",
+        "descripcion" : "Tienes el cajón lleno de pantalones cortos que no te sirven. Demasiado largos o excesivamente cortos. Con pocos bolsillos o de tejidos ásperos. Olvídate de esas incomodidades y viste el pantalón corto adidas Own the Run. Se ha confeccionado en un tejido ligero y transpirable que brinda comodidad en cortas y largas distancias. Nunca más te conformes con menos",
+        "precio" : "19,50"
+    },
+    {
+        "imagen" : "../img/chaqueta.jpg",
+        "nombre" : "Chaqueta Marathon Translucent",
+        "marca" : "Adidas",
+        "tipo" : "Chaqueta",
+        "descripcionCorta" : "Chaqueta para el ejercicio",
+        "descripcion" : "Las razones por las que corres están claras. Para ganar fuerza. Resistencia. Y ahora, para ayudar a mejorar el planeta. Esta chaqueta de running adidas te ofrece una protección ligera y transpirable. Se ha confeccionado con material reciclado como parte del compromiso de adidas de reducir los residuos plásticos. Su acabado exterior repele la lluvia fina y te aísla del viento en los días grises.",
+        "precio" : "65"
     }
 ]

@@ -101,16 +101,5 @@ async function TodosDeportes(){
         }else{
             throw "ERROR EN LA LLAMADA AJAX"
         }
-    }).then(function(texto){
-        console.log(texto);
-        /* borrarTarjetas();
-        pintarTabla(texto);
-        eliminarMarca();
-        insertarMarca(texto);
-        eliminarTipo();
-        insertarTipo(texto); */
-        // localStorage.setItem("indice","0");
-    }).catch(function(err){
-        console.log(err);
-    });
+    })
 }
