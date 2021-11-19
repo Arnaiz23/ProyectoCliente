@@ -50,7 +50,15 @@ if(location.href.includes("carrito.html")){
 
 function addCarrito(){
     let producto = { "imagen" : event.target.dato.imagen, "nombre" : event.target.dato.nombre, "cantidad" : event.target.dato2.value, "precio" : (parseFloat(event.target.dato.precio) * event.target.dato2.value)};
-    carrito.push(producto);
+    let coincidencia = carrito.find(productos => {
+        return productos.nombre == producto.nombre;
+    });
+    if(coincidencia){
+        coincidencia.cantidad++;
+    }else{
+        carrito.push(producto);
+    }
+    // carrito.push(producto);
     localStorage.setItem("carrito",JSON.stringify(carrito))
     precio += (parseFloat(event.target.dato.precio) * event.target.dato2.value);
     let contenedor_precio = document.querySelectorAll(".main_container_derecha_carrito p");

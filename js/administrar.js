@@ -161,6 +161,16 @@ document.getElementById("misDirecciones").addEventListener("click", async()=>{
             </div>
         `);
         document.body.style.overflowY = "hidden";
+        // CANCELAR
+        document.getElementById("cancelarDireccion").addEventListener("click",()=>{
+            /* document.querySelector(".main_container_total").removeChild(informacion.nextElementSibling);
+            // document.body.style.overflowY = "initial"; */
+            document.querySelector(".containerDatoExtra").remove();
+            document.body.style.overflowY = "initial";
+        });
+        document.getElementById("addNuevaDireccion").addEventListener("click",async ()=>{
+            
+        });
     });
 })
 

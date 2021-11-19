@@ -104,6 +104,12 @@
             fwrite($preguntas,",\n{\n".$datos."}\n]");
             fclose($preguntas);
             print "OK";
+        }else if($cabecera["tipo"] == "direccionadd"){
+            $listausuarios = file("../datos/usuarios.json");
+            // print json_encode($usuarios);
+            foreach($listausuarios as $usuarios){
+                print $usuarios;
+            }
         }
     }
 

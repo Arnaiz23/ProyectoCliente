@@ -191,3 +191,9 @@
 .pedido_direccion input:focus{
     outline: none;
 }
+
+@media screen and (max-width:1400px) {
+    .main_container_izquierda_articulo,.linea{
+        width: 90%;
+    }
+}

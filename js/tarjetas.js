@@ -6,7 +6,7 @@ const running = document.getElementById("running");
 let contenedorIzquierdo = document.querySelector(".main_container_izquierda_tarjetas");
 
 function pintarTarjeta(){
-    if(localStorage.getItem("usuario") != null){
+    if(localStorage.getItem("usuario") != null && localStorage.getItem("usuario") != "admin"){
         contenedorIzquierdo.insertAdjacentHTML("beforeend",`
             <div class="card">
                 <img src="" alt="" class="card_imagenes" onclick="mostrarProducto()">
@@ -54,7 +54,7 @@ function pintarTabla(lista){
         let titulo_tarjeta = document.querySelectorAll(".card_informacion_titulo")[indice];
         let parrafo_tarjeta = document.querySelectorAll(".card_informacion_texto")[indice];
         let precio = document.querySelectorAll(".card_informacion_precio p")[indice];
-        if(localStorage.getItem("usuario") != null){
+        if(localStorage.getItem("usuario") != null && localStorage.getItem("usuario") != "admin"){
             let boton = document.querySelectorAll(".card_informacion_add p")[indice];
             let cantidad = document.querySelectorAll(".cantidadTarjeta")[indice];
             boton.parentElement.dato = texto;
