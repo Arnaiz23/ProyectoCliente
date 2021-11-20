@@ -1,20 +1,64 @@
 [
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "adidas",
-        "marca" : "Adidas",
+        "imagen" : "../img/molten.jpg",
+        "nombre" : "Balón Voleibol Molten 5000 Verde Rojo",
+        "marca" : "Molten",
         "tipo" : "balones",
-        "descripcionCorta" : "hola",
-        "descripcion" : "adios",
-        "precio" : "40€"
+        "descripcionCorta" : "Balón muy suave y muy flexible. Gran resistencia al desgaste.",
+        "descripcion" : "Este balón de voleibol ha sido concebido para entrenamientos y competiciones. Balón certificado, cumple las normas para campeonatos regionales y provinciales. ",
+        "precio" : "79,99"
     },
     {
-        "imagen" : "../img/voley.png",
-        "nombre" : "adidas",
-        "marca" : "Adidas",
+        "imagen" : "../img/mikasa.jpg",
+        "nombre" : "Balón Voleibol Mikasa MVA 330 Amarillo Azul",
+        "marca" : "Mikasa",
         "tipo" : "balones",
-        "descripcionCorta" : "hola",
-        "descripcion" : "adios",
-        "precio" : "40€"
+        "descripcionCorta" : "Este balón de voleibol tiene una rotación más estable. ",
+        "descripcion" : "Este balón ha sido concebido para la competición y la práctica intensiva del voleibol en interior. Balón oficial de la FIVB y aprobado por la FIVB.",
+        "precio" : "39,99"
+    },
+    {
+        "imagen" : "../img/camisetaVoleibol.jpg",
+        "nombre" : "CAMISETA VOLLEY ALOE MARINO-BLANCO S/M W.",
+        "marca" : "Joma",
+        "tipo" : "Camisetas",
+        "descripcionCorta" : "Camiseta de tirantes ",
+        "descripcion" : "Camiseta de entrenamiento Joma Azul marino y Blanco",
+        "precio" : "5,98"
+    },
+    {
+        "imagen" : "../img/pantalonVoleibol.jpg",
+        "nombre" : "SHORT STELLA II MARINO MUJER",
+        "marca" : "Joma",
+        "tipo" : "Pantalones",
+        "descripcionCorta" : "Pantalón corto de mujer",
+        "descripcion" : "Pantalón corto con abertura curva en el lateral para favorecer la movilidad. Con cintura elástica con cordón interior para un ajuste óptimo.",
+        "precio" : "13,50"
+    },
+    {
+        "imagen" : "../img/camisetaVoleibol2.jpg",
+        "nombre" : "CAMISETA CREW II CELESTE-MARINO S/M",
+        "marca" : "Joma",
+        "tipo" : "Camisetas",
+        "descripcionCorta" : "Camiseta sin mangas para voleibol",
+        "descripcion" : "Camiseta sin mangas diseñada con cuello de pico en tejido base. Incluye una pieza horizontal en la parte delantera en dos tonos que incorpora una decoración gofrada en la parte derecha. Incorpora tecnología capaz de controlar la humedad corporal del deportista.",
+        "precio" : "5,98"
+    },
+    {
+        "imagen" : "../img/japonVoleibol.jpg",
+        "nombre" : "Camiseta ISHIKAWA Yuki Selección de JAPÓN 2021",
+        "marca" : "Desconocido",
+        "tipo" : "Camisetas",
+        "descripcionCorta" : "Camiseta del jugador Ishikawa",
+        "descripcion" : "Camiseta oficial de la selección japonesa de voleibol",
+        "precio" : "100"
+    },{
+        "imagen" : "../img/msby.jpg",
+        "nombre" : "Camiseta MSBY",
+        "marca" : "ICS",
+        "tipo" : "Camisetas",
+        "descripcionCorta" : "Camiseta del jugador Shoyo Hinata",
+        "descripcion" : "Camiseta oficial del MSBY Black Jackals",
+        "precio" : "150"
     }
 ]

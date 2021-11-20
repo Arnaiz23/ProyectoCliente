@@ -14,6 +14,7 @@
         cursor: pointer;
         border-bottom: 1px solid rgba(0,0,0,.4);
         margin: 5% 10%;
+        user-select: none;
     }
     /* RESPUESTA */
     .main_container_izquierda_respuesta{
@@ -23,6 +24,7 @@
         display: none;
         padding: 20px;
         font-weight: 200;
+        line-height: 26px;
     }
     .main_container_izquierda_respuesta:last-child{
         margin: -3% 0 0 10%;

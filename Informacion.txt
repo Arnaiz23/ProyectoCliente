@@ -137,14 +137,10 @@ Token -> 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
 
 ---------------------QUE FALTA-----------------------------------
 7-11
-    Aterrizaje  
-        -Completar datos de los JSON
     Mi cuenta
         -Completar datos (modificarlo por lo del servidor)
         -Mis direcciones 
             -Añadir y modificar
-    Preguntas
-        -JSON
     Admin
         -Darle funcionalidad
             -Mostrar ambos OK

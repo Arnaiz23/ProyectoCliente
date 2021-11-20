@@ -1,14 +1,14 @@
 [
     {
-        "pregunta" : "Pregunta1",
-        "respuesta" : "holaholaholaholahoahoshiahsifhjhfiuasdfujbauifhuiwhejnfuwhiu"
+        "pregunta" : "¿Como puedo comprar en MetaSport?",
+        "respuesta" : "Registrate e inicia sesión el página web. Busca el producto que desees. Haz click en añadir. Y continua la compra en el carrito"
     },
     {
-        "pregunta" : "Pregunta2",
-        "respuesta" : "adios"
+        "pregunta" : "Formas de pago con tarjeta",
+        "respuesta" : "Esta forma de pago es inmediata, cómoda y segura. Al terminar tu pedido, podrás hacer el pago en la página del banco. MetaSport no recibirá estos datos ni tendrá acceso a ellos. Puedes asociar a tu cuenta de cliente tantas tarjetas como quieras para hacer pedidos más rápido. Un pedido por tarjeta se puede pagar en la hora siguiente a su confirmación. Pasado ese tiempo, si no llega el pago, el pedido será anulado automáticamente."
     },
     {
-        "pregunta" : "Pregunta3",
-        "respuesta" : "hola"
+        "pregunta" : "Localizar mi pedido",
+        "respuesta" : "Una vez realizado y confirmado un pedido, recibira un correo electrónico en el que se le enviara un enlace a la página de la empresa de reparto, donde podar localizar su pedido."
     }
 ]
