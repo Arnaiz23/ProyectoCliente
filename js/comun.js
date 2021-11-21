@@ -46,7 +46,10 @@ window.onload = async ()=>{
                     var valor = 0;
                 }else{
                     valor = 0;
-                    carrito.forEach(producto => valor += parseFloat(producto.precio));
+                    // carrito.forEach(producto => valor += parseFloat(producto.precio));
+                    carrito.forEach(producto => {
+                        valor += parseFloat(producto.precio) * parseInt(producto.cantidad);
+                    });
                 }
                 // Sustituir el 0 por una variable del precio
                 contenedor_precio.insertAdjacentHTML("beforeend",`
@@ -58,39 +61,15 @@ window.onload = async ()=>{
         }).catch(function(err){
             console.log(err);
         });
-
-        // USUARIO
-        /* if(localStorage.getItem("usuario") != null){
-            let boton_administracion = document.querySelector(".header_nav_opciones_inicio");
-            let listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"))
-            listaUsuario.forEach(texto => {
-                // console.log(texto)
-                if(texto.tipo == "admin" && texto.usuario == localStorage.getItem("usuario")){
-                    // if(localStorage.getItem("usuario") == texto.usuario){
-                        boton_administracion.innerHTML = `
-                        <a href="admin.html" id="administrar_sesion"><span class="icon-cog"></span>ADMIN</a>
-                        `;
-                    // }
-                }else{
-                    boton_administracion.innerHTML = `
-                        <a href="administrar.html"><span class="icon-user"></span>MI CUENTA</a>
-                    `;
-                }
-            });
-            // Sustituir el 0 por una variable del precio
-            contenedor_precio.insertAdjacentHTML("beforeend",`
-                <p>0 €</p>
-            `);
-        }else{
-            contenedor_precio.innerHTML = "<p>Inicia sesión para acceder</p>";
-        } */
     }else{
         if(location.href.includes("carrito.html")){
             if(localStorage.getItem("carrito") == null){
                 var valor = 0;
             }else{
                 valor = 0;
-                carrito.forEach(producto => valor += parseFloat(producto.precio));
+                carrito.forEach(producto => {
+                    valor += parseFloat(producto.precio) * parseInt(producto.cantidad);
+                });
             }
             // Sustituir el 0 por una variable del precio
             contenedor_precio.insertAdjacentHTML("beforeend",`

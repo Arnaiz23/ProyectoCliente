@@ -5,7 +5,9 @@ if(localStorage.getItem("carrito") == null){
 }else{
     precio = 0;
     var carrito = JSON.parse(localStorage.getItem("carrito"));
-    carrito.forEach(producto => precio += parseFloat(producto.precio));
+    carrito.forEach(producto => {
+        precio += parseFloat(producto.precio) * parseInt(producto.cantidad);
+    });
 }
 
 function pintarCarrito(){
@@ -49,17 +51,14 @@ if(location.href.includes("carrito.html")){
 }
 
 function addCarrito(){
-    let producto = { "imagen" : event.target.dato.imagen, "nombre" : event.target.dato.nombre, "cantidad" : event.target.dato2.value, "precio" : (parseFloat(event.target.dato.precio) * event.target.dato2.value)};
+    let producto = { "imagen" : event.target.dato.imagen, "nombre" : event.target.dato.nombre, "cantidad" : event.target.dato2.value, "precio" : parseFloat(event.target.dato.precio)};
     let coincidencia = carrito.find(productos => {
         return productos.nombre == producto.nombre;
     });
     let cantidadActual;
     if(coincidencia){
         cantidadActual = parseInt(coincidencia.cantidad);
-        console.log(cantidadActual)
-        console.log(producto.cantidad)
         cantidadActual += parseInt(producto.cantidad);
-        console.log(cantidadActual)
         coincidencia.cantidad = cantidadActual;
     }else{
         carrito.push(producto);
@@ -88,6 +87,9 @@ function eliminarProducto(){
         valor = indice;
         return texto.nombre == nombre;
     })
+    console.log(precio)
+    precio -= (parseFloat(producto.precio) * producto.cantidad);
+    console.log(precio)
     carrito.splice(valor,1);
     localStorage.setItem("carrito",JSON.stringify(carrito))
     let articulo = document.querySelectorAll(".main_container_izquierda_articulo");
@@ -95,7 +97,9 @@ function eliminarProducto(){
         <div class="main_container_izquierda_comprar">
             <p>Realizar pedido</p>
         </div>`;
+    /* console.log(precio)
     precio -= (parseFloat(producto.precio) * producto.cantidad);
+    console.log(precio) */
     let contenedor_precio = document.querySelectorAll(".main_container_derecha_carrito p");
     contenedor_precio[1].innerHTML = `${precio.toFixed(2)}€`;
     pintarCarrito();

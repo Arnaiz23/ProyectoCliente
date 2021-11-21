@@ -6,6 +6,7 @@ function cerrarSesion(){
     localStorage.removeItem("usuario");
     localStorage.removeItem("tarjeta");
     localStorage.removeItem("mispedidos");
+    localStorage.removeItem("direcciones");
     location.href = "index.html";
 }
 
@@ -129,9 +130,10 @@ administrarCuenta.addEventListener("click",async ()=>{
 // BOTON DIRECCION
 document.getElementById("misDirecciones").addEventListener("click", async()=>{
     await Usuario();
+    let direcciones = [];
     let valor = 0;
     informacion.innerHTML = "";
-    for(direccion in usuario.direcciones){
+    /* for(direccion in usuario.direcciones){
         valor++;
         informacion.insertAdjacentHTML("beforeend",`
             <h2>Direccion ${valor}</h2>
@@ -142,7 +144,34 @@ document.getElementById("misDirecciones").addEventListener("click", async()=>{
                 <div class ="linea2"></div>
             `);
         }
+    } */
+    if(localStorage.getItem("direcciones") != null){
+        direcciones = JSON.parse(localStorage.getItem("direcciones"));
+    }else{
+        if(Object.keys(usuario.direcciones).length == 1){
+            informacion.innerHTML = "No hay direcciones";
+        }else{
+            for(direccion in usuario.direcciones){
+                direcciones.push({
+                    "direccion" : usuario.direcciones[direccion]
+                });
+            }
+            localStorage.setItem("direcciones",JSON.stringify(direcciones));
+        }
+        
     }
+    direcciones.forEach(direccion =>{
+        valor++;
+        informacion.insertAdjacentHTML("beforeend",`
+            <h2>Direccion ${valor}</h2>
+            <p>${direccion.direccion}</p>
+        `);
+        if(valor < Object.keys(direcciones).length){
+            informacion.insertAdjacentHTML("beforeend",`
+                <div class ="linea2"></div>
+            `);
+        }
+    });
     informacion.insertAdjacentHTML("beforeend",`
         <button type="button" class="botonAddDireccion" id="addDireccion">Añadir direccion</button>
     `);
@@ -163,13 +192,29 @@ document.getElementById("misDirecciones").addEventListener("click", async()=>{
         document.body.style.overflowY = "hidden";
         // CANCELAR
         document.getElementById("cancelarDireccion").addEventListener("click",()=>{
-            /* document.querySelector(".main_container_total").removeChild(informacion.nextElementSibling);
-            // document.body.style.overflowY = "initial"; */
             document.querySelector(".containerDatoExtra").remove();
             document.body.style.overflowY = "initial";
         });
         document.getElementById("addNuevaDireccion").addEventListener("click",async ()=>{
-            
+            let nuevaDireccion = document.getElementById("nuevaDireccion");
+            if(nuevaDireccion.value == ""){
+                nuevaDireccion.style.border = "2px solid red";
+            }else{
+                console.log(direcciones)
+                let coincidencia = direcciones.find(valor =>{
+                    return valor.direccion == nuevaDireccion.value
+                });
+                if(coincidencia){
+                    alert("Esa direccion ya esta registrada");
+                    nuevaDireccion.style.border = "2px solid red";
+                }else{
+                    direcciones.push({"direccion" : nuevaDireccion.value});
+                    nuevaDireccion.style.border = "2px solid var(--verde)";
+                    alert("Direccion registrada");
+                    localStorage.setItem("direcciones",JSON.stringify(direcciones));
+                    location.reload();
+                }
+            }
         });
     });
 })
@@ -256,7 +301,6 @@ async function actualizarCuenta(){
                     }
                 }
             });
-            console.log(texto)
             if(actualizar){
                 await fetch("../php/datos.php",{
                     method : "POST",
