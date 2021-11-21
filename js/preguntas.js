@@ -88,10 +88,22 @@ window.onload = async()=>{
 document.getElementById("pregunta_enviar").addEventListener("click",()=>{
     let correo = document.getElementById("correoPregunta");
     let pregunta = document.getElementById("preguntaUsuario");
-    if(!validarCorreo(correo.value)){
-        correo.style.border = "2px solid red";
+    if(correo != null){
+        if(!validarCorreo(correo.value)){
+            correo.style.border = "2px solid red";
+        }else{
+            correo.style.border = "2px solid var(--verde)";
+            if(pregunta.value == ""){
+                pregunta.style.border = "2px solid red";
+                alert("Rellene el campo de la pregunta");
+            }else{
+                pregunta.style.border = "2px solid var(--verde)";
+                alert("Pregunta enviada, pronto contactaremos con usted");
+                location.reload();
+                pregunta.value = "";
+            }
+        }
     }else{
-        correo.style.border = "2px solid var(--verde)";
         if(pregunta.value == ""){
             pregunta.style.border = "2px solid red";
             alert("Rellene el campo de la pregunta");

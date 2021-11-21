@@ -141,12 +141,6 @@ Token -> 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
         -Completar datos (modificarlo por lo del servidor)
         -Mis direcciones 
             -Añadir y modificar
-    Admin
-        -Darle funcionalidad
-            -Mostrar ambos OK
-            -Darle la funcionalidad
-                    -En ese div añadir el boton de eliminar OK
-                    -Eliminar y modificar JS
     Clases
         -Modificarlas
     Servidor y cliente
@@ -154,3 +148,13 @@ Token -> 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
     Una vez acabada la pagina, mirar si quiero crear mis propios alerts
     Modificar los js para que no me den errores
     En caso de que al final quiera, poner un boton ir arriba
+
+
+
+Errores 
+    -Carrito
+        -Si eliminas el carrito, queda en negativos
+            -300€ 2 objetos, borras los 2 y se queda en -150€
+            -A veces va bien y otras mal
+        -Si compras 1 y luego 3, en la cantidad solo se pone 2
+            -Arreglado pero tengo un problema con el precio ya que 4 camisetas MSBY y 4 balones de españa pro pone que cuesta 290€

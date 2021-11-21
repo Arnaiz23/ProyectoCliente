@@ -70,6 +70,54 @@
                 print $producto;
             }
             // print json_encode($futbol);
+        }else if($cabecera["tipo"] == "modificarfutbol"){
+            // print $datos;
+            $fichero = fopen("../datos/futbol.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Modificado";
+            fclose($fichero);
+        }else if($cabecera["tipo"] == "modificarbaloncesto"){
+            // print $datos;
+            $fichero = fopen("../datos/baloncesto.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Modificado";
+            fclose($fichero);
+        }else if($cabecera["tipo"] == "modificarvoleibol"){
+            // print $datos;
+            $fichero = fopen("../datos/voleibol.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Modificado";
+            fclose($fichero);
+        }else if($cabecera["tipo"] == "modificarrunning"){
+            // print $datos;
+            $fichero = fopen("../datos/running.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Modificado";
+            fclose($fichero);
+        }else if($cabecera["tipo"] == "deletefutbol"){
+            // print $datos;
+            $fichero = fopen("../datos/futbol.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Eliminado";
+            fclose($fichero);
+        }else if($cabecera["tipo"] == "deletebaloncesto"){
+            // print $datos;
+            $fichero = fopen("../datos/baloncesto.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Eliminado";
+            fclose($fichero);
+        }else if($cabecera["tipo"] == "deletevoleibol"){
+            // print $datos;
+            $fichero = fopen("../datos/voleibol.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Eliminado";
+            fclose($fichero);
+        }else if($cabecera["tipo"] == "deleterunning"){
+            // print $datos;
+            $fichero = fopen("../datos/running.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Eliminado";
+            fclose($fichero);
         }else if($cabecera["tipo"] == "futboladd"){
             // print $datos;
             $futbol = fopen("../datos/futbol.json","r+");
@@ -101,6 +149,11 @@
             fwrite($preguntas,",\n{\n".$datos."}\n]");
             fclose($preguntas);
             print "OK";
+        }else if($cabecera["tipo"] == "deletepregunta"){
+            $fichero = fopen("../datos/preguntas.json","w");
+            fwrite($fichero,json_encode($datos));
+            print "Eliminado";
+            fclose($fichero);
         }else if($cabecera["tipo"] == "direccionadd"){
             $listausuarios = file("../datos/usuarios.json");
             // print json_encode($usuarios);

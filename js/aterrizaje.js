@@ -77,7 +77,6 @@ document.getElementById("filtroMenor").addEventListener("click",async ()=>{
         lista2 = lista[localStorage.getItem("indice")];
         ordenarMenor(lista2);
     });
-    console.log(lista2)
 });
 
 document.getElementById("filtroMayor").addEventListener("click",async ()=>{

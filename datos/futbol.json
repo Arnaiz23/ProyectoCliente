@@ -6,7 +6,8 @@
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol sala Joma",
         "descripcion" : "Joma, como Sponsor Técnico Oficial de Fútbol Sala de la Real Federación Española de Fútbol, y la RFEF han dado a conocer el balón oficial con que el se disputará la próxima edición de la máxima competición nacional de fútbol sala, Primera División la Primera RFEF Futsal.",
-        "precio" : "26.50"
+        "precio" : "26.50",
+        "deporte" : "futbol"
     },
     {
         "imagen" : "../img/Balón_adidas_España_Pro.jpg",
@@ -15,7 +16,8 @@
         "tipo" : "Balones",
         "descripcionCorta" : "Balón profesional de fútbol playa",
         "descripcion" : "El estilo clásico y elegante del balón adidas Tiro cumple todas las expectativas de tu equipo. El Balón adidas España Pro cuenta con el sello de calidad FIFA Quality Pro para rodar en los mejores estadios del mundo. La superficie sin costuras térmicamente sellada garantiza una trayectoria del balón más predecible.",
-        "precio" : "140"
+        "precio" : "140",
+        "deporte" : "futbol"
     },
     {
         "imagen" : "../img/Balón_Puma_LaLiga_1_Adrenalina_2021_2022_Hybrid.jpg",
@@ -24,7 +26,8 @@
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol Puma de La Liga española LFP 2021 2022",
         "descripcion" : "Diseño en color amarillo flúor que se combina con unos gráficos en color turquesa que ofrecen un buen contraste y le permiten ser visto con facilidad en el terreno de juego.",
-        "precio" : "25"
+        "precio" : "25",
+        "deporte" : "futbol"
     },
     {
         "imagen" : "../img/Balón_adidas_Tiro_League_TB.jpg",
@@ -33,7 +36,8 @@
         "tipo" : "Balones",
         "descripcionCorta" : "Balón de fútbol adidas Team",
         "descripcion" : "Para mejorar tu juego. Para hacer grande a tu equipo. adidas ha diseñado la colección Tiro para ofrecerte la esencia del fútbol en un balón. Inspirado en los balones oficiales, el balón Tiro League TB presenta una superficie sin costuras térmicamente sellada que garantiza una trayectoria más predecible. El distintivo IMS certifica su calidad en cualquier tipo de competición.",
-        "precio" : "30"
+        "precio" : "30",
+        "deporte" : "futbol"
     },
     {
         "imagen" : "../img/Nike_Mercurial_Superfly_8_Pro_KM_FG.jpg",
@@ -42,7 +46,8 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol de Kylian Mbappé Nike FG",
         "descripcion" : "Botas de fútbol de Kylian Mbappé Nike FG para césped natural o artificial de última generación - lilas azuladas",
-        "precio" : "160"
+        "precio" : "160",
+        "deporte" : "futbol"
     },
     {
         "imagen" : "../img/Nike_Phantom_GT2_Elite_SW_AG-PRO.jpg",
@@ -51,7 +56,8 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol Nike AG-PRO para césped artificial",
         "descripcion" : "Botas de fútbol Nike AG-PRO para césped artificial - verdes, negra",
-        "precio" : "270"
+        "precio" : "270",
+        "deporte" : "futbol"
     },
     {
         "imagen" : "../img/adidas_Predator_FREAK_FG.jpg",
@@ -60,7 +66,8 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol con tobillera sin cordones adidas FG",
         "descripcion" : "Botas de fútbol con tobillera sin cordones adidas FG para césped natural o artificial de última generación - blancas",
-        "precio" : "280"
+        "precio" : "280",
+        "deporte" : "futbol"
     },
     {
         "imagen" : "../img/adidas_X_SPEEDFLOW.1_Adizero_FG.jpg",
@@ -69,7 +76,8 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol adidas FG para césped natural o artificial",
         "descripcion" : "Botas de fútbol adidas FG para césped natural o artificial de última generación - blancas, verdes",
-        "precio" : "220"
+        "precio" : "220",
+        "deporte" : "futbol"
     },
     {
         "imagen" : "../img/Puma_Future_Z_1.2_FG_AG.jpg",
@@ -78,6 +86,7 @@
         "tipo" : "Botas",
         "descripcionCorta" : "Botas de fútbol Puma FG/AG para césped natural o artificial",
         "descripcion" : "Botas de fútbol Puma FG/AG para césped natural o artificial - azules, verdes",
-        "precio" : "200"
+        "precio" : "200",
+        "deporte" : "futbol"
     }
 ]

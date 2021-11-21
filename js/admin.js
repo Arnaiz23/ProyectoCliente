@@ -133,10 +133,6 @@ function mostrarDatos(elemento){
                 <input type="file" name="imagenProductoMod" id="imagenProductoMod">
                 <label for="nombreProductoMod">Nombre</label>
                 <input type="text" name="nombreProductoMod" id="nombreProductoMod" placeholder="${elemento.dato.nombre}">
-                <label for="marcaProductoMod">Marca</label>
-                <input type="text" name="marcaProductoMod" id="marcaProductoMod" placeholder="${elemento.dato.marca}">
-                <label for="tipoProductoMod">Tipo</label>
-                <input type="text" name="tipoProductoMod" id="tipoProductoMod" placeholder="${elemento.dato.tipo}">
                 <label for="descripcionCortaMod">Descripcion corta</label>
                 <textarea name="descripcionCortaMod" id="descripcionCortaMod" cols="30" rows="10" placeholder="${elemento.dato.descripcionCorta}"></textarea>
                 <label for="descripcionLargaMod">Descripcion Larga</label>
@@ -146,10 +142,13 @@ function mostrarDatos(elemento){
                 <div>
                     <button type="button" class="boton" onclick="Cancelar()">Cancelar</button>
                     <button type="button" class="boton" onclick="ActualizarData()">Actualizar</button>
+                    <button type="button" class="boton" onclick="EliminarProducto()">Eliminar</button>
                 </div>
             </div>
         </div>
     `);
+    document.querySelectorAll(".containerDentro div button")[1].producto = elemento.dato;
+    document.querySelectorAll(".containerDentro div button")[2].producto = elemento.dato;
 }
 
 function addProducto(){
@@ -229,7 +228,7 @@ function addProducto(){
             }).catch(function(err){
                 console.log(err);
             });
-            console.log(imagen.files[0].name)
+            // console.log(imagen.files[0].name)
             let nuevo = `
                     "imagen" : "../img/${imagen.files[0].name}",
                     "nombre" : "${nombre.value}",
@@ -275,7 +274,7 @@ function Cancelar(){
 }
 
 function modificarPregunta(pregunta){
-    console.log(pregunta.previousElementSibling.firstElementChild.dato)
+    // console.log(pregunta.previousElementSibling.firstElementChild.dato)
     document.querySelector(".main_informacion_derecha").insertAdjacentHTML("afterend",`
         <div class="fondo">
             <div class="containerDentro">
@@ -286,10 +285,13 @@ function modificarPregunta(pregunta){
                 <div>
                     <button type="button" class="boton" onclick="Cancelar()">Cancelar</button>
                     <button type="button" class="boton" id="modPregunta">Modificar</button>
+                    <button type="button" class="boton" onclick="EliminarPregunta()">Eliminar</button>
                 </div>
             </div>
         </div>
     `);
+    document.querySelectorAll("button")[2].pregunta = pregunta.previousElementSibling.firstElementChild.dato;
+    document.body.style.overflowY = "hidden";
 }
 
 
@@ -337,6 +339,148 @@ function addPregunta(){
             }
         }).catch(function(err){
             console.log(err);
+        });
+    });
+}
+
+async function EliminarPregunta(){
+    // console.log(this.event.target.pregunta)
+    pregunta = this.event.target.pregunta;
+    await fetch("../php/datos.php",{
+        method : "POST",
+        headers : {
+            "Content-type" : "application/json",
+            "tipo" : "preguntas"
+        }
+    }).then(function(response){
+        if(response.ok){
+            return response.json();
+        }else{
+            throw "Error en la llamada AJAX";
+        }
+    }).then(async function(texto){
+        texto.forEach((valor,indice) =>{
+            if(valor.pregunta == pregunta.pregunta){
+                texto.splice(indice,1);
+            }
+        });
+        await fetch("../php/datos.php",{
+            method : "POST",
+            headers : {
+                "Content-type" : "application/json",
+                "tipo" : "deletepregunta"
+            },
+            body : JSON.stringify(texto)
+        }).then(function(response){
+            if(response.ok){
+                return response.text();
+            }else{
+                throw "Error en la llamada AJAX";
+            }
+        }).then(function(texto){
+            // console.log(texto)
+            if(texto == "Eliminado"){
+                alert("Pregunta eliminada");
+                location.reload();
+            }
+        }).catch(function(err){
+            console.log(err);
+        });  
+    }).catch(function(err){
+        console.log(err);
+    });   
+}
+
+async function EliminarProducto(){
+    let producto = this.event.target.producto;
+    await getInfo().then(listas =>{
+        listas.forEach(productos => {
+            productos.forEach(async (elemento,indice) => {
+                if(producto.nombre == elemento.nombre){
+                    let deporte = elemento.deporte;
+                    productos.splice(indice,1);
+                    await fetch("../php/datos.php",{
+                        method : "POST",
+                        headers : {
+                            "Content-type" : "application/json",
+                            "tipo" : `delete${deporte}`
+                        },
+                        body : JSON.stringify(productos)
+                    }).then(function(response){
+                        if(response.ok){
+                            return response.text();
+                        }else{
+                            throw "Error en la llamada AJAX";
+                        }
+                    }).then(function(texto){
+                        // console.log(texto)
+                        if(texto == "Eliminado"){
+                            alert("Pregunta eliminada");
+                            location.reload();
+                        }
+                    }).catch(function(err){
+                        console.log(err);
+                    });  
+                }
+            });
+        });
+    });
+}
+
+
+async function ActualizarData(){
+    let producto = this.event.target.producto;
+    let imagen = document.getElementById("imagenProductoMod");
+    let nombre = document.getElementById("nombreProductoMod");
+    let corta = document.getElementById("descripcionCortaMod");
+    let larga = document.getElementById("descripcionLargaMod");
+    let precio = document.getElementById("precioProductoMod");
+    await getInfo().then(listas =>{
+        listas.forEach(productos => {
+            productos.forEach(async (elemento,indice) => {
+                if(producto.nombre == elemento.nombre){
+                    let deporte = elemento.deporte;
+                    // ---------------------------------
+                    if(nombre.value != ""){
+                        elemento.nombre = nombre.value;
+                    }
+                    if(corta.value != ""){
+                        elemento.descripcionCorta = corta.value;
+                    }
+                    if(larga.value != ""){
+                        elemento.descripcion = larga.value;
+                    }
+                    if(precio.value != ""){
+                        elemento.precio = precio.value;
+                    }
+                    if(imagen.value != ""){
+                        elemento.imagen = `../img/${imagen.files[0].name}`
+                    }
+                    // ---------------------------------
+                    await fetch("../php/datos.php",{
+                        method : "POST",
+                        headers : {
+                            "Content-type" : "application/json",
+                            "tipo" : `modificar${deporte}`
+                        },
+                        body : JSON.stringify(productos)
+                    }).then(function(response){
+                        if(response.ok){
+                            return response.text();
+                        }else{
+                            throw "Error en la llamada AJAX";
+                        }
+                    }).then(function(texto){
+                        // console.log(texto)
+                        if(texto == "Modificado"){
+                            alert("Producto modificado");
+                            location.reload();
+                        }
+                    }).catch(function(err){
+                        console.log(err);
+                    });  
+                }
+            });
         });
     });
 }

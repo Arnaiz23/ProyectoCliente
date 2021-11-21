@@ -53,8 +53,14 @@ function addCarrito(){
     let coincidencia = carrito.find(productos => {
         return productos.nombre == producto.nombre;
     });
+    let cantidadActual;
     if(coincidencia){
-        coincidencia.cantidad++;
+        cantidadActual = parseInt(coincidencia.cantidad);
+        console.log(cantidadActual)
+        console.log(producto.cantidad)
+        cantidadActual += parseInt(producto.cantidad);
+        console.log(cantidadActual)
+        coincidencia.cantidad = cantidadActual;
     }else{
         carrito.push(producto);
     }
