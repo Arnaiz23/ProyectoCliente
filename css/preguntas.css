@@ -91,3 +91,16 @@
     #pregunta_enviar:hover{
         background-color: #ac0909;
     }
+
+
+@media screen and (max-width:1400px) {
+    .main_container_izquierda_pregunta,.main_container_izquierda_respuesta{
+        width: 60%;
+    }
+    .main_container_derecha{
+        width: 27%;
+    }
+    .main_container_izquierda{
+        width: 64%;
+    }
+}

@@ -87,9 +87,7 @@ function eliminarProducto(){
         valor = indice;
         return texto.nombre == nombre;
     })
-    console.log(precio)
     precio -= (parseFloat(producto.precio) * producto.cantidad);
-    console.log(precio)
     carrito.splice(valor,1);
     localStorage.setItem("carrito",JSON.stringify(carrito))
     let articulo = document.querySelectorAll(".main_container_izquierda_articulo");
@@ -103,6 +101,7 @@ function eliminarProducto(){
     let contenedor_precio = document.querySelectorAll(".main_container_derecha_carrito p");
     contenedor_precio[1].innerHTML = `${precio.toFixed(2)}€`;
     pintarCarrito();
+    location.reload();
 }
 
 if(location.href.includes("carrito.html")){
