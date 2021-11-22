@@ -1,7 +1,7 @@
 let marca = document.querySelector(".main_container_derecha_opciones_marca");
 
 
-
+// FUNCION PARA INSERTAR LA MARCA DEL PRODUCTO
 function insertarMarca(lista){
     let listaMarca = [];
     lista.forEach(texto =>{
@@ -19,6 +19,7 @@ function insertarMarca(lista){
     })
 }
 
+// FUNCION PARA ELIMINAR LA MARCA DEL PRODUCTO
 function eliminarMarca(){
     let marcaAntigua = document.querySelectorAll(".main_container_derecha_opciones_marca .opciones_filtro");
     marcaAntigua.forEach((texto,indice)=>{
@@ -26,6 +27,7 @@ function eliminarMarca(){
     });
 }
 
+// FUNCION PARA INSERTAR EL TIPO DEL PRODUCTO
 function insertarTipo(lista){
     let listaTipo = [];
     let tipoAntiguo = document.querySelector(".main_container_derecha_opciones_tipos");
@@ -44,6 +46,7 @@ function insertarTipo(lista){
     });
 }
 
+// FUNCION PARA ELIMINAR EL TIPO DEL PRODUCTO
 function eliminarTipo(){
     let tipoDatos = document.querySelectorAll(".main_container_derecha_opciones_tipos .opciones_filtro");
     let tipoAntiguo = document.querySelector(".main_container_derecha_opciones_tipos");
@@ -52,6 +55,7 @@ function eliminarTipo(){
     });
 }
 
+// FUNCIONES DE ORDERNAR POR PRECIO
 function ordenarMenor(lista){
     borrarTarjetas();
     pintarTabla(lista.sort((a,b) => {
@@ -96,6 +100,7 @@ document.getElementById("filtroNormal").addEventListener("click",async ()=>{
     });
 });
 
+// FUNCION PARA REGRESAR EL FILTRO A LA NORMALIDAD
 function regresarFiltro(){
     document.getElementsByName("filtro")[0].selectedIndex = 0;
 }

@@ -2,6 +2,7 @@ const btnCerrarSesion = document.querySelector(".header_nav_opciones_inicio");
 const misPedidos = document.getElementById("misPedidos");
 const administrarCuenta = document.getElementById("administrarCuenta");
 
+// FUNCION CERRAR SESION
 function cerrarSesion(){
     localStorage.removeItem("usuario");
     localStorage.removeItem("tarjeta");
@@ -10,6 +11,7 @@ function cerrarSesion(){
     location.href = "index.html";
 }
 
+// FUNCION CERRAR SESION AL MINUTO. SIN USO. PRUEBA
 function cerrarSesion2(){
     setTimeout(()=>{
         localStorage.removeItem("usuario");
@@ -195,6 +197,7 @@ document.getElementById("misDirecciones").addEventListener("click", async()=>{
             document.querySelector(".containerDatoExtra").remove();
             document.body.style.overflowY = "initial";
         });
+        // AÑADIR DIRECCION
         document.getElementById("addNuevaDireccion").addEventListener("click",async ()=>{
             let nuevaDireccion = document.getElementById("nuevaDireccion");
             if(nuevaDireccion.value == ""){
@@ -219,6 +222,7 @@ document.getElementById("misDirecciones").addEventListener("click", async()=>{
     });
 })
 
+// PETICION AL SERVIDOR DE TODOS LOS USUARIOS
 async function Usuario(){
     await fetch("../php/datos.php",{
         method : "POST",

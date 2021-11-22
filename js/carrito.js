@@ -1,4 +1,5 @@
 const contenedor = document.querySelector(".main_container_izquierda");
+// CONTENEDOR DEL PRECIO
 if(localStorage.getItem("carrito") == null){
     var carrito = [];
     var precio = 0;
@@ -10,6 +11,7 @@ if(localStorage.getItem("carrito") == null){
     });
 }
 
+// PINTAR CARRITO EN CARRITO.HTML
 function pintarCarrito(){
     if(carrito.length != 0){
         carrito.forEach(producto => {
@@ -30,6 +32,8 @@ function pintarCarrito(){
         document.querySelector(".main_container_izquierda_comprar p").style.cursor = "not-allowed";
     }
 }
+
+// EN CASO DE QUE NO HAYAS INICIADO SESION, SALTA EL MENSAJE DE QUE DEBES INICIAR SESION
 if(location.href.includes("carrito.html")){
     if(localStorage.getItem("usuario") == null){
         document.querySelector("main").insertAdjacentHTML("beforebegin",`
@@ -50,6 +54,7 @@ if(location.href.includes("carrito.html")){
     }
 }
 
+// FUNCION PARA AÑADIR UN PRODUCTO AL CARRITO
 function addCarrito(){
     let producto = { "imagen" : event.target.dato.imagen, "nombre" : event.target.dato.nombre, "cantidad" : event.target.dato2.value, "precio" : parseFloat(event.target.dato.precio)};
     let coincidencia = carrito.find(productos => {
@@ -104,6 +109,7 @@ function eliminarProducto(){
     location.reload();
 }
 
+// REALIZAR EL PEDIDO
 if(location.href.includes("carrito.html")){
     let realizarPedido = document.querySelector(".main_container_izquierda_comprar p");
     realizarPedido.addEventListener("click",async ()=>{

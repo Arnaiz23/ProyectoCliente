@@ -9,6 +9,7 @@ document.getElementById("adminProductos").addEventListener("click",async ()=>{
         <table class="tabla" border="1">
         </table>
     `);
+    // PINTAMOS LA TABLA CON TODOS LOS PRODUCTOS
     let tabla = document.querySelector(".tabla");
     await getInfo().then(listas =>{
         tabla.insertAdjacentHTML("afterbegin",`
@@ -37,10 +38,8 @@ document.getElementById("adminProductos").addEventListener("click",async ()=>{
                 indice++;
             });
         });
-        /* tabla.insertAdjacentHTML("afterend",`
-            <h1>Actualizar</h1>
-        `); */
     });
+    // BOTON AÑADIR PRODUCTO
     if(document.getElementById("adminAdd") != null){
         document.getElementById("adminAdd").remove();
     }
@@ -97,12 +96,10 @@ document.getElementById("adminPreguntas").addEventListener("click",async ()=>{
             document.querySelectorAll(".texto h5")[indice].dato = valor;
             indice++;
         });
-        /* tabla.insertAdjacentHTML("afterend",`
-            <h1>Hola</h1>
-        `); */
     }).catch(function(err){
         console.log(err);
     });
+    // BOTON AÑADIR PREGUNTAS
     if(document.getElementById("adminAdd") != null){
         document.getElementById("adminAdd").remove();
     }
@@ -112,7 +109,7 @@ document.getElementById("adminPreguntas").addEventListener("click",async ()=>{
     `);
 });
 
-
+// FUNCION PARA ELIMINAR TANTO LA TABLA DE PRODUCTOS COMO LA DE PREGUNTAS
 function eliminarPintado(){
     let containerDelete = document.querySelector(".main_informacion_derecha div");
     let tablaDelete = document.querySelector(".main_informacion_derecha table")
@@ -124,6 +121,7 @@ function eliminarPintado(){
     }
 }
 
+// FUNCION PARA MOSTRAR LOS DATOS DE UN PRODUCTO
 function mostrarDatos(elemento){
     document.body.style.overflowY = "hidden";
     document.querySelector(".main_informacion_derecha").insertAdjacentHTML("afterend",`
@@ -151,6 +149,7 @@ function mostrarDatos(elemento){
     document.querySelectorAll(".containerDentro div button")[2].producto = elemento.dato;
 }
 
+// FUNCION PARA AÑADIR UN PRODUCTO NUEVO
 function addProducto(){
     document.body.style.overflowY = "hidden";
     document.querySelector(".main_informacion_derecha").insertAdjacentHTML("afterend",`
@@ -206,6 +205,7 @@ function addProducto(){
         let larga = document.getElementById("descripcionLargaAdd");
         let precio = document.getElementById("precioProductoAdd");
 
+        // PROCESO FINAL PARA AÑADIR. ENVIAR DATOS AL SERVIDOS
         document.getElementById("addData").addEventListener("click",async ()=>{
             let coincidencia;
             await fetch("../php/datos.php",{
@@ -268,11 +268,13 @@ function addProducto(){
     });
 }
 
+// FUNCION PARA CANCELAR LA ACCION
 function Cancelar(){
     document.body.style.overflowY = "initial";
     document.querySelector(".fondo").remove();
 }
 
+// FUNCION PARA MODIFICAR LAS PREGUNTAS
 function modificarPregunta(pregunta){
     // console.log(pregunta.previousElementSibling.firstElementChild.dato)
     document.querySelector(".main_informacion_derecha").insertAdjacentHTML("afterend",`
@@ -294,7 +296,7 @@ function modificarPregunta(pregunta){
     document.body.style.overflowY = "hidden";
 }
 
-
+// FUNCION PARA AÑADIR UNA PREGUNTA
 function addPregunta(){
     document.querySelector(".main_informacion_derecha").insertAdjacentHTML("afterend",`
         <div class="fondo">
@@ -313,6 +315,7 @@ function addPregunta(){
     let pregunta = document.getElementById("preguntaAdd");
     let respuesta = document.getElementById("respuestaAdd");
     
+    // ENVIAR DATOS DE LA NUEVA PREGUNTA AL SERVIDOR
     document.getElementById("addPregunta").addEventListener("click",async ()=>{
         let preguntanueva = `
             "pregunta" : "${pregunta.value}",
@@ -343,9 +346,11 @@ function addPregunta(){
     });
 }
 
+// FUNCION ELIMINAR UNA PREGUNTA
 async function EliminarPregunta(){
     // console.log(this.event.target.pregunta)
     pregunta = this.event.target.pregunta;
+    // SOLICITAR TODAS LAS PREGUNTAS AL SERVIDOR
     await fetch("../php/datos.php",{
         method : "POST",
         headers : {
@@ -364,6 +369,7 @@ async function EliminarPregunta(){
                 texto.splice(indice,1);
             }
         });
+        // ENVIAR LOS DATOS AL SERVIDOR
         await fetch("../php/datos.php",{
             method : "POST",
             headers : {
@@ -391,6 +397,7 @@ async function EliminarPregunta(){
     });   
 }
 
+// FUNCION ELIMINAR UN PRODUCTO
 async function EliminarProducto(){
     let producto = this.event.target.producto;
     await getInfo().then(listas =>{
@@ -427,7 +434,7 @@ async function EliminarProducto(){
     });
 }
 
-
+// FUNCION ACTUALIZAR PRODUCTO
 async function ActualizarData(){
     let producto = this.event.target.producto;
     let imagen = document.getElementById("imagenProductoMod");

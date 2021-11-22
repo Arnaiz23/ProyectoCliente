@@ -5,6 +5,7 @@ const running = document.getElementById("running");
 
 let contenedorIzquierdo = document.querySelector(".main_container_izquierda_tarjetas");
 
+// FUNCION PARA PINTAR LA TARJETA SIN DATOS
 function pintarTarjeta(){
     if(localStorage.getItem("usuario") != null && localStorage.getItem("usuario") != "admin"){
         contenedorIzquierdo.insertAdjacentHTML("beforeend",`
@@ -47,6 +48,7 @@ function pintarTarjeta(){
     }
 }
 
+// FUNCION PARA PINTAR LOS DATOS JUNTO CON LAS TARJETAS
 function pintarTabla(lista){
     lista.forEach((texto,indice) => {
         pintarTarjeta();
@@ -70,63 +72,29 @@ function pintarTabla(lista){
     });
 }
 
+// PINTAR DEPENDIENDO DEL DEPORTE
 futbol.addEventListener("click",async ()=>{
-    /* getInfo().then(deporte =>{
-        borrarTarjetas();
-        pintarTabla(deporte[0]);
-        eliminarMarca();
-        insertarMarca(deporte[0]);
-        eliminarTipo();
-        insertarTipo(deporte[0]);
-        localStorage.setItem("indice","0");
-    }); */
     await Deporte("futbol");
     localStorage.setItem("indice","0");
     regresarFiltro();
 });
 baloncesto.addEventListener("click",async ()=>{
-    /* getInfo().then(deporte =>{
-        borrarTarjetas();
-        pintarTabla(deporte[1]);
-        eliminarMarca();
-        insertarMarca(deporte[1]);
-        eliminarTipo();
-        insertarTipo(deporte[1]);
-        localStorage.setItem("indice","1");
-    }); */
     await Deporte("baloncesto");
     localStorage.setItem("indice","1");
     regresarFiltro();
 });
 voleibol.addEventListener("click",async ()=>{
-    /* getInfo().then(deporte =>{
-        borrarTarjetas();
-        pintarTabla(deporte[2]);
-        eliminarMarca();
-        insertarMarca(deporte[2]);
-        eliminarTipo();
-        insertarTipo(deporte[2]);
-        localStorage.setItem("indice","2");
-    }); */
     await Deporte("voleibol");
     localStorage.setItem("indice","2");
     regresarFiltro();
 });
 running.addEventListener("click",async ()=>{
-    /* getInfo().then(deporte =>{
-        borrarTarjetas();
-        pintarTabla(deporte[3]);
-        eliminarMarca();
-        insertarMarca(deporte[3]);
-        eliminarTipo();
-        insertarTipo(deporte[3]);
-        localStorage.setItem("indice","3");
-    }); */
     await Deporte("running");
     localStorage.setItem("indice","3");
     regresarFiltro();
 });
 
+// FUNCION PARA BORRAR LAS TARJETAS
 function borrarTarjetas(){
     let tarjeta = document.querySelectorAll(".card");
     tarjeta.forEach((texto,indice)=>{
@@ -134,7 +102,7 @@ function borrarTarjetas(){
     })
 }
 
-
+// FUNCION MOSTRAR EL PRODUCTO
 function mostrarProducto(){
     localStorage.setItem("producto",JSON.stringify(event.target.objeto));
     location.href = "producto.html";

@@ -7,6 +7,7 @@ let precio = document.querySelectorAll(".precio h3")[1];
 
 let objeto = JSON.parse(localStorage.getItem("producto"));
 
+// PINTAR LOS DATOS DEL PRODUCTO SELECCIONADO
 window.onload = async ()=>{
     imagen.src = objeto.imagen;
     nombre.innerHTML = objeto.nombre;

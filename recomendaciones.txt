@@ -1,0 +1,10 @@
+La página cuanta con algunos usuarios:
+	- 1 usuario administrador
+		Cuenta: admin
+		Password: admin
+	- 1 usuario con cuenta normal
+		Cuenta: Adrian
+		Password: 1234567
+Cualquier usuario creado en el panel de login, sera cuenta normal
+
+Recomendacion: Ver y trabajar con la aplicacion en pantalla completa (F11)

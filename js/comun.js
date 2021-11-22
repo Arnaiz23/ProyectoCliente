@@ -1,13 +1,16 @@
 const contenedor_precio = document.querySelector(".main_container_derecha_carrito");
 
 window.onload = async ()=>{
+    // SI LA PAGINA NO ES NI PREGUNTAS NI CARRITO
     if(!location.href.includes("preguntas.html") && !location.href.includes("carrito.html")){
+        // PETICION Y PINTAMOS FUTBOL
         getInfo().then(deporte => {
             pintarTabla(deporte[0]);
             insertarMarca(deporte[0]);
             insertarTipo(deporte[0]);
             localStorage.setItem("indice","0");
         });
+        // PETICION USUARIOS
         fetch("../php/datos.php",{
             method : "POST",
             headers : {

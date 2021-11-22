@@ -85,6 +85,7 @@ window.onload = async()=>{
     }
 }
 
+// ENVIAR PREGUNTA DEL USUARIO
 document.getElementById("pregunta_enviar").addEventListener("click",()=>{
     let correo = document.getElementById("correoPregunta");
     let pregunta = document.getElementById("preguntaUsuario");

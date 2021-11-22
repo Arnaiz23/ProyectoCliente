@@ -12,14 +12,6 @@ const register = document.querySelector("#register");
 // ----------------------------------------------------------------------
 window.onload = ()=>{
     pintarRegistro();
-    /* if(localStorage.getItem("listaUsuario") != null){
-        listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
-    }else{
-        getUsuario().then(valor => {
-            listaUsuario = valor;
-            localStorage.setItem("listaUsuario",JSON.stringify(listaUsuario))
-        })
-    } */
 }
 // ----------------------------------------------------------------------
 
@@ -88,6 +80,7 @@ function pintarRegistro(){
                 coincidenciae = texto.find(nombre => {
                     return nombre.correo == mail.value;
                 });
+                // VALIDACION DE LOS DATOS INTRODUCIDOS
                 if(usuario.value != "" && mail.value != "" && password.value != ""){
                     let enviar = true;
                     if(!validarCorreo(mail.value)){
@@ -165,41 +158,6 @@ function pintarRegistro(){
             }).catch(function(err){
                 console.log(err);
             });
-            // -----------------------------------------------------------
-            // USUARIOS CON LOCALSTORAGE
-            /* let listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
-            let terminos = document.getElementById("terminos");
-            // getUsuario().then(valor => {
-                // listaUsuario = valor;
-                let coincidencian = listaUsuario.find(nombre => {
-                    return nombre.usuario == usuario.value;
-                });
-                let coincidenciae = listaUsuario.find(nombre => {
-                    return nombre.correo == mail.value;
-                });
-                if(usuario.value != "" && mail.value != "" && password.value != ""){
-                    if(coincidencian == undefined){
-                        if(coincidenciae == undefined){
-                            if(terminos.checked){
-                                listaUsuario.push(new Usuario(usuario.value,password.value,"usuario","","",mail.value,""));
-                                localStorage.setItem("listaUsuario",JSON.stringify(listaUsuario));
-                                alert("Registrado");
-                                location.href = "index.html";
-                                localStorage.setItem("usuario",usuario.value);
-                            }else{
-                                alert("Hay que aceptar los términos para poder continuar");
-                            }
-                        }else{
-                            alert("Ya hay una cuenta con ese correo");
-                        }
-                    }else{
-                        alert("Este nombre de usuario ya esta en uso");
-                    }
-                }else{
-                    alert("Rellena todos los datos");
-                } */
-                
-            // });
         });
     
     // FUNCION INICIO
@@ -209,6 +167,7 @@ function pintarRegistro(){
         });
 }
 
+// FUNCION PARA PONTAR EL APARTADO DE LOGIN
 function pintarLogin(){
     borrar();
     pintar.insertAdjacentHTML("beforeend",`
