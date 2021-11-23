@@ -47,32 +47,6 @@ Tarjetas
 ---------------------------------------------------------------------
 Carrito
     Solo aparezca en caso de estar logeado.
----------------------------------------------------------------------
-
-MIRAR PQ NO SE ME CENTRA EL BOTON DE LAS OPCIONES DERECHA
-
---------------------------------------------------------------------------
-	Si hay muchas tarjetas meterle un sticky al contenedor del carrito,
-	tanto en el index como en el del carrito
---------------------------------------------------------------------------
-
-CSS
-	Pagina Aterrizaje OK
-	Pagina Login OK
-	Pagina Preguntas OK
-	Pagina carrito OK
-    Pagina admin OK
-    Pagina articulo NO
-    Pagina administracion usuario NO (Falta los datos de la derecha)
-
-Editar el scroll de la pagina
-
-Pagina admin
-	-Preguntas
-	-Tarjetas
-	-Filtro
-
-	En el añadir,eliminar... cuando pueda, poner un boton confirmar cambios
 
 ------------------------------------------------------------------------------------------
 Se puede usar almacenamiento local o la base de datos local o una base de datos externa
@@ -89,33 +63,6 @@ SERVIDOR
         POST -> Insert
         PUT -> Update
         DELETE -> Delete
-    
-
-JS
-    Menu OK
-    Login (registro e carga predeterminada OK login OK)
-    Login (botones OK)
-    Login (validacion NO)
-        Registro:        
-            Recoger datos, comprobar que no existen, true -> guardarlos 			(comprobar que se han aceptado las condiciones)
-        Login:
-            Recoger datos, comprobar que son correctos, y aceptar o no
-        Sesion iniciada OK (a medias, 2 opciones [por tiempo, poner una alerta por si no quieres que te cierre la sesion] [dandole tu al boton])
-    Preguntas tipicas OK
-    Preguntas del usuario NO
-        Si no tienes cuenta, que te salga ademas un campo para poner el correctos
-        Si tienes cuenta, que se quede como esta ahora
-    Tarjetas NO
-    Filtro precio OK
-    Filtro (buscar, marca, tipo) NO [en proceso]
-    Carrito NO (Error en el js comun)
-
-Poner imagenes de momento
-    guardar en variable el input.file
-    escribir en la imagen.src = "URL.createObjectURL(variable[0])"
-
-
-
 ----------------------------------------------------------------
 Datos de futbol y esos
 A la hora de crear, al momento de añadir la imagen, poner: "imagen" : "img/"+imagen,
