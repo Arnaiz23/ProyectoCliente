@@ -1,1 +1,32 @@
-[{"id":"01","usuario":"Adrian","password":"1234567","tipo":"usuario","nombre":"Adrian","apellidos":"Arnaiz Fernandez","correo":"adrian@gmail.com","direcciones":{"direccion1":"Av. de la Onu","direccion2":"Calle Espa\u00f1a"}},{"usuario":"admin","password":"admin","tipo":"admin"},{"id":"0.4821443679322699","usuario":"Prueba1","password":"Prueba1","tipo":"usuario","nombre":"Prueba1","apellidos":"Prueba1","correo":"Prueba1@gmail.com","direcciones":{"direccion1":""}}]
+[
+    {
+        "id": "01",
+        "usuario": "Adrian",
+        "password": "1234567",
+        "tipo": "usuario",
+        "nombre": "Adrian",
+        "apellidos": "Arnaiz Fernandez",
+        "correo": "adrian@gmail.com",
+        "direcciones": {
+            "direccion1": "Av. de la Onu",
+            "direccion2": "Calle Espa\u00f1a"
+        }
+    },
+    {
+        "usuario": "admin",
+        "password": "admin",
+        "tipo": "admin"
+    },
+    {
+        "id": "0.4821443679322699",
+        "usuario": "Prueba1",
+        "password": "Prueba1",
+        "tipo": "usuario",
+        "nombre": "Prueba1",
+        "apellidos": "Prueba1",
+        "correo": "Prueba1@gmail.com",
+        "direcciones": {
+            "direccion1": ""
+        }
+    }
+]

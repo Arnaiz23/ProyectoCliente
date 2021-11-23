@@ -137,8 +137,6 @@ Token -> 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
 
 ---------------------QUE FALTA-----------------------------------
 21-11
-    Clases
-        -Modificarlas
     Una vez acabada la pagina, mirar si quiero crear mis propios alerts
     Modificar los js para que no me den errores
     En caso de que al final quiera, poner un boton ir arriba

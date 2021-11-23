@@ -1,14 +1,1 @@
-[
-    {
-        "pregunta" : "¿Como puedo comprar en MetaSport?",
-        "respuesta" : "Registrate e inicia sesión el página web. Busca el producto que desees. Haz click en añadir. Y continua la compra en el carrito"
-    },
-    {
-        "pregunta" : "Formas de pago con tarjeta",
-        "respuesta" : "Esta forma de pago es inmediata, cómoda y segura. Al terminar tu pedido, podrás hacer el pago en la página del banco. MetaSport no recibirá estos datos ni tendrá acceso a ellos. Puedes asociar a tu cuenta de cliente tantas tarjetas como quieras para hacer pedidos más rápido. Un pedido por tarjeta se puede pagar en la hora siguiente a su confirmación. Pasado ese tiempo, si no llega el pago, el pedido será anulado automáticamente."
-    },
-    {
-        "pregunta" : "Localizar mi pedido",
-        "respuesta" : "Una vez realizado y confirmado un pedido, recibira un correo electrónico en el que se le enviara un enlace a la página de la empresa de reparto, donde podar localizar su pedido."
-    }
-]
+[{"pregunta":"\u00bfComo puedo comprar en MetaSport?","respuesta":"Registrate e inicia sesi\u00f3n el p\u00e1gina web. Busca el producto que desees. Haz click en a\u00f1adir. Y continua la compra en el carrito"},{"pregunta":"Formas de pago con tarjeta","respuesta":"Esta forma de pago es inmediata, c\u00f3moda y segura. Al terminar tu pedido, podr\u00e1s hacer el pago en la p\u00e1gina del banco. MetaSport no recibir\u00e1 estos datos ni tendr\u00e1 acceso a ellos. Puedes asociar a tu cuenta de cliente tantas tarjetas como quieras para hacer pedidos m\u00e1s r\u00e1pido. Un pedido por tarjeta se puede pagar en la hora siguiente a su confirmaci\u00f3n. Pasado ese tiempo, si no llega el pago, el pedido ser\u00e1 anulado autom\u00e1ticamente."},{"pregunta":"Localizar mi pedido","respuesta":"Una vez realizado y confirmado un pedido, recibira un correo electr\u00f3nico en el que se le enviara un enlace a la p\u00e1gina de la empresa de reparto, donde podar localizar su pedido."}]

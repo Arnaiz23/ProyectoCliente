@@ -92,7 +92,7 @@ administrarCuenta.addEventListener("click",async ()=>{
                         texto.splice(indice,1);
                     }
                 });
-                console.log(JSON.stringify(texto))
+                // console.log(JSON.stringify(texto))
                 // texto.splice(usuario,1);
                 // console.log(texto);
                 await fetch("../php/datos.php",{
