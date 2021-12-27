@@ -1,0 +1,51 @@
+@media screen and (max-width:1621px) {
+     .card{
+         width: 280px;
+     }
+}
+@media screen and (max-width:1533px) {
+    .main_container_izquierda_tarjetas{
+        width: auto;
+    }
+    .card{
+        width: 27%;
+    }
+}
+@media screen and (max-width:1309px) {
+    .card{
+        width: 30%;
+    }
+}
+@media screen and (max-width:1130px) {
+    #buscar_filtro{
+        width: 90%;
+    }
+    .card {
+        width: 36%;
+    }
+}
+@media screen and (max-width:1000px) {
+    .main_container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .main_container_izquierda{
+        width: auto;
+    }
+    .main_container_derecha{
+        width: 40%;
+    }
+}
+@media screen and (max-width:972px) {
+    footer{
+        flex-direction: column;
+    }
+    .footer-item{
+        margin: 5px 0;
+    }
+}
+@media screen and (max-width:800px) {
+    .main_container_derecha{
+        width: 60%;
+    }
+}
